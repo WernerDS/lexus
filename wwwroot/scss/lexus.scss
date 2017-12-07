@@ -1,0 +1,51 @@
+/*!
+ * Lexus v1
+ */
+
+// Font Smoothing 
+html, html a, body {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004); 
+}
+
+html,
+.material-icons {
+	font-size: 14px;
+}
+
+@import "fonts/nobel";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+// Bootstrap
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/bootstrap"; 
+
+// Fonts
+@import "font-awesome/font-awesome";
+
+// ARK
+@import "ark/variables"; 
+//@import "ark/alerts";
+//@import "ark/announcements";
+@import "ark/buttons";
+//@import "ark/cards";
+@import "ark/colors";
+//@import "ark/datatables";
+//@import "ark/datepicker";
+//@import "ark/features";
+//@import "ark/forms";
+@import "ark/grid";
+//@import "ark/icons";
+//@import "ark/images";
+//@import "ark/maps";
+//@import "ark/modals";
+@import "ark/navbars";
+@import "ark/sections"; 
+//@import "ark/stats";
+//@import "ark/tables";
+//@import "ark/toggles";
+@import "ark/typography"; 
+
+// Theme
+@import "theme"; 
