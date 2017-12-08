@@ -46,12 +46,13 @@
     
     @await Html.PartialAsync("Footer")
 
-    <script src="~/js/jquery-3.2.1.min.js"></script>
+    <script src="~/js/jquery-2.2.4.min.js"></script>
 	<script src="~/js/popper.min.js"></script>
 	<script src="~/js/bootstrap.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
+   
     @RenderSection("Scripts", required: false)
+    
+    <script src="~/js/site.js" asp-append-version="true"></script>
     
 </body>
 </html>
