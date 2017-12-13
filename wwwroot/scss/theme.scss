@@ -73,6 +73,14 @@ header,
 	* {
 		z-index: 2;
 	}
+	video {
+		position: absolute;
+	    right: 0;
+	    bottom: 0;
+	    min-width: 100%; 
+	    min-height: 100%;
+	    z-index: 1;
+	}
 }
 
 
@@ -80,5 +88,33 @@ header,
 footer {
 	img {
 		height: 30px;
+	}
+}
+
+.logoSVG {
+	display: none;
+}
+
+.mask { 
+	a {
+		position: relative;
+		display:block;
+		background-position: -160px 0;
+		&:hover,
+		&:focus{
+			background-position: 10px 0;
+			transition: all 1s;
+		}
+		&:after {
+			content:'';
+			position: absolute;
+			pointer-events: none;
+			top:0; left:0; right:0; bottom: 0;
+			background: radial-gradient(0 0,circle farthest-side, rgba(0,0,0,0) 90%,rgba(0,0,0,.8) 98%,rgba(0,0,0,0) 100%) no-repeat;
+			background: radial-gradient(circle farthest-side at 0 0, rgba(0,0,0,0) 90%,rgba(0,0,0,.8) 98%,rgba(0,0,0,0) 100%) no-repeat;
+			background-position: inherit; 
+			-webkit-mask: url('../images/lexus-white.svg') center;
+			mask: url('#mask-firefox');
+		}
 	}
 }
