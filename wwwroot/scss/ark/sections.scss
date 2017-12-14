@@ -79,3 +79,48 @@ $section-padding: 80px;
 		vertical-align: bottom;
 	}
 }
+
+
+
+.section-story-overview {
+	padding: $section-padding 0;
+	.image-container {
+	    height: 335px;
+	    position: relative;
+	    background-position: center center;
+	    background-size: cover;
+	    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+	    border-radius: .25rem;
+	    &.image-left {
+	    	z-index: 1;
+	    }
+	    &.image-right {
+	    	z-index: 2;
+	    }
+	}
+	p.blockquote {
+	    width: 220px;
+	    min-height: 180px;
+	    text-align: left;
+	    position: absolute;
+	    top: 376px;
+	    right: 155px;
+	    z-index: 0;
+	    border: 1px solid $border-color;
+		padding: 20px;
+		font-size: 1.1em;
+		line-height: 1.8;
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+	.image-container.image-left {
+	    margin-right: -100px;
+	}
+	.image-container.image-right {
+	    top: 80px;
+	    margin-left: -100px;
+	    margin-bottom: 130px;
+	}
+}
