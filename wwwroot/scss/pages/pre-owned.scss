@@ -1,0 +1,486 @@
+//VARIABLES
+$size: 45px;
+
+//SEARCH RESULTS
+.results { 
+    .breadcrumb { 
+        margin-left:300px;
+        background:none;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 1px solid #ebebeb;
+        font-size: 0.8em;
+        
+        @include media-breakpoint-down(sm) {
+            margin-left:0;
+        } 
+    }
+    
+    .refine-search {
+        .btn {
+            border-bottom:1px solid #ededed; 
+            &:before {
+                content: "\f1de";
+                font-family: fontawesome;
+                margin-right:10px;
+                color:black;
+            }
+        }
+    }
+    .results-column {
+        margin-left: 0;
+        @include media-breakpoint-up(md) {
+           margin-left:300px;
+        } 
+    
+    .result-listing {
+        @extend .card; 
+        margin: 10px 0;
+        position: relative;
+      
+        a { 
+            transition: all 0.4s cubic-bezier(.25,.8,.25,1);   
+           
+        }
+        a:hover {
+            text-decoration: none;
+            box-shadow: 0 7px 14px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1); 
+        }
+        
+         
+        .row {
+            & div:nth-of-type(1) {    
+                // IMAGE
+                @extend .col-sm-3;
+               
+                img
+                {
+                    width:100%;
+                }
+                @extend .col-12; 
+                position: relative;
+                span {
+                    position: absolute;
+                    top:2px;
+                    left:18px; 
+                    @extend .badge;
+                    @extend .badge-pill;
+                    @extend .badge-primary;
+                    background:rgba(0, 0, 0, 0.38);
+                    padding:6px;
+                }
+                span:after {
+                    font-family: "fontawesome";
+                    content: "\f030";
+                    margin-left: 5px;     
+                }
+            }
+            // MODEL DETAILS
+            & div:nth-of-type(2) { 
+                position: relative;
+                @extend .col-sm-9; 
+                @extend .col-12; 
+                padding-top:10px;
+                margin-left:0;
+                text-transform: uppercase;
+                //Model Price
+                span:nth-of-type(1) {
+                    position: absolute;
+                    top:5px;
+                    right:22px;
+                    font-size:1.8em;  
+                    font-weight: bold;             
+                }
+                
+                 //Mileage
+                span:nth-child(2) { 
+                    position: absolute;
+                    bottom:3px;
+                    right:80px;
+                    font-size:1.2em;
+                    display: block;
+                   
+                }
+                
+                 //Model Year 
+                 span:nth-of-type(3) {
+                    position: absolute;
+                    bottom:3px;
+                    right:22px;
+                    font-size:1.2em;
+                    display: block;                
+                }
+                
+                //Model
+                span:nth-child(4) {
+                    font-size:1.2em;
+                    display: block;
+                    text-transform: uppercase;
+                    font-weight: bold; 
+                    padding-left:5px;
+                    @extend .text-secondary;
+                   
+                }
+                //Model Detailed
+                span:nth-child(5) {
+                    font-size:1.6em;
+                    display: block;
+                    font-weight: normal;
+                    text-transform: uppercase;
+                    padding-left:5px;
+                    @extend .text-truncate;
+                   
+                }
+                //Model Desc
+                span:nth-child(6) {
+                    font-size:0.8em;
+                    display: block;
+                    text-transform: none;
+                    color:grey;
+                    margin: 5px 0;
+                    padding-left:5px;
+                    @extend .text-truncate;
+                }
+                
+                //Dealership Name
+                span:nth-child(7) {
+                    font-size:1em; 
+                    @extend .badge; 
+                    @extend .badge-secondary;
+                    background:#e3e3e3;
+                    color:black;
+                    margin: 0px 0px 5px 5px;
+                }  
+            }
+        }
+    }
+}
+    & + footer {
+        margin-left:300px;
+        
+        @include media-breakpoint-down(sm) {
+            margin-left:0;
+        }  
+    }
+}
+
+// FACETS
+.leftsidebar {
+    position: fixed;
+    top:5.5rem;
+    left:0;
+    width:300px;
+    height:100%;
+    overflow-y: scroll;
+    box-shadow: 0 7px 14px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1); 
+    background:#ffffff;
+    
+    > div:first-child { 
+        background: #c1c1c1; 
+        color:white;
+        text-transform: uppercase;
+        padding: 13px;
+        height: 41px;
+        font-weight: bold;
+        font-size:0.9em;
+        
+        &:before {
+            content: "\f1de";
+            font-family: fontawesome;
+            margin-right:20px;
+            
+        }
+    }
+    .lead {
+        text-transform: uppercase;
+        font-size:0.9em;
+        margin:15px 20px;
+        font-weight: bold;
+        color:grey;
+        border-bottom:1px dotted #d0d0d0;      
+    }
+    .search-list { 
+        div { 
+            position: relative;
+            padding: 5px 44px;
+            font-size: 0.9em;
+            margin: 0 5px;
+            
+            & a {
+                color:grey;
+            }
+            &.active {
+                background: #505050;
+                font-weight: bold;
+                border-radius: 5px;
+                margin: 0 5px;
+                a {
+                    color:white;
+                }
+                
+                &:hover {
+                    background: #505050;
+                }
+                .badge {
+                    background: white;
+                    color:black;
+                }
+            }
+            
+            &:hover  {
+                background: #f4f4f4;  
+                cursor:pointer;
+            }
+        }
+        span {
+            position: absolute;
+            top: 6px;
+            right: 15px;
+            color:grey;
+            @extend .badge;
+            @extend .badge-pill;
+            @extend .badge-light;
+            background:#eaeaea;
+            min-width:25px;
+        }
+    }
+}
+
+//SEARCH DETAILS
+.result-details { 
+    margin-right:350px;
+        @include media-breakpoint-down(md) {
+            margin-right:0;
+        } 
+
+    .card {
+        max-width: 640px;  
+        margin-top: 20px;
+      
+    }
+    .map {
+        max-width: 640px;
+        border:2px solid black;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    
+    .thumbnail-img { 
+        img {
+            margin: -7px 1px;
+            border:1px solid transparent;
+            max-width:120px;
+            &:hover {
+                border:1px solid black;
+                cursor: pointer;
+            }
+        }
+    
+    }
+    .card-header {
+        text-transform: uppercase; 
+        position: relative;
+        
+        h1 {
+            @extend .text-truncate;
+            margin-right: 120px;
+        }
+        
+        @include media-breakpoint-down(md) {
+            font-size:0.8em;
+            h1 {
+                margin-right: 90px;
+            }
+            
+        } 
+        
+        h1 {
+            font-size: 1.5em; 
+            margin-bottom: 0;
+        }
+
+        span {
+            position: absolute;
+            top: 15px;
+            right: 17px;
+            position: absolute;
+            top: 2px;
+            right: 9px;
+            font-size: 2em;
+            font-weight: bold;
+            
+          
+        }
+    }
+    
+    
+    .card-body { 
+        .list-group { 
+            position: relative;
+            
+            li.list-group-item  {   
+                //Condition
+                &:nth-of-type(1) p { 
+                    margin:0;
+                    &:before {
+                        content:'Condition';
+                        margin:0;
+                    }
+                }
+                //Mileage
+                &:nth-of-type(2) p { 
+                    margin:0;
+ 
+                    &:before {
+                        content:'Mileage';
+                        margin:0;
+                    }
+                }
+                //Year
+                &:nth-of-type(3) p { 
+                    margin:0;
+ 
+                    &:before {
+                        content:'Year';
+                        margin:0;
+                    }
+                }
+                //Colour
+                &:nth-of-type(4) p { 
+                    margin:0;
+ 
+                    &:before {
+                        content:'Colour';
+                        margin:0;
+                    }
+                }             
+                span { 
+                    position: absolute;
+                    top:12px;
+                    right:12px;
+                    font-weight: bold;  
+                }  
+                
+            }    
+        }
+    }
+    
+    .breadcrumb { 
+        background:none;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 1px solid #ebebeb;
+        font-size: 0.8em;
+        margin: 0px -15px;
+    }
+    
+}
+
+//CONTACT DEALER
+.rightsidebar {
+    box-shadow: 0 7px 14px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1); 
+    position: fixed;
+    top:5.5rem;
+    right:0;
+    width:350px;
+    height:100%;
+    overflow-y: scroll; 
+
+    .dealer-name { 
+        height: 41px;
+        color: #ffffff;
+        padding: 10px;
+        font-size: 1.2em; 
+        font-weight: bold;
+        text-align: center;
+        @extend .edge--both--reverse;
+    }
+    .dealer-num {   
+        font-weight: 900;
+        font-size: 1.7em;
+        text-align: center;
+        padding-top: 16px;
+        &:before {
+            content:'';
+            background:url('../images/tel.png');
+            background-repeat: no-repeat;
+        }
+    }
+    
+    label { 
+        text-transform: uppercase;
+        margin-top: 5px;
+        color:black;
+        font-size: 0.9em;
+        font-weight: bold;
+        &.req + span {
+            float:right;
+            text-transform: uppercase;
+            color:$blue;
+            &:after { 
+                content: "\f06a";
+                font-family: fontawesome;
+                margin-left:5px;
+            }
+        }  
+    }
+    
+    label:has(.req) {
+            background:red;      
+        }
+  
+    .form-control { 
+        background: transparent;
+        border: 1px solid #cecece;
+    }
+}
+.rightsidebar-sm {
+    
+    border: 1px solid black;
+    
+    .dealer-name { 
+        background: #4f4f4f;
+        height: 41px;
+        color: #ffffff;
+        padding: 10px;
+        font-size: 1.2em; 
+        font-weight: bold;
+        text-align: center;
+    }
+    .dealer-num {   
+        font-weight: 900;
+        font-size: 1.7em;
+        text-align: center;
+        padding-top: 16px;
+    }
+    
+    label { 
+        text-transform: uppercase;
+        margin-top: 5px;
+        color:black;
+        font-size: 0.9em;
+    }
+  
+    .form-control { 
+        background: transparent;
+        color:black;
+        border: 1px solid #cecece;
+    }
+}
+.right-arrow, .left-arrow {
+    margin: 117px 0; 
+    width: 6%;
+}
+.right-arrow {
+    border-bottom-right-radius: $size * 2;
+    border-top-right-radius: $size * 2;
+    background: rgba(0, 0, 0, 0.4);
+}
+.left-arrow {
+    border-bottom-left-radius: $size * 2;
+    border-top-left-radius: $size * 2;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+
