@@ -12,6 +12,19 @@
 			height: 30px;
 		}
 	}
+    
+    .nav-item {
+        &.active {
+//            -moz-transform: rotate(20deg); 
+//            -o-transform: rotate(20deg); 
+//            -webkit-transform: rotate(20deg); 
+//            background: #5c5c5c; 
+//            margin-bottom: -100px; 
+//            margin-top: -70px; 
+//            height: 150px;
+        }    
+        
+    }
 }
 
 // HEADER
