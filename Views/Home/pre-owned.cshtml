@@ -3,7 +3,6 @@
 }
 
 <section class="section results">
-    
     <ul class="breadcrumb mb-0">
         <li class="breadcrumb-item">
           <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
@@ -19,14 +18,20 @@
     </div>
    
     <div class="container">
-    <aside class="leftsidebar d-none d-md-block">
+    <aside class="facets d-none d-md-block">
         @Html.Partial("pre-owned-facets")
     </aside>
     <div class="results-column">
         <div class="row mt-4">
             <div class="col">
-                <h1 class="mb-0"><span>USED </span><span class="text-secondary">LEXUS RX MODELS</span></h1>
-                <span class="d-block py-2"><b>35</b> VEHICLES MATCHING YOUR SEARCH </span> 
+                <h1 class="mb-0"><span class="light pr-2">USED </span>
+                
+                <div class="edge--skew bg-gray-6 p-3">
+                    <span class="text-white">LEXUS RX MODELS</span>
+                </div>
+                
+                </h1>
+                <span class="d-block py-4"><b>35</b> Vehicles matching your search </span> 
             </div>
         </div>
             
@@ -56,7 +61,7 @@
                     <li class="page-item active">
                         <a class="page-link" href="#">3</a>
                     </li>
-                    <li class="page-item disabled">
+                    <li class="page-item">
                         <a class="page-link" href="#">4</a>
                     </li>
                     <li class="page-item">

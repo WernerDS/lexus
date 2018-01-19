@@ -3,22 +3,20 @@ $size: 45px;
 
 //SEARCH RESULTS
 .results { 
+    @extend .bg-gray-2;
     .breadcrumb { 
         margin-left:300px;
         background:none;
         font-weight: bold;
         text-transform: uppercase;
-        border-bottom: 1px solid #ebebeb;
-        font-size: 0.8em;
+        font-size: 0.9em;
         
         @include media-breakpoint-down(sm) {
             margin-left:0;
         } 
     }
-    
     .refine-search {
         .btn {
-            border-bottom:1px solid #ededed; 
             &:before {
                 content: "\f1de";
                 font-family: fontawesome;
@@ -44,7 +42,7 @@ $size: 45px;
         }
         a:hover {
             text-decoration: none;
-            box-shadow: 0 7px 14px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1); 
+            box-shadow: 0 7px 14px rgba(0,0,0,0.1), 0 10px 5px rgba(0,0,0,0.1); 
         }
         
          
@@ -85,11 +83,33 @@ $size: 45px;
                 text-transform: uppercase;
                 //Model Price
                 span:nth-of-type(1) {
-                    position: absolute;
-                    top:5px;
-                    right:22px;
-                    font-size:1.8em;  
-                    font-weight: bold;             
+                        position: absolute;
+                        top: 0px;
+                        right: 15px;
+                        font-size: 1.8em;
+                        font-weight: bold;
+                        background: #000;
+                        color: white;
+                        padding: 3px 12px;
+                        height: 44px;
+                        display: block;
+                        overflow: hidden;
+                        z-index: 1;
+                        width: auto;
+                        min-width: 224px;
+                        text-align: right;
+                    &:before { 
+                        content: '';
+                        background: white;
+                        transform: skewX(-20deg);
+                        left: -157px;
+                        top: 0;
+                        display: block;
+                        z-index: 0;
+                        position: absolute;
+                        width: 100%;
+                        height: 44px;
+                    }
                 }
                 
                  //Mileage
@@ -116,18 +136,17 @@ $size: 45px;
                     font-size:1.2em;
                     display: block;
                     text-transform: uppercase;
-                    font-weight: bold; 
                     padding-left:5px;
-                    @extend .text-secondary;
                    
                 }
                 //Model Detailed
                 span:nth-child(5) {
-                    font-size:1.6em;
+                    font-size:2em;
                     display: block;
-                    font-weight: normal;
+                    font-weight: bold;
                     text-transform: uppercase;
                     padding-left:5px;
+                    @extend .text-secondary;
                     @extend .text-truncate;
                    
                 }
@@ -136,7 +155,7 @@ $size: 45px;
                     font-size:0.8em;
                     display: block;
                     text-transform: none;
-                    color:grey;
+                    @extend .gray-6;
                     margin: 5px 0;
                     padding-left:5px;
                     @extend .text-truncate;
@@ -145,11 +164,18 @@ $size: 45px;
                 //Dealership Name
                 span:nth-child(7) {
                     font-size:1em; 
-                    @extend .badge; 
-                    @extend .badge-secondary;
-                    background:#e3e3e3;
-                    color:black;
+                    @extend .gray-8;
                     margin: 0px 0px 5px 5px;
+                    &:before { 
+                        @extend .fas;
+                        font-size: 1.2em;
+                        @extend .gray-7;
+                        
+                        content:'\f3c5';
+                        font-family: fontawesome;
+                        margin-right:5px;
+                        
+                    }    
                 }  
             }
         }
@@ -165,15 +191,19 @@ $size: 45px;
 }
 
 // FACETS
-.leftsidebar {
+.facets {
     position: fixed;
-    top:5.5rem;
+    top:4.5rem;
     left:0;
     width:300px;
     height:100%;
     overflow-y: scroll;
-    box-shadow: 0 7px 14px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1); 
-    background:#ffffff;
+//    box-shadow: 0 7px 14px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1); 
+     @extend .bg-gray-3;
+    
+    p { 
+        @extend .lead;
+    }
     
     > div:first-child { 
         background: #c1c1c1; 
@@ -196,8 +226,8 @@ $size: 45px;
         font-size:0.9em;
         margin:15px 20px;
         font-weight: bold;
-        color:grey;
-        border-bottom:1px dotted #d0d0d0;      
+        color:black;
+             
     }
     .search-list { 
         div { 
@@ -207,15 +237,15 @@ $size: 45px;
             margin: 0 5px;
             
             & a {
-                color:grey;
+                color:black;
             }
             &.active {
-                background: #505050;
+                background: $gray-200;
                 font-weight: bold;
-                border-radius: 5px;
-                margin: 0 5px;
+                border-radius: 0;
+                margin: 0;
                 a {
-                    color:white;
+                    color:black;
                 }
                 
                 &:hover {
@@ -236,11 +266,7 @@ $size: 45px;
             position: absolute;
             top: 6px;
             right: 15px;
-            color:grey;
-            @extend .badge;
-            @extend .badge-pill;
-            @extend .badge-light;
-            background:#eaeaea;
+            color:grey;                   
             min-width:25px;
         }
     }
@@ -248,12 +274,16 @@ $size: 45px;
 
 //SEARCH DETAILS
 .result-details { 
+    background:#d9d8d9;
+    
     margin-right:350px;
         @include media-breakpoint-down(md) {
             margin-right:0;
         } 
 
-    .card {
+    .detail-card{
+        background-color: transparent;
+        border: none;
         max-width: 640px;  
         margin-top: 20px;
       
@@ -267,11 +297,10 @@ $size: 45px;
     
     .thumbnail-img { 
         img {
-            margin: -7px 1px;
-            border:1px solid transparent;
-            max-width:120px;
+            min-width: 125px;
+            transition: box-shadow .4s;
             &:hover {
-                border:1px solid black;
+                box-shadow: 0 0 10px rgba(33,33,33,.9); 
                 cursor: pointer;
             }
         }
@@ -280,6 +309,8 @@ $size: 45px;
     .card-header {
         text-transform: uppercase; 
         position: relative;
+        background: none;
+        color:white;
         
         h1 {
             @extend .text-truncate;
@@ -295,21 +326,38 @@ $size: 45px;
         } 
         
         h1 {
-            font-size: 1.5em; 
+            font-size: 2.5em; 
             margin-bottom: 0;
         }
-
+    
         span {
-            position: absolute;
-            top: 15px;
-            right: 17px;
-            position: absolute;
-            top: 2px;
-            right: 9px;
-            font-size: 2em;
-            font-weight: bold;
-            
-          
+                background: white;
+                z-index: 1;
+                position: absolute;
+                top: 14px;
+                right: 0;
+                font-size: 2.5em;
+                font-weight: bold;
+                color: black;
+  
+            &:before {
+                background: inherit;
+                content: '';
+                display: block;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                right: 0;
+                z-index: -1;
+                -webkit-backface-visibility: hidden; // for Chrome Windows
+            }
+
+            &:before {
+                top: -1px;
+                transform: skewX(-20deg);
+                transform-origin: 100% 0;
+              }
+
         }
     }
     
@@ -365,77 +413,133 @@ $size: 45px;
         }
     }
     
+    .car-specs { 
+        .list-inline {
+            margin-top: 20px;
+            & .list-inline-item { 
+                min-width: 120px;
+                transform: skewX(-20deg);
+                
+                p {
+                    font-weight: bold;
+                    font-size:0.9em;
+                    margin-top:20px;
+                    transform: skewX(20deg);
+                }
+                span {
+                    display: block; 
+                    font-size: 1.5em;
+                    margin-bottom: 20px;
+                    transform: skewX(20deg); 
+                }
+                
+                //Mileage
+                 &:nth-of-type(1) p  { 
+                    &:before {
+                        content:'Mileage';                     
+                    }
+                }
+                //Year
+                 &:nth-of-type(2) p  { 
+                    &:before {
+                        content:'Year';                     
+                    }
+                }
+                //Engine
+                 &:nth-of-type(3) p  { 
+                    &:before {
+                        content:'Engine';                     
+                    }
+                }
+                //Transmission
+                 &:nth-of-type(4) p  { 
+                    &:before {
+                        content:'Transmission';                     
+                    }
+                }
+            }
+            
+            & .list-inline-item:nth-child(n + 2):not(:nth-child(n + 4)) {
+                border-right:2px dotted #4d4d4d;
+                margin:3px;
+                border-radius: 0;
+            }
+            
+            & .list-inline-item:first-child { 
+                background:#4d4d4d;
+                transform: skewX(-20deg);
+                color:white;   
+            }
+        }
+    }
+    
     .breadcrumb { 
         background:none;
         font-weight: bold;
         text-transform: uppercase;
-        border-bottom: 1px solid #ebebeb;
         font-size: 0.8em;
-        margin: 0px -15px;
+        margin: -5px -15px;
+        a {color:grey;}
+        .active {color:white;}
+    }
+    
+
+
+    //CUSTOM CAROUSEL
+    .carousel-control-prev {
+        left: -70px;
+    }
+    .carousel-control-next {
+        right: -70px;  
+    }
+    
+    .carousel-control-next-icon {
+        background-image: url('../images/right-arrow.png');
+        height: 50px;
+    }
+
+    .carousel-control-prev-icon {
+        background-image: url('../images/left-arrow.png');
+        height: 50px;
     }
     
 }
 
 //CONTACT DEALER
-.rightsidebar {
+.result-contact {
+    @extend .bg-gray-8;
     box-shadow: 0 7px 14px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1); 
     position: fixed;
-    top:5.5rem;
+    top:4rem;
     right:0;
     width:350px;
     height:100%;
-    overflow-y: scroll; 
-
+    overflow-y: scroll;
+    
     .dealer-name { 
         height: 41px;
         color: #ffffff;
-        padding: 10px;
-        font-size: 1.2em; 
+        padding-top: 20px;
+        font-size: 1.3em; 
         font-weight: bold;
         text-align: center;
-        @extend .edge--both--reverse;
+        text-transform: uppercase;
     }
     .dealer-num {   
         font-weight: 900;
-        font-size: 1.7em;
+        color: #ffffff;
+        font-size: 1.3em;
         text-align: center;
         padding-top: 16px;
         &:before {
-            content:'';
-            background:url('../images/tel.png');
-            background-repeat: no-repeat;
+            content: "\f095";
+            font-family: fontawesome;
+            margin-right:5px;
         }
-    }
-    
-    label { 
-        text-transform: uppercase;
-        margin-top: 5px;
-        color:black;
-        font-size: 0.9em;
-        font-weight: bold;
-        &.req + span {
-            float:right;
-            text-transform: uppercase;
-            color:$blue;
-            &:after { 
-                content: "\f06a";
-                font-family: fontawesome;
-                margin-left:5px;
-            }
-        }  
-    }
-    
-    label:has(.req) {
-            background:red;      
-        }
-  
-    .form-control { 
-        background: transparent;
-        border: 1px solid #cecece;
-    }
+    }    
 }
-.rightsidebar-sm {
-    
+.result-contact-sm {
+ 
     border: 1px solid black;
     
     .dealer-name { 
@@ -467,20 +571,7 @@ $size: 45px;
         border: 1px solid #cecece;
     }
 }
-.right-arrow, .left-arrow {
-    margin: 117px 0; 
-    width: 6%;
-}
-.right-arrow {
-    border-bottom-right-radius: $size * 2;
-    border-top-right-radius: $size * 2;
-    background: rgba(0, 0, 0, 0.4);
-}
-.left-arrow {
-    border-bottom-left-radius: $size * 2;
-    border-top-left-radius: $size * 2;
-    background: rgba(0, 0, 0, 0.4);
-}
+  
 
 
 
