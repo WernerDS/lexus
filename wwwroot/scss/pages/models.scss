@@ -1,0 +1,246 @@
+body { 
+    background-image: url('/images/white_leather.png');
+}
+
+.models { 
+    .main-cta {
+        position: fixed;
+        top: 65px;
+        right: -12px;
+        height: 60px;
+        background:rgba(0, 0, 0, 0.7);
+        transform: skewX(-20deg);
+        z-index: 1000;
+        .car-specs { 
+            .list-inline {
+                text-transform: uppercase;
+          
+                & .list-inline-item { 
+                    min-width: 120px;
+                    color:white;
+                    height: 60px;
+                    width: 248px;
+                    
+                    span {
+                        display: block;
+                        font-size: 1.2em;
+                        transform: skewX(20deg);
+                        font-weight: bold;
+                        padding-top: 16px;
+                        img { margin-right:10px;}
+                    }
+                }
+
+                & .list-inline-item:last-child {     
+                    background:$blue;
+                }
+
+            }
+        }
+    }
+    .main-cta-stick {
+        height: 60px;
+        transform: skewX(-20deg);
+        z-index: 1000;
+        border-bottom:2px solid #565656;
+        .car-specs { 
+            .list-inline {
+                text-transform: uppercase;
+          
+                & .list-inline-item {   
+                    height: 60px;
+                    width:auto;
+                    span {
+                        display: block;
+                        font-size: 1.2em;
+                        transform: skewX(20deg);
+                        font-weight: bold;
+                        padding-top: 16px;
+                        margin:0 20px;
+                        
+                    }
+                }
+
+                & .list-inline-item:first-child {     
+                    background:rgba(0, 0, 0, 0.7);
+                    a {
+                        color:white;
+                    }
+                }
+                
+                & .list-inline-item:hover { 
+                    background:$gray-300;
+                    color:black;
+                }
+
+            }
+        }
+    }
+    .car-specs-model { 
+        .list-inline {
+            margin-top: 20px;
+            
+            .list-inline-item {    
+                margin: 0px -2px;
+                min-width: 179px;
+                height: 200px;
+                transform: skewX(-20deg);
+                
+                p {
+                    font-weight: bold;
+                    font-size:1.5em;
+                    margin-top:20px;
+                    transform: skewX(20deg);
+                }
+                span {
+                    display: block; 
+                    font-size: 4.5em;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                    transform: skewX(20deg); 
+                    padding:0 30px;
+                }
+                
+                //0-100
+                 &:nth-of-type(1) p  { 
+                    &:before {
+                        content:'0-100 km/h';                     
+                    }
+                }
+                //Max Km/h
+                 &:nth-of-type(2) p  { 
+                    &:before {
+                        content:'Max(km/h)';                     
+                    }
+                }
+                //Emmisions
+                 &:nth-of-type(3) p  { 
+                    &:before {
+                        content:'CO2(g/km)';                     
+                    }
+                }
+            }
+            
+            & .list-inline-item:nth-child(2) {
+                border-right:2px dotted #4d4d4d;
+            }
+            
+            & .list-inline-item:first-child { 
+                background:#4d4d4d;
+                transform: skewX(-20deg);
+                color:white;   
+            }
+        }
+    }
+    .car-model-pic { 
+    margin-top:-50px;
+    }
+    .car-model-colours { 
+        
+        
+        //CAR Colours
+        .morello-red {background:$morello-red;}
+        .madder-red {background:$madder-red;}
+        .graphite-black {background:$graphite-black;}
+        .mercury-grey {background:$mercury-grey;}
+        .platinum-silver {background:$platinum-silver;}
+        .sonic-quartz {background:$sonic-quartz;}
+        
+        
+        .list-inline-item { 
+            span {
+                @extend .edge--skew;
+                display: inline-block;
+                width:50px;
+                height:15px;
+                border-radius:3px;
+                box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+                transition: all 0.2s;
+            }
+            & span:hover { 
+                padding-top:10px;
+                cursor: pointer;
+                height:20px;
+                margin-top:-20px;
+            }
+        }
+        p {
+            text-align: center;
+            font-size:1.2em;
+            font-weight: bold;
+        }
+    }
+    .car-features { 
+        position: relative;
+        .car-features-row {
+            @extend .align-items-center;
+            @extend .w-50-md-up;
+            height:100vh;
+            
+            ul { 
+                @extend .h3; 
+                color:white;
+                font-weight: 400; 
+                @extend .light;
+                    
+                li { 
+                   margin:30px 0; 
+                }
+            }  
+        }
+    }
+    .car-vr { 
+        .car-vr-models {
+            .list-inline {
+            margin-top: 10px;
+            
+            .list-inline-item {    
+                margin: 0px -2px;
+                transform: skewX(-20deg);
+                
+                span {
+                    display: block; 
+                    font-size: 1.4em;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                    transform: skewX(20deg); 
+                    padding:0 30px;
+                }     
+            }
+   
+            & .list-inline-item.active { 
+                background:#4d4d4d;
+                transform: skewX(-20deg);
+                color:white;   
+            }
+        }    
+            
+        }
+    }
+    .car-info-table { 
+        thead {
+            border-bottom: 1px solid #000000;
+        }
+        .nav  { 
+            display: block;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            overflow:hidden;
+            background-image: url('/images/gradient.png');
+            background-position-x: 48px;
+            background-position-y: -80px;
+            background-repeat: no-repeat;
+            height: 100%;
+           
+            .nav-link.active { 
+                background: $gray-800;
+                color:white;
+                width:100%;
+                margin-left: 13px;
+                @extend .edge--skew;
+            }
+        }
+        
+        
+    }
+}

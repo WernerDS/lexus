@@ -10,7 +10,7 @@ html, html a, body {
 
 html,
 .material-icons {
-	font-size: 14px;
+	font-size: 14px; 
 }
 
 @import "fonts/nobel";
@@ -38,7 +38,7 @@ html,
 @import "ark/grid";
 //@import "ark/icons";
 //@import "ark/images";
-//@import "ark/maps";
+@import "ark/maps";
 //@import "ark/modals";
 @import "ark/navbars";
 @import "ark/owl.carousel"; 
@@ -46,13 +46,15 @@ html,
 //@import "ark/stats";
 //@import "ark/tables";
 //@import "ark/toggles";
-@import "ark/typography"; 
+@import "ark/typography";  
 
 // Theme
 @import "theme"; 
 
 //Mixins
-@import "bootstrap/mixins/slanted-edges";
+@import "bootstrap/mixins/slanted-edges"; 
 
 //Pages
 @import "pages/pre-owned"; 
+@import "pages/models"; 
+
