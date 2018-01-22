@@ -503,7 +503,7 @@ template {
   display: none !important; }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1, .h2, .h3, .models .car-features .car-features-row ul, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: "nobellexusbold";
   font-weight: 700;
@@ -516,7 +516,7 @@ h1, .h1 {
 h2, .h2 {
   font-size: 2rem; }
 
-h3, .h3 {
+h3, .h3, .models .car-features .car-features-row ul {
   font-size: 1.75rem; }
 
 h4, .h4 {
@@ -4617,7 +4617,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .align-items-end {
   align-items: flex-end !important; }
 
-.align-items-center {
+.align-items-center, .models .car-features .car-features-row {
   align-items: center !important; }
 
 .align-items-baseline {
@@ -8799,7 +8799,7 @@ readers do not read off random characters that represent icons */
     width: 50% !important; } }
 
 @media (min-width: 768px) {
-  .w-50-md-up {
+  .w-50-md-up, .models .car-features .car-features-row {
     width: 50% !important; } }
 
 @media (max-width: 991.99px) {
@@ -9552,16 +9552,30 @@ readers do not read off random characters that represent icons */
 .display-4 {
   font-family: "nobellexusbold";
   text-transform: uppercase; }
-  .shout.light,
+  .shout.light, .models .car-features .car-features-row ul.shout,
   .shout .light,
+  .shout .models .car-features .car-features-row ul, .models .car-features .car-features-row
+  .shout ul,
   .display-1.light,
+  .models .car-features .car-features-row ul.display-1,
   .display-1 .light,
+  .display-1 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+  .display-1 ul,
   .display-2.light,
+  .models .car-features .car-features-row ul.display-2,
   .display-2 .light,
+  .display-2 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+  .display-2 ul,
   .display-3.light,
+  .models .car-features .car-features-row ul.display-3,
   .display-3 .light,
+  .display-3 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+  .display-3 ul,
   .display-4.light,
-  .display-4 .light {
+  .models .car-features .car-features-row ul.display-4,
+  .display-4 .light,
+  .display-4 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+  .display-4 ul {
     font-family: "nobellexuslight"; }
   .shout.gray,
   .shout .gray,
@@ -9576,23 +9590,47 @@ readers do not read off random characters that represent icons */
     color: #e9ecef; }
 
 h1.light,
-h1 .light, .h1.light,
+h1 .light,
+h1 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+h1 ul, .h1.light, .models .car-features .car-features-row ul.h1,
 .h1 .light,
+.h1 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+.h1 ul,
 h2.light,
-h2 .light, .h2.light,
+h2 .light,
+h2 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+h2 ul, .h2.light, .models .car-features .car-features-row ul.h2,
 .h2 .light,
+.h2 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+.h2 ul,
 h3.light,
-h3 .light, .h3.light,
-.h3 .light,
+h3 .light,
+h3 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+h3 ul, .h3.light, .models .car-features .car-features-row ul,
+.h3 .light, .models .car-features .car-features-row ul .light,
+.h3 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+.h3 ul, .models .car-features .car-features-row ul ul,
 h4.light,
-h4 .light, .h4.light,
+h4 .light,
+h4 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+h4 ul, .h4.light, .models .car-features .car-features-row ul.h4,
 .h4 .light,
+.h4 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+.h4 ul,
 h5.light,
-h5 .light, .h5.light,
+h5 .light,
+h5 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+h5 ul, .h5.light, .models .car-features .car-features-row ul.h5,
 .h5 .light,
+.h5 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+.h5 ul,
 h6.light,
-h6 .light, .h6.light,
-.h6 .light {
+h6 .light,
+h6 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+h6 ul, .h6.light, .models .car-features .car-features-row ul.h6,
+.h6 .light,
+.h6 .models .car-features .car-features-row ul, .models .car-features .car-features-row
+.h6 ul {
   font-family: "nobellexuslight"; }
 
 h1.gray,
@@ -9602,8 +9640,8 @@ h2.gray,
 h2 .gray, .h2.gray,
 .h2 .gray,
 h3.gray,
-h3 .gray, .h3.gray,
-.h3 .gray,
+h3 .gray, .h3.gray, .models .car-features .car-features-row ul.gray,
+.h3 .gray, .models .car-features .car-features-row ul .gray,
 h4.gray,
 h4 .gray, .h4.gray,
 .h4 .gray,
@@ -9827,13 +9865,13 @@ label {
     transform: skewY(-1.5deg);
     transform-origin: 100%; }
 
-.edge--skew, .pagination .page-item.active, .models .car-model-colours .list-inline-item span {
+.edge--skew, .pagination .page-item.active, .models .car-model-colours .list-inline-item span, .models .car-info-table .nav .nav-link.active {
   transform: skewX(-20deg);
   display: inline-block; }
-  .edge--skew span, .pagination .page-item.active span, .models .car-model-colours .list-inline-item span span {
+  .edge--skew span, .pagination .page-item.active span, .models .car-model-colours .list-inline-item span span, .models .car-info-table .nav .nav-link.active span {
     transform: skewX(20deg);
     display: inline-block; }
-  .edge--skew a, .pagination .page-item.active a, .models .car-model-colours .list-inline-item span a {
+  .edge--skew a, .pagination .page-item.active a, .models .car-model-colours .list-inline-item span a, .models .car-info-table .nav .nav-link.active a {
     transform: skewX(20deg);
     display: inline-block; }
 
@@ -10469,3 +10507,49 @@ body {
   text-align: center;
   font-size: 1.2em;
   font-weight: bold; }
+
+.models .car-features {
+  position: relative; }
+  .models .car-features .car-features-row {
+    height: 100vh; }
+    .models .car-features .car-features-row ul {
+      color: white;
+      font-weight: 400; }
+      .models .car-features .car-features-row ul li {
+        margin: 30px 0; }
+
+.models .car-vr .car-vr-models .list-inline {
+  margin-top: 10px; }
+  .models .car-vr .car-vr-models .list-inline .list-inline-item {
+    margin: 0px -2px;
+    transform: skewX(-20deg); }
+    .models .car-vr .car-vr-models .list-inline .list-inline-item span {
+      display: block;
+      font-size: 1.4em;
+      font-weight: bold;
+      margin-bottom: 20px;
+      transform: skewX(20deg);
+      padding: 0 30px; }
+  .models .car-vr .car-vr-models .list-inline .list-inline-item.active {
+    background: #4d4d4d;
+    transform: skewX(-20deg);
+    color: white; }
+
+.models .car-info-table thead {
+  border-bottom: 1px solid #000000; }
+
+.models .car-info-table .nav {
+  display: block;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  overflow: hidden;
+  background-image: url("/images/gradient.png");
+  background-position-x: 48px;
+  background-position-y: -80px;
+  background-repeat: no-repeat;
+  height: 100%; }
+  .models .car-info-table .nav .nav-link.active {
+    background: #343a40;
+    color: white;
+    width: 100%;
+    margin-left: 13px; }

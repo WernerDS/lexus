@@ -170,4 +170,77 @@ body {
             font-weight: bold;
         }
     }
+    .car-features { 
+        position: relative;
+        .car-features-row {
+            @extend .align-items-center;
+            @extend .w-50-md-up;
+            height:100vh;
+            
+            ul { 
+                @extend .h3; 
+                color:white;
+                font-weight: 400; 
+                @extend .light;
+                    
+                li { 
+                   margin:30px 0; 
+                }
+            }  
+        }
+    }
+    .car-vr { 
+        .car-vr-models {
+            .list-inline {
+            margin-top: 10px;
+            
+            .list-inline-item {    
+                margin: 0px -2px;
+                transform: skewX(-20deg);
+                
+                span {
+                    display: block; 
+                    font-size: 1.4em;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                    transform: skewX(20deg); 
+                    padding:0 30px;
+                }     
+            }
+   
+            & .list-inline-item.active { 
+                background:#4d4d4d;
+                transform: skewX(-20deg);
+                color:white;   
+            }
+        }    
+            
+        }
+    }
+    .car-info-table { 
+        thead {
+            border-bottom: 1px solid #000000;
+        }
+        .nav  { 
+            display: block;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            overflow:hidden;
+            background-image: url('/images/gradient.png');
+            background-position-x: 48px;
+            background-position-y: -80px;
+            background-repeat: no-repeat;
+            height: 100%;
+           
+            .nav-link.active { 
+                background: $gray-800;
+                color:white;
+                width:100%;
+                margin-left: 13px;
+                @extend .edge--skew;
+            }
+        }
+        
+        
+    }
 }
