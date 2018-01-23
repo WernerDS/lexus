@@ -47,6 +47,8 @@ body {
             .list-inline {
                 text-transform: uppercase;
           
+               
+                
                 & .list-inline-item {   
                     height: 60px;
                     width:auto;
@@ -64,13 +66,22 @@ body {
                 & .list-inline-item:first-child {     
                     background:rgba(0, 0, 0, 0.7);
                     a {
-                        color:white;
+                        color:white; 
                     }
                 }
                 
                 & .list-inline-item:hover { 
                     background:$gray-300;
                     color:black;
+                    height: 58px;
+                     a {
+                    color:black; 
+                    text-decoration: none;
+                    
+                    &:hover { 
+                        color:black;  
+                    }
+                }
                 }
 
             }
@@ -132,11 +143,49 @@ body {
             }
         }
     }
+    .car-specials { 
+         position: relative;
+        .car-special-item { 
+            img {
+                box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.37);
+                border-radius: 8px;
+            }
+            //Car Desc
+            span:nth-of-type(1) {
+                position: absolute;
+                top:12px;
+                left:30px;
+                font-size:1.2em;
+                font-weight:bold;
+            }
+            //Car Price
+            span:nth-of-type(2) {
+                position: absolute;
+                top:52px;
+                left:30px;
+                font-size:2em;
+                font-weight: bold;
+            }
+            //Car Special
+            span:nth-of-type(3) {
+                font-size:1.1em;
+                position: absolute;
+                top:94px;
+                left:30px;
+                font-weight: normal;
+                &:before {
+                    content:'SAVE'; 
+                    display: block;
+                    text-align: left;
+                    margin-bottom: -5px;
+                }
+            }
+        }
+    }
     .car-model-pic { 
     margin-top:-50px;
     }
     .car-model-colours { 
-        
         
         //CAR Colours
         .morello-red {background:$morello-red;}
@@ -199,12 +248,11 @@ body {
                 transform: skewX(-20deg);
                 
                 span {
-                    display: block; 
+                    display: block;
                     font-size: 1.4em;
                     font-weight: bold;
-                    margin-bottom: 20px;
-                    transform: skewX(20deg); 
-                    padding:0 30px;
+                    transform: skewX(20deg);
+                    padding: 4px 30px;
                 }     
             }
    
@@ -242,5 +290,14 @@ body {
         }
         
         
+    }
+    .car-dealerships { 
+        .card {             
+            .card-header,.card-footer { border:none;background: transparent;}
+            background-image: url('/images/paper-texture.jpg');
+            color:white;
+            border:none;
+        }
+    
     }
 }

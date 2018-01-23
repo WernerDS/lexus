@@ -9659,10 +9659,10 @@ p {
 #main-nav.navbar {
   padding: 0;
   height: 65px;
-  background: #212529;
+  background: black;
   z-index: 1040; }
   #main-nav.navbar .navbar-brand img {
-    height: 30px;
+    height: 42px;
     margin-left: 140px; }
   #main-nav.navbar .navbar-nav {
     align-items: center; }
@@ -10017,6 +10017,172 @@ label {
 
 .-green {
   background: #5e9b42; }
+
+.angle--top-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% 100%, 0 100%); }
+  @supports not (clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% 100%, 0 100%)) {
+    .angle--top-left::before, .angle--top-left::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      z-index: 10;
+      display: block;
+      border-style: solid; }
+    .angle--top-left::before {
+      top: 0;
+      border-width: 8vw 100vw 0 0;
+      border-color: #fff transparent transparent transparent; } }
+
+.angle--top-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0 100%); }
+  @supports not (clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0 100%)) {
+    .angle--top-right::before, .angle--top-right::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      z-index: 10;
+      display: block;
+      border-style: solid; }
+    .angle--top-right::before {
+      top: 0;
+      border-width: 8vw 0 0 100vw;
+      border-color: #fff transparent transparent transparent; } }
+
+.angle--bottom-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw)); }
+  @supports not (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw))) {
+    .angle--bottom-left::before, .angle--bottom-left::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      z-index: 10;
+      display: block;
+      border-style: solid; }
+    .angle--bottom-left::after {
+      bottom: 0;
+      border-width: 0 100vw 8vw 0;
+      border-color: transparent transparent #fff transparent; } }
+
+.angle--bottom-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%); }
+  @supports not (clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%)) {
+    .angle--bottom-right::before, .angle--bottom-right::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      z-index: 10;
+      display: block;
+      border-style: solid; }
+    .angle--bottom-right::after {
+      bottom: 0;
+      border-width: 0 0 8vw 100vw;
+      border-color: transparent transparent #fff transparent; } }
+
+.angle--both-left-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% 100%, 0 calc(100% - 7vw)); }
+  @supports not (clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% 100%, 0 calc(100% - 7vw))) {
+    .angle--both-left-left::before, .angle--both-left-left::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      z-index: 10;
+      display: block;
+      border-style: solid; }
+    .angle--both-left-left::before {
+      top: 0;
+      border-width: 8vw 100vw 0 0;
+      border-color: #fff transparent transparent transparent; }
+    .angle--both-left-left::after {
+      bottom: 0;
+      border-width: 0 100vw 8vw 0;
+      border-color: transparent transparent #fff transparent; } }
+
+.angle--both-right-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% calc(100% - 7vw), 0 100%); }
+  @supports not (clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% calc(100% - 7vw), 0 100%)) {
+    .angle--both-right-right::before, .angle--both-right-right::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      z-index: 10;
+      display: block;
+      border-style: solid; }
+    .angle--both-right-right::before {
+      top: 0;
+      border-width: 8vw 0 0 100vw;
+      border-color: #fff transparent transparent transparent; }
+    .angle--both-right-right::after {
+      bottom: 0;
+      border-width: 0 0 8vw 100vw;
+      border-color: transparent transparent #fff transparent; } }
+
+.angle--both-left-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% calc(100% - 7vw), 0 100%); }
+  @supports not (clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% calc(100% - 7vw), 0 100%)) {
+    .angle--both-left-right::before, .angle--both-left-right::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      z-index: 10;
+      display: block;
+      border-style: solid; }
+    .angle--both-left-right::before {
+      top: 0;
+      border-width: 8vw 100vw 0 0;
+      border-color: #fff transparent transparent transparent; }
+    .angle--both-left-right::after {
+      bottom: 0;
+      border-width: 0 0 8vw 100vw;
+      border-color: transparent transparent #fff transparent; } }
+
+.angle--both-right-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0 calc(100% - 7vw)); }
+  @supports not (clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0 calc(100% - 7vw))) {
+    .angle--both-right-left::before, .angle--both-right-left::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      z-index: 10;
+      display: block;
+      border-style: solid; }
+    .angle--both-right-left::before {
+      top: 0;
+      border-width: 8vw 0 0 100vw;
+      border-color: #fff transparent transparent transparent; }
+    .angle--both-right-left::after {
+      bottom: 0;
+      border-width: 0 100vw 8vw 0;
+      border-color: transparent transparent #fff transparent; } }
+
+.angle__content {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.angle--colour {
+  color: #fff;
+  background-color: #2196F3;
+  text-align: center;
+  padding: 10% 0; }
+
+.parallax-slider {
+  overflow: hidden; }
 
 .results .breadcrumb {
   margin-left: 300px;
@@ -10434,7 +10600,13 @@ body {
         color: white; }
     .models .main-cta-stick .car-specs .list-inline .list-inline-item:hover {
       background: #dee2e6;
-      color: black; }
+      color: black;
+      height: 58px; }
+      .models .main-cta-stick .car-specs .list-inline .list-inline-item:hover a {
+        color: black;
+        text-decoration: none; }
+        .models .main-cta-stick .car-specs .list-inline .list-inline-item:hover a:hover {
+          color: black; }
 
 .models .car-specs-model .list-inline {
   margin-top: 20px; }
@@ -10467,6 +10639,35 @@ body {
     background: #4d4d4d;
     transform: skewX(-20deg);
     color: white; }
+
+.models .car-specials {
+  position: relative; }
+  .models .car-specials .car-special-item img {
+    box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.37);
+    border-radius: 8px; }
+  .models .car-specials .car-special-item span:nth-of-type(1) {
+    position: absolute;
+    top: 12px;
+    left: 30px;
+    font-size: 1.2em;
+    font-weight: bold; }
+  .models .car-specials .car-special-item span:nth-of-type(2) {
+    position: absolute;
+    top: 52px;
+    left: 30px;
+    font-size: 2em;
+    font-weight: bold; }
+  .models .car-specials .car-special-item span:nth-of-type(3) {
+    font-size: 1.1em;
+    position: absolute;
+    top: 94px;
+    left: 30px;
+    font-weight: normal; }
+    .models .car-specials .car-special-item span:nth-of-type(3):before {
+      content: 'SAVE';
+      display: block;
+      text-align: left;
+      margin-bottom: -5px; }
 
 .models .car-model-pic {
   margin-top: -50px; }
@@ -10527,9 +10728,8 @@ body {
       display: block;
       font-size: 1.4em;
       font-weight: bold;
-      margin-bottom: 20px;
       transform: skewX(20deg);
-      padding: 0 30px; }
+      padding: 4px 30px; }
   .models .car-vr .car-vr-models .list-inline .list-inline-item.active {
     background: #4d4d4d;
     transform: skewX(-20deg);
@@ -10553,3 +10753,11 @@ body {
     color: white;
     width: 100%;
     margin-left: 13px; }
+
+.models .car-dealerships .card, .models .car-dealerships .results .results-column .result-listing, .results .results-column .models .car-dealerships .result-listing {
+  background-image: url("/images/paper-texture.jpg");
+  color: white;
+  border: none; }
+  .models .car-dealerships .card .card-header, .models .car-dealerships .results .results-column .result-listing .card-header, .results .results-column .models .car-dealerships .result-listing .card-header, .models .car-dealerships .card .card-footer, .models .car-dealerships .results .results-column .result-listing .card-footer, .results .results-column .models .car-dealerships .result-listing .card-footer {
+    border: none;
+    background: transparent; }

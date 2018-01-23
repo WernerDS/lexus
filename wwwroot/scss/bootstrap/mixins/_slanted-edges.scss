@@ -1,5 +1,3 @@
-
-
 // mixin
 @mixin angle($pseudo, $flip: false, $angle: 1.5deg) {
   // Possible values for $pseudo are: before, after, both
@@ -150,6 +148,4 @@
 .-green {
   background: #5e9b42;
 }
-
-
 
