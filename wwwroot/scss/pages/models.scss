@@ -2,7 +2,195 @@ body {
     background-image: url('/images/white_leather.png');
 }
 
-.models { 
+
+
+.models {  
+    .car-specs-model { 
+        .list-inline {
+            margin-top: 50px;
+            
+            &:emtpy span:nth-of-type(1) {
+                display: none;     
+            }
+            .list-inline-item {    
+                margin: 0px -2px;
+                height: 320px;
+                width: 160px;
+                transform: skewX(-20deg);
+
+            &:hover { 
+                background:rgba(0, 0, 0, 0.18);
+                margin: 0px -2px;
+                color:white;
+                
+                &.es {
+                    background-image: url('/images/is-slant.png');
+                    .is & {
+                        background-image: none;
+                    }
+                }             
+            }
+                
+            
+            &.active { 
+                transform: skewX(-20deg);
+                color:white;   
+            }
+            
+               
+                span:nth-of-type(1){ 
+                    font-weight:bold;
+                    font-size:1.3em;
+                    color:black;
+                    margin-top:-55px;
+                    display: block;
+                    transform: skewX(20deg); 
+                    &:before {
+                        content:'From';
+                        font-weight: normal;
+                        display: block;
+                        font-size:1em;
+                    }
+                    
+                    &:empty {
+                        display: none;
+                    }   
+                }
+                span:nth-of-type(2) {
+                    display: block; 
+                    font-size: 3em;
+                    font-weight: normal;
+                    margin-bottom: 20px;
+                    transform: skewX(20deg); 
+                    padding:0 30px;
+                }
+            }
+        }
+    }
+    .car-model-pic { 
+        display: block;
+        margin-top: -150px;
+        margin-bottom: 200px;
+        position: relative;
+        width:100%;
+        img {display: inline-block;}
+        img:nth-of-type(1) {
+            position: absolute;
+            top:-21px;
+            left:-100px;
+            z-index: 10;
+           
+        }
+        img:nth-of-type(2) {
+            position: absolute;
+            top:0;
+            left:268px;
+            z-index: 9;
+        }   
+        img:nth-of-type(3) {
+            position: absolute;
+            top:9px;
+            left:590px;
+            z-index: 8;
+        }
+    }
+    .car-features { 
+        position: relative;
+        .car-features-row {
+            @extend .align-items-center;
+            @extend .w-50-md-up;
+            height:100vh;
+            
+            ul { 
+                @extend .h3; 
+                color:white;
+                font-weight: 400; 
+                @extend .light;
+                    
+                li { 
+                   margin:30px 0; 
+                }
+            }  
+        }
+    }
+    .car-vr { 
+        .car-vr-models {
+            .list-inline {
+            margin-top: 10px;
+            
+            .list-inline-item {    
+                margin: 0px -2px;
+                transform: skewX(-20deg);
+                
+                span {
+                    display: block;
+                    font-size: 1.4em;
+                    font-weight: bold;
+                    transform: skewX(20deg);
+                    padding: 4px 30px;
+                }     
+            }
+   
+            & .list-inline-item.active { 
+                background:#4d4d4d;
+                transform: skewX(-20deg);
+                color:white;   
+            }
+        }    
+            
+        }
+    }
+    .car-info-table { 
+        thead {
+            border-bottom: 1px solid #000000;
+        }
+        .nav  { 
+            display: block;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            overflow:hidden;
+            background-image: url('/images/gradient.png');
+            background-position-x: 48px;
+            background-position-y: -80px;
+            background-repeat: no-repeat;
+            height: 100%;
+           
+            .nav-link.active { 
+                background: $gray-800;
+                color:white;
+                width:100%;
+                margin-left: 13px;
+                @extend .edge--skew;
+            }
+        }
+        
+        
+    }
+    .car-dealerships { 
+        .card {             
+            .card-header,.card-footer { border:none;background: transparent;}
+            background-image: url('/images/paper-texture.jpg');
+            color:white;
+            border:none;
+        }
+    }
+    
+    .suvs { 
+        background:rgba(0, 0, 0, 0.4);
+        padding-top: 100px;
+        padding-bottom: 220px;
+        overflow: hidden;
+    }
+    .coupes { 
+        background:rgba(0, 0, 0, 0.7);
+        margin-top: -121px;
+
+        .list-inline-item { 
+            span{color:white!important}
+        }
+    }
+}
+.models-detail { 
     .main-cta {
         position: fixed;
         top: 65px;
@@ -301,3 +489,5 @@ body {
     
     }
 }
+
+
