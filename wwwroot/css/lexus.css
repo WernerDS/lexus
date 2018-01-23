@@ -10705,14 +10705,33 @@ body {
   background-image: url("/images/paper-texture.jpg");
   color: white;
   border: none; }
+  .models .car-dealerships .card img.midrand-map, .models .car-dealerships .results .results-column .result-listing img.midrand-map, .results .results-column .models .car-dealerships .result-listing img.midrand-map {
+    display: none; }
+    .models .car-dealerships .card img.midrand-map + span, .models .car-dealerships .results .results-column .result-listing img.midrand-map + span, .results .results-column .models .car-dealerships .result-listing img.midrand-map + span {
+      display: none; }
   .models .car-dealerships .card .card-header, .models .car-dealerships .results .results-column .result-listing .card-header, .results .results-column .models .car-dealerships .result-listing .card-header, .models .car-dealerships .card .card-footer, .models .car-dealerships .results .results-column .result-listing .card-footer, .results .results-column .models .car-dealerships .result-listing .card-footer {
     border: none;
     background: transparent; }
-  .models .car-dealerships .card:hover, .models .car-dealerships .results .results-column .result-listing:hover, .results .results-column .models .car-dealerships .result-listing:hover {
-    background-image: url("/images/map.jpg");
-    background-repeat: none;
-    background-size: cover;
-    z-index: 1000; }
+  .models .car-dealerships .card:hover img.midrand-map, .models .car-dealerships .results .results-column .result-listing:hover img.midrand-map, .results .results-column .models .car-dealerships .result-listing:hover img.midrand-map {
+    height: 204px;
+    display: block;
+    cursor: pointer; }
+    .models .car-dealerships .card:hover img.midrand-map ~ .card-header, .models .car-dealerships .results .results-column .result-listing:hover img.midrand-map ~ .card-header, .results .results-column .models .car-dealerships .result-listing:hover img.midrand-map ~ .card-header {
+      display: none; }
+    .models .car-dealerships .card:hover img.midrand-map ~ .card-body, .models .car-dealerships .results .results-column .result-listing:hover img.midrand-map ~ .card-body, .results .results-column .models .car-dealerships .result-listing:hover img.midrand-map ~ .card-body {
+      display: none; }
+    .models .car-dealerships .card:hover img.midrand-map ~ .card-footer, .models .car-dealerships .results .results-column .result-listing:hover img.midrand-map ~ .card-footer, .results .results-column .models .car-dealerships .result-listing:hover img.midrand-map ~ .card-footer {
+      display: none; }
+    .models .car-dealerships .card:hover img.midrand-map + span, .models .car-dealerships .results .results-column .result-listing:hover img.midrand-map + span, .results .results-column .models .car-dealerships .result-listing:hover img.midrand-map + span {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 4px; }
 
 .models .suvs {
   background: rgba(0, 0, 0, 0.4);
@@ -10722,7 +10741,7 @@ body {
 
 .models .coupes {
   background: rgba(0, 0, 0, 0.7);
-  margin-top: -121px; }
+  margin-top: -123px; }
   .models .coupes .list-inline-item span {
     color: white !important; }
 
