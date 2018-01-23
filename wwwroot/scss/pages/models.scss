@@ -160,17 +160,38 @@ body {
         
     }
     .car-dealerships { 
-        .card {
+        .card {       
+            img.midrand-map  {
+                display: none;
+                + span { 
+                    display:none;
+                }
+            }
             box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.8);
             .card-header,.card-footer { border:none;background: transparent;}
             background-image: url('/images/paper-texture.jpg');
             color:white;
             border:none;
             &:hover {
-                background-image: url('/images/map.jpg');
-                background-repeat: none;
-                background-size:cover;
-                z-index: 1000;
+                img.midrand-map  {                
+                    height: 204px;
+                    display: block;
+                    cursor: pointer;
+                    ~ .card-header {display: none;}
+                    ~ .card-body {display: none;}
+                    ~ .card-footer {display: none;}   
+                    & + span { 
+                        display: block;
+                        position: absolute;
+                        bottom:0;
+                        left:0;
+                        width:100%;
+                        background:black;
+                        color:white;
+                        text-align: center;
+                        padding:4px;
+                    }
+                }
             }
         }
     }
@@ -183,7 +204,7 @@ body {
     }
     .coupes { 
         background:rgba(0, 0, 0, 0.7);
-        margin-top: -121px;
+        margin-top: -123px;  
 
         .list-inline-item { 
             span{color:white!important}
