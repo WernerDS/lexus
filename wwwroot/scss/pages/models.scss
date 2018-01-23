@@ -21,14 +21,7 @@ body {
             &:hover { 
                 background:rgba(0, 0, 0, 0.18);
                 margin: 0px -2px;
-                color:white;
-                
-                &.es {
-                    background-image: url('/images/is-slant.png');
-                    .is & {
-                        background-image: none;
-                    }
-                }             
+                color:white;        
             }
                 
             
@@ -167,11 +160,18 @@ body {
         
     }
     .car-dealerships { 
-        .card {             
+        .card {
+            box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.8);
             .card-header,.card-footer { border:none;background: transparent;}
             background-image: url('/images/paper-texture.jpg');
             color:white;
             border:none;
+            &:hover {
+                background-image: url('/images/map.jpg');
+                background-repeat: none;
+                background-size:cover;
+                z-index: 1000;
+            }
         }
     }
     
@@ -480,13 +480,14 @@ body {
         
     }
     .car-dealerships { 
-        .card {             
-            .card-header,.card-footer { border:none;background: transparent;}
+        .card {    
             background-image: url('/images/paper-texture.jpg');
             color:white;
             border:none;
+            .card-header,.card-footer { 
+                border:none;background: transparent;
+            }        
         }
-    
     }
 }
 

@@ -10606,10 +10606,6 @@ body {
       background: rgba(0, 0, 0, 0.18);
       margin: 0px -2px;
       color: white; }
-      .models .car-specs-model .list-inline .list-inline-item:hover.es {
-        background-image: url("/images/is-slant.png"); }
-        .models .car-specs-model .list-inline .list-inline-item:hover.es.is {
-          background-image: none; }
     .models .car-specs-model .list-inline .list-inline-item.active {
       transform: skewX(-20deg);
       color: white; }
@@ -10705,12 +10701,18 @@ body {
     margin-left: 13px; }
 
 .models .car-dealerships .card, .models .car-dealerships .results .results-column .result-listing, .results .results-column .models .car-dealerships .result-listing {
+  box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.8);
   background-image: url("/images/paper-texture.jpg");
   color: white;
   border: none; }
   .models .car-dealerships .card .card-header, .models .car-dealerships .results .results-column .result-listing .card-header, .results .results-column .models .car-dealerships .result-listing .card-header, .models .car-dealerships .card .card-footer, .models .car-dealerships .results .results-column .result-listing .card-footer, .results .results-column .models .car-dealerships .result-listing .card-footer {
     border: none;
     background: transparent; }
+  .models .car-dealerships .card:hover, .models .car-dealerships .results .results-column .result-listing:hover, .results .results-column .models .car-dealerships .result-listing:hover {
+    background-image: url("/images/map.jpg");
+    background-repeat: none;
+    background-size: cover;
+    z-index: 1000; }
 
 .models .suvs {
   background: rgba(0, 0, 0, 0.4);
