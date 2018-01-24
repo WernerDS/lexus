@@ -9704,30 +9704,23 @@ p {
     margin-left: 140px; }
   #main-nav.navbar .navbar-nav {
     align-items: center; }
-  #main-nav.navbar .nav-item.active {
-    background: #495057;
-    transform: skew(-20deg); }
-    #main-nav.navbar .nav-item.active a {
-      transform: skew(20deg);
-      display: flex;
-      align-items: center;
-      padding: 22px 10px;
-      font-weight: bold;
-      width: auto; }
-    #main-nav.navbar .nav-item.active a:hover {
-      background: transparent; }
-  #main-nav.navbar .nav-item a:hover {
-    transform: skew(-20deg);
+  #main-nav.navbar .nav-item.active span {
+    display: flex;
+    align-items: center;
     padding: 22px 10px;
-    transition: all 0s cubic-bezier(0.25, 0.8, 0.25, 1); }
-  #main-nav.navbar .nav-item a {
-    transform: none;
-    padding: 22px 10px;
-    transition: all 0s cubic-bezier(0.25, 0.8, 0.25, 1); }
-  #main-nav.navbar .nav-item a:hover span {
-    transform: skew(20deg);
-    display: inline-block;
-    transition: all 0s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    font-weight: bold;
+    width: auto;
+    position: relative;
+    width: 130px;
+    justify-content: center; }
+    #main-nav.navbar .nav-item.active span:before {
+      content: '';
+      transform: skew(-20deg);
+      position: absolute;
+      width: 130px;
+      height: 65px;
+      background: #495057;
+      z-index: -1; }
 
 .bidvest-logo {
   position: absolute;
@@ -9884,10 +9877,6 @@ label {
   background: #4d4d4d; }
   .pagination .page-item.active .page-link {
     background: transparent; }
-
-.stitch-1 {
-  background-image: url("../images/stitch-2.png");
-  height: 20px; }
 
 .edge--bottom {
   position: relative;
@@ -10077,53 +10066,53 @@ label {
       border-width: 8vw 100vw 0 0;
       border-color: #fff transparent transparent transparent; } }
 
-.angle--top-right {
+.angle--top-right, .home-page .bidvest-insurance {
   position: relative;
   overflow: hidden;
   clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0 100%); }
   @supports not (clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0 100%)) {
-    .angle--top-right::before, .angle--top-right::after {
+    .angle--top-right::before, .home-page .bidvest-insurance::before, .angle--top-right::after, .home-page .bidvest-insurance::after {
       content: "";
       position: absolute;
       left: 0;
       z-index: 10;
       display: block;
       border-style: solid; }
-    .angle--top-right::before {
+    .angle--top-right::before, .home-page .bidvest-insurance::before {
       top: 0;
       border-width: 8vw 0 0 100vw;
       border-color: #fff transparent transparent transparent; } }
 
-.angle--bottom-left {
+.angle--bottom-left, .home-page .hero {
   position: relative;
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw)); }
   @supports not (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw))) {
-    .angle--bottom-left::before, .angle--bottom-left::after {
+    .angle--bottom-left::before, .home-page .hero::before, .angle--bottom-left::after, .home-page .hero::after {
       content: "";
       position: absolute;
       left: 0;
       z-index: 10;
       display: block;
       border-style: solid; }
-    .angle--bottom-left::after {
+    .angle--bottom-left::after, .home-page .hero::after {
       bottom: 0;
       border-width: 0 100vw 8vw 0;
       border-color: transparent transparent #fff transparent; } }
 
-.angle--bottom-right {
+.angle--bottom-right, .home-page .bidvest-mccarthy {
   position: relative;
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%); }
   @supports not (clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%)) {
-    .angle--bottom-right::before, .angle--bottom-right::after {
+    .angle--bottom-right::before, .home-page .bidvest-mccarthy::before, .angle--bottom-right::after, .home-page .bidvest-mccarthy::after {
       content: "";
       position: absolute;
       left: 0;
       z-index: 10;
       display: block;
       border-style: solid; }
-    .angle--bottom-right::after {
+    .angle--bottom-right::after, .home-page .bidvest-mccarthy::after {
       bottom: 0;
       border-width: 0 0 8vw 100vw;
       border-color: transparent transparent #fff transparent; } }
@@ -10225,6 +10214,84 @@ label {
 
 .parallax-slider {
   overflow: hidden; }
+
+.home-page header, .home-page .bg-image {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0; }
+
+.home-page .hero {
+  color: white;
+  background-image: url("/images/club-mccarthy-bg.jpg");
+  background-size: cover;
+  z-index: 10; }
+  .home-page .hero p {
+    font-size: 0.8em;
+    font-weight: bold; }
+
+.home-page .models {
+  margin-top: -164px;
+  text-transform: uppercase;
+  color: white; }
+  .home-page .models .col-4 {
+    height: 520px;
+    padding: 132px 60px; }
+  .home-page .models .col-4:nth-of-type(1) {
+    background-image: url("/images/sedan.jpg");
+    background-size: cover; }
+    .home-page .models .col-4:nth-of-type(1) span {
+      display: none; }
+    .home-page .models .col-4:nth-of-type(1):hover span:before {
+      display: block;
+      content: 'arrow';
+      position: absolute;
+      top: 30px; }
+  .home-page .models .col-4:nth-of-type(2) {
+    background-image: url("/images/suv.jpg");
+    background-size: cover; }
+  .home-page .models .col-4:nth-of-type(3) {
+    background-image: url("/images/coupe.jpg");
+    background-size: cover; }
+
+.home-page .bidvest-mccarthy {
+  background-image: url("/images/bidvest-dealer.jpg");
+  background-size: cover; }
+
+.home-page .bidvest-insurance {
+  background-image: url("/images/insurance-bg.jpg");
+  background-size: cover;
+  color: white; }
+  .home-page .bidvest-insurance p {
+    font-size: 0.8em; }
+
+.home-page .car-specials {
+  position: relative; }
+  .home-page .car-specials .car-special-item img {
+    box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.37);
+    border-radius: 8px; }
+  .home-page .car-specials .car-special-item span:nth-of-type(1) {
+    position: absolute;
+    top: 12px;
+    left: 30px;
+    font-size: 1.2em;
+    font-weight: bold; }
+  .home-page .car-specials .car-special-item span:nth-of-type(2) {
+    position: absolute;
+    top: 52px;
+    left: 30px;
+    font-size: 2em;
+    font-weight: bold; }
+  .home-page .car-specials .car-special-item span:nth-of-type(3) {
+    font-size: 1.1em;
+    position: absolute;
+    top: 94px;
+    left: 30px;
+    font-weight: normal; }
+    .home-page .car-specials .car-special-item span:nth-of-type(3):before {
+      content: 'SAVE';
+      display: block;
+      text-align: left;
+      margin-bottom: -5px; }
 
 .results .breadcrumb {
   margin-left: 300px;
@@ -10591,7 +10658,8 @@ label {
     border: 1px solid #cecece; }
 
 body {
-  background-image: url("/images/white_leather.png"); }
+  background-image: url("/images/white_leather.png");
+  margin-top: 0; }
 
 .models .car-specs-model .list-inline {
   margin-top: 50px; }
@@ -10700,6 +10768,12 @@ body {
     width: 100%;
     margin-left: 13px; }
 
+.models .car-dealerships .stitch-7 {
+  background-image: url(/images/stitch-2.png);
+  width: 100%;
+  height: 20px;
+  margin-top: -38px; }
+
 .models .car-dealerships .card, .models .car-dealerships .results .results-column .result-listing, .results .results-column .models .car-dealerships .result-listing {
   box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.8);
   background-image: url("/images/paper-texture.jpg");
@@ -10733,15 +10807,98 @@ body {
       text-align: center;
       padding: 4px; }
 
+.models .sedans {
+  background: url("/images/sedan-bg.jpg");
+  background-size: cover;
+  padding-bottom: 140px;
+  overflow: hidden; }
+  .models .sedans .stitch-2 {
+    background-image: url("/images/sedan-panel.png");
+    position: absolute;
+    right: 0;
+    top: -60px;
+    height: 100%;
+    width: 15px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+
 .models .suvs {
-  background: rgba(0, 0, 0, 0.4);
+  background-image: url("/images/grey_leather.png");
   padding-top: 100px;
   padding-bottom: 220px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: -124px;
+  z-index: 2; }
+  .models .suvs:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #333333, rgba(255, 255, 255, 0));
+    opacity: .6; }
+  .models .suvs .stitch-3 {
+    background-image: url("/images/stitch-3.png");
+    position: absolute;
+    left: 0;
+    top: -60px;
+    height: 100%;
+    width: 15px;
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg); }
+  .models .suvs .stitch-4 {
+    background-image: url("/images/stitch-4.png");
+    position: absolute;
+    right: 50px;
+    top: 0;
+    height: 100%;
+    width: 15px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
 
 .models .coupes {
-  background: rgba(0, 0, 0, 0.7);
-  margin-top: -123px; }
+  background-image: url("/images/dark_leather.png");
+  margin-top: -122px;
+  z-index: 1;
+  overflow: hidden; }
+  .models .coupes:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #101010, rgba(255, 255, 255, 0));
+    opacity: .6; }
+  .models .coupes .stitch-5 {
+    background-image: url("/images/stitch-5.png");
+    position: absolute;
+    left: 50px;
+    top: 0;
+    height: 100%;
+    width: 15px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .models .coupes .stitch-6 {
+    background-image: url(/images/stitch-6.png);
+    position: absolute;
+    right: 220px;
+    top: 384px;
+    height: 100%;
+    width: 15px; }
   .models .coupes .list-inline-item span {
     color: white !important; }
 
@@ -10774,13 +10931,17 @@ body {
 .models-detail .main-cta-stick {
   height: 60px;
   transform: skewX(-20deg);
-  z-index: 1000;
-  border-bottom: 2px solid #565656; }
+  z-index: 10;
+  border-bottom: 2px solid #565656;
+  width: 100%; }
   .models-detail .main-cta-stick .car-specs .list-inline {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: white; }
     .models-detail .main-cta-stick .car-specs .list-inline .list-inline-item {
       height: 60px;
       width: auto; }
+      .models-detail .main-cta-stick .car-specs .list-inline .list-inline-item a {
+        color: black; }
       .models-detail .main-cta-stick .car-specs .list-inline .list-inline-item span {
         display: block;
         font-size: 1.2em;
@@ -10791,48 +10952,47 @@ body {
     .models-detail .main-cta-stick .car-specs .list-inline .list-inline-item:first-child {
       background: rgba(0, 0, 0, 0.7); }
       .models-detail .main-cta-stick .car-specs .list-inline .list-inline-item:first-child a {
-        color: white; }
+        color: white !important; }
     .models-detail .main-cta-stick .car-specs .list-inline .list-inline-item:hover {
-      background: #dee2e6;
-      color: black;
+      color: white;
       height: 58px; }
       .models-detail .main-cta-stick .car-specs .list-inline .list-inline-item:hover a {
-        color: black;
         text-decoration: none; }
         .models-detail .main-cta-stick .car-specs .list-inline .list-inline-item:hover a:hover {
-          color: black; }
+          color: white; }
 
-.models-detail .car-specs-model .list-inline {
-  margin-top: 20px; }
-  .models-detail .car-specs-model .list-inline .list-inline-item {
-    margin: 0px -2px;
-    min-width: 179px;
-    height: 200px;
-    transform: skewX(-20deg); }
-    .models-detail .car-specs-model .list-inline .list-inline-item p {
-      font-weight: bold;
-      font-size: 1.5em;
-      margin-top: 20px;
-      transform: skewX(20deg); }
-    .models-detail .car-specs-model .list-inline .list-inline-item span {
-      display: block;
-      font-size: 4.5em;
-      font-weight: bold;
-      margin-bottom: 20px;
-      transform: skewX(20deg);
-      padding: 0 30px; }
-    .models-detail .car-specs-model .list-inline .list-inline-item:nth-of-type(1) p:before {
-      content: '0-100 km/h'; }
-    .models-detail .car-specs-model .list-inline .list-inline-item:nth-of-type(2) p:before {
-      content: 'Max(km/h)'; }
-    .models-detail .car-specs-model .list-inline .list-inline-item:nth-of-type(3) p:before {
-      content: 'CO2(g/km)'; }
-  .models-detail .car-specs-model .list-inline .list-inline-item:nth-child(2) {
-    border-right: 2px dotted #4d4d4d; }
-  .models-detail .car-specs-model .list-inline .list-inline-item:first-child {
-    background: #4d4d4d;
-    transform: skewX(-20deg);
-    color: white; }
+.models-detail .car-specs-model .list-inline .list-inline-item {
+  margin: 0px -2px;
+  min-width: 179px;
+  height: 200px;
+  transform: skewX(-20deg); }
+  .models-detail .car-specs-model .list-inline .list-inline-item p {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 20px;
+    transform: skewX(20deg);
+    text-align: center; }
+  .models-detail .car-specs-model .list-inline .list-inline-item span {
+    display: block;
+    font-size: 4.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transform: skewX(20deg);
+    padding: 0 30px; }
+  .models-detail .car-specs-model .list-inline .list-inline-item:nth-of-type(1) p:before {
+    content: '0-100 km/h'; }
+  .models-detail .car-specs-model .list-inline .list-inline-item:nth-of-type(2) p:before {
+    content: 'Max(km/h)'; }
+  .models-detail .car-specs-model .list-inline .list-inline-item:nth-of-type(3) p:before {
+    content: 'CO2(g/km)'; }
+
+.models-detail .car-specs-model .list-inline .list-inline-item:nth-child(2) {
+  border-right: 2px dotted #4d4d4d; }
+
+.models-detail .car-specs-model .list-inline .list-inline-item:first-child {
+  background: #4d4d4d;
+  transform: skewX(-20deg);
+  color: white; }
 
 .models-detail .car-specials {
   position: relative; }
@@ -10910,6 +11070,12 @@ body {
     .models-detail .car-features .car-features-row ul {
       color: white;
       font-weight: 400; }
+      .models-detail .car-features .car-features-row ul.wheels {
+        list-style-image: url("/images/wheel-icon.png"); }
+      .models-detail .car-features .car-features-row ul.steering {
+        list-style-image: url("/images/steering-wheel.png"); }
+      .models-detail .car-features .car-features-row ul.seat {
+        list-style-image: url("/images/car-seat.png"); }
       .models-detail .car-features .car-features-row ul li {
         margin: 30px 0; }
 
