@@ -22,40 +22,30 @@
     .navbar-nav { 
         align-items: center;
     }
-    .nav-item {
+    .nav-item {    
         &.active {     
-            background: $gray-700; 
-            transform: skew(-20deg);
-            a {
-                transform: skew(20deg);
+            span {
                 display: flex;
                 align-items: center;
                 padding: 22px 10px;
                 font-weight: bold;
                 width: auto;
+                position: relative;
+                width: 130px; 
+                justify-content: center;
+                
+                &:before {
+                    content: '';
+                    transform: skew(-20deg);
+                    position: absolute;
+                    width: 130px;
+                    height: 65px; 
+                    background: $gray-700;
+                    z-index: -1;
+                }  
             }
-            a:hover {
-                background: transparent;    
-            }  
+                  
         } 
-      
-        a:hover {
-            transform: skew(-20deg);
-            padding: 22px 10px;
-            transition: all 0s cubic-bezier(.25,.8,.25,1);   
-        }
-        
-        a {
-            transform: none; 
-            padding: 22px 10px;
-            transition: all 0s cubic-bezier(.25,.8,.25,1);  
-        }
-        a:hover span  {
-            transform: skew(20deg);
-            display: inline-block;
-            transition: all 0s cubic-bezier(.25,.8,.25,1);  
-        }
-        
     }
 }
 .bidvest-logo { 
@@ -250,13 +240,5 @@ label {
         }
     }   
 }
-
-//STITCHES
-
-.stitch-1 { 
-    background-image: url('../images/stitch-2.png');
-    height: 20px;
-}
-
 
 
