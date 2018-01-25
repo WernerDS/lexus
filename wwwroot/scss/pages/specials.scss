@@ -1,0 +1,16 @@
+.car-specials { 
+   z-index: 1000;
+    
+    .specials-hero { 
+        color:white;   
+        background-image: url('/images/club-mccarthy-bg.jpg');
+        background-size: cover;  
+        z-index: 10;
+        img {
+            margin-bottom:10px;
+        }
+        p {
+            font-size:0.7em;
+        }
+    } 
+}

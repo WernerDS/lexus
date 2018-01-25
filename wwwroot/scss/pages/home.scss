@@ -6,16 +6,28 @@
         margin-bottom: 0;
     }
     .hero { 
-        @extend .angle--bottom-left;
         color:white;   
         background-image: url('/images/club-mccarthy-bg.jpg');
         background-size: cover;  
         z-index: 10;
-        p {
-            font-size:0.8em;
-            font-weight: bold;
+        img {
+            margin-bottom:10px;
         }
-       
+        p {
+            font-size:0.7em;
+        }
+    } 
+    .specials-hero { 
+        color:white;   
+        background-image: url('/images/specials-bg.jpg');
+        background-size: cover;  
+        z-index: 10;
+        img {
+            margin-bottom:10px;
+        }
+        p {
+            font-size:0.7em;
+        }
     }
     .models { 
         margin-top: -164px;
@@ -54,21 +66,39 @@
         @extend .angle--bottom-right;
         background-image: url('/images/bidvest-dealer.jpg');
         background-size: cover;   
+        z-index: 10;
     }
     .bidvest-insurance { 
-        @extend .angle--top-right;
         background-image: url('/images/insurance-bg.jpg');
         background-size: cover;
         color: white;
+        img {
+            margin-bottom:6px;
+        }
         p { 
-            font-size: 0.8em;
+            font-size: 0.7em;
         }
     }
      .car-specials { 
-         position: relative;
-        
+        background-image: url('/images/white_leather.png.jpg');
+        background-size: cover;
+        position: relative;
+        z-index: 10;
+   
         .car-special-item { 
             margin:20px 0;
+            max-width: 455px;
+            
+             a { 
+                transition: all 0.4s cubic-bezier(.25,.8,.25,1); 
+                border-radius:8px;
+                display: block;
+            }
+            
+            a:hover {
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 10px 40px rgba(0,0,0,0.3); 
+            }
+            
             img {
                 box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.37);
                 border-radius: 8px;
@@ -104,5 +134,12 @@
                 }
             }
         }
+    }
+    
+    .facets-specials {
+        position: absolute;
+        left: 0;
+        top: 420px;
+//        z-index: -1;
     }
 }

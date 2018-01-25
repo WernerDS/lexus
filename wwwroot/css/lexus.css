@@ -10078,36 +10078,36 @@ label {
       border-width: 8vw 100vw 0 0;
       border-color: #fff transparent transparent transparent; } }
 
-.angle--top-right, .home-page .bidvest-insurance {
+.angle--top-right {
   position: relative;
   overflow: hidden;
   clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0 100%); }
   @supports not (clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0 100%)) {
-    .angle--top-right::before, .home-page .bidvest-insurance::before, .angle--top-right::after, .home-page .bidvest-insurance::after {
+    .angle--top-right::before, .angle--top-right::after {
       content: "";
       position: absolute;
       left: 0;
       z-index: 10;
       display: block;
       border-style: solid; }
-    .angle--top-right::before, .home-page .bidvest-insurance::before {
+    .angle--top-right::before {
       top: 0;
       border-width: 8vw 0 0 100vw;
       border-color: #fff transparent transparent transparent; } }
 
-.angle--bottom-left, .home-page .hero {
+.angle--bottom-left {
   position: relative;
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw)); }
   @supports not (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw))) {
-    .angle--bottom-left::before, .home-page .hero::before, .angle--bottom-left::after, .home-page .hero::after {
+    .angle--bottom-left::before, .angle--bottom-left::after {
       content: "";
       position: absolute;
       left: 0;
       z-index: 10;
       display: block;
       border-style: solid; }
-    .angle--bottom-left::after, .home-page .hero::after {
+    .angle--bottom-left::after {
       bottom: 0;
       border-width: 0 100vw 8vw 0;
       border-color: transparent transparent #fff transparent; } }
@@ -10227,6 +10227,18 @@ label {
 .parallax-slider {
   overflow: hidden; }
 
+.car-specials {
+  z-index: 1000; }
+  .car-specials .specials-hero {
+    color: white;
+    background-image: url("/images/club-mccarthy-bg.jpg");
+    background-size: cover;
+    z-index: 10; }
+    .car-specials .specials-hero img {
+      margin-bottom: 10px; }
+    .car-specials .specials-hero p {
+      font-size: 0.7em; }
+
 .home-page header, .home-page .bg-image {
   position: relative;
   overflow: hidden;
@@ -10237,9 +10249,20 @@ label {
   background-image: url("/images/club-mccarthy-bg.jpg");
   background-size: cover;
   z-index: 10; }
+  .home-page .hero img {
+    margin-bottom: 10px; }
   .home-page .hero p {
-    font-size: 0.8em;
-    font-weight: bold; }
+    font-size: 0.7em; }
+
+.home-page .specials-hero {
+  color: white;
+  background-image: url("/images/specials-bg.jpg");
+  background-size: cover;
+  z-index: 10; }
+  .home-page .specials-hero img {
+    margin-bottom: 10px; }
+  .home-page .specials-hero p {
+    font-size: 0.7em; }
 
 .home-page .models {
   margin-top: -164px;
@@ -10267,19 +10290,32 @@ label {
 
 .home-page .bidvest-mccarthy {
   background-image: url("/images/bidvest-dealer.jpg");
-  background-size: cover; }
+  background-size: cover;
+  z-index: 10; }
 
 .home-page .bidvest-insurance {
   background-image: url("/images/insurance-bg.jpg");
   background-size: cover;
   color: white; }
+  .home-page .bidvest-insurance img {
+    margin-bottom: 6px; }
   .home-page .bidvest-insurance p {
-    font-size: 0.8em; }
+    font-size: 0.7em; }
 
 .home-page .car-specials {
-  position: relative; }
+  background-image: url("/images/white_leather.png.jpg");
+  background-size: cover;
+  position: relative;
+  z-index: 10; }
   .home-page .car-specials .car-special-item {
-    margin: 20px 0; }
+    margin: 20px 0;
+    max-width: 455px; }
+    .home-page .car-specials .car-special-item a {
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      border-radius: 8px;
+      display: block; }
+    .home-page .car-specials .car-special-item a:hover {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 10px 40px rgba(0, 0, 0, 0.3); }
     .home-page .car-specials .car-special-item img {
       box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.37);
       border-radius: 8px; }
@@ -10306,6 +10342,11 @@ label {
         display: block;
         text-align: left;
         margin-bottom: -5px; }
+
+.home-page .facets-specials {
+  position: absolute;
+  left: 0;
+  top: 420px; }
 
 .results .breadcrumb {
   margin-left: 300px;
@@ -10680,16 +10721,61 @@ body {
   .models .car-specs-model .list-inline:emtpy span:nth-of-type(1) {
     display: none; }
   .models .car-specs-model .list-inline .list-inline-item {
-    margin: 0px -2px;
+    margin: 1px -2px;
     height: 320px;
     width: 160px;
     transform: skewX(-20deg); }
+    .models .car-specs-model .list-inline .list-inline-item.is:hover {
+      background-image: url("/images/is-slant.png"); }
+      .models .car-specs-model .list-inline .list-inline-item.is:hover span:nth-of-type(1) {
+        display: block; }
+    .models .car-specs-model .list-inline .list-inline-item.es-hybrid:hover {
+      background-image: url("/images/lc-slant.png"); }
+      .models .car-specs-model .list-inline .list-inline-item.es-hybrid:hover span:nth-of-type(1) {
+        display: block; }
+    .models .car-specs-model .list-inline .list-inline-item.es:hover {
+      background-image: url("/images/rx-slant.png"); }
+      .models .car-specs-model .list-inline .list-inline-item.es:hover span:nth-of-type(1) {
+        display: block; }
+    .models .car-specs-model .list-inline .list-inline-item.gs:hover {
+      background-image: url("/images/is-slant.png"); }
+      .models .car-specs-model .list-inline .list-inline-item.gs:hover span:nth-of-type(1) {
+        display: block; }
+    .models .car-specs-model .list-inline .list-inline-item.ls:hover {
+      background-image: url("/images/rx-slant.png"); }
+      .models .car-specs-model .list-inline .list-inline-item.ls:hover span:nth-of-type(1) {
+        display: block; }
+    .models .car-specs-model .list-inline .list-inline-item.ct:hover {
+      background-image: url("/images/lc-slant.png"); }
+      .models .car-specs-model .list-inline .list-inline-item.ct:hover span:nth-of-type(1) {
+        display: block; }
+    .models .car-specs-model .list-inline .list-inline-item.nx:hover {
+      background-image: url("/images/rx-slant.png"); }
+      .models .car-specs-model .list-inline .list-inline-item.nx:hover span:nth-of-type(1) {
+        display: block; }
+    .models .car-specs-model .list-inline .list-inline-item.rx:hover {
+      background-image: url("/images/is-slant.png"); }
+      .models .car-specs-model .list-inline .list-inline-item.rx:hover span:nth-of-type(1) {
+        display: block; }
+    .models .car-specs-model .list-inline .list-inline-item.rx-hybrid:hover {
+      background-image: url("/images/rx-slant.png"); }
+      .models .car-specs-model .list-inline .list-inline-item.rx-hybrid:hover span:nth-of-type(1) {
+        display: block; }
+    .models .car-specs-model .list-inline .list-inline-item.lx:hover {
+      background-image: url("/images/is-slant.png"); }
+      .models .car-specs-model .list-inline .list-inline-item.lx:hover span:nth-of-type(1) {
+        display: block; }
+    .models .car-specs-model .list-inline .list-inline-item.rc:hover {
+      background-image: url("/images/is-slant.png"); }
+      .models .car-specs-model .list-inline .list-inline-item.rc:hover span:nth-of-type(1) {
+        display: block; }
+    .models .car-specs-model .list-inline .list-inline-item.lc:hover {
+      background-image: url("/images/rx-slant.png"); }
+      .models .car-specs-model .list-inline .list-inline-item.lc:hover span:nth-of-type(1) {
+        display: block; }
     .models .car-specs-model .list-inline .list-inline-item:hover {
       background: rgba(0, 0, 0, 0.18);
       margin: 0px -2px;
-      color: white; }
-    .models .car-specs-model .list-inline .list-inline-item.active {
-      transform: skewX(-20deg);
       color: white; }
     .models .car-specs-model .list-inline .list-inline-item span:nth-of-type(1) {
       font-weight: bold;
@@ -10697,7 +10783,8 @@ body {
       color: black;
       margin-top: -55px;
       display: block;
-      transform: skewX(20deg); }
+      transform: skewX(20deg);
+      display: none; }
       .models .car-specs-model .list-inline .list-inline-item span:nth-of-type(1):before {
         content: 'From';
         font-weight: normal;
@@ -10719,23 +10806,43 @@ body {
   margin-bottom: 200px;
   position: relative;
   width: 100%; }
-  .models .car-model-pic img {
-    display: inline-block; }
+  @media (max-width: 767.99px) {
+    .models .car-model-pic {
+      margin-top: 0; } }
+  @media (max-width: 767.99px) {
+    .models .car-model-pic img {
+      display: block;
+      padding: 30px 0;
+      border-bottom: 1px solid black; } }
   .models .car-model-pic img:nth-of-type(1) {
     position: absolute;
     top: -21px;
     left: -100px;
     z-index: 10; }
+    @media (max-width: 767.99px) {
+      .models .car-model-pic img:nth-of-type(1) {
+        position: static;
+        margin: 20px 0; }
+        .models .car-model-pic img:nth-of-type(1):before {
+          content: 'Hello'; } }
   .models .car-model-pic img:nth-of-type(2) {
     position: absolute;
     top: 0;
     left: 268px;
     z-index: 9; }
+    @media (max-width: 767.99px) {
+      .models .car-model-pic img:nth-of-type(2) {
+        display: block;
+        position: static; } }
   .models .car-model-pic img:nth-of-type(3) {
     position: absolute;
     top: 9px;
     left: 590px;
     z-index: 8; }
+    @media (max-width: 767.99px) {
+      .models .car-model-pic img:nth-of-type(3) {
+        display: block;
+        position: static; } }
 
 .models .car-features {
   position: relative; }
