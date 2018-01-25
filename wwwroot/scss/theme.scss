@@ -1,4 +1,11 @@
+//Mobile Text alignment
 
+@media (max-width: 767px) {
+  // Align text to center.
+  .text-xs-center {
+    text-align: center;
+  } 
+}
 
 
 // NAVBAR
@@ -128,8 +135,18 @@ header,
 
 // NAVBAR
 footer {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    li { 
+        padding:4px 0;
+    }
+    a{
+        color:white;
+    }
+    background:#0f264b;
 	img {
 		height: 30px;
+        
 	}
 }
 

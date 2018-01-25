@@ -304,8 +304,8 @@ body {
         z-index: 1000;
         .car-specs { 
             .list-inline {
+                color:white;
                 text-transform: uppercase;
-          
                 & .list-inline-item { 
                     min-width: 120px;
                     color:white;
@@ -319,6 +319,11 @@ body {
                         font-weight: bold;
                         padding-top: 16px;
                         img { margin-right:10px;}
+                        
+                        a {
+                            color:white;
+                            text-decoration: none;
+                        }
                     }
                 }
 
@@ -379,13 +384,11 @@ body {
     }
     .car-specs-model { 
         .list-inline {
-           
             .list-inline-item {    
                 margin: 0px -2px;
                 min-width: 179px;
                 height: 200px;
-                transform: skewX(-20deg);
-                
+                transform: skewX(-20deg);            
                 p {
                     font-weight: bold;
                     font-size:1.5em;

@@ -21,12 +21,12 @@
         margin-top: -164px;
         text-transform: uppercase;
         color:white;
-        .col-4 {
+        .col {
             height: 520px;
             padding: 132px 60px;
             
         }
-        .col-4:nth-of-type(1) {
+        .col:nth-of-type(1) {
             background-image: url('/images/sedan.jpg');
             background-size: cover;
             
@@ -41,11 +41,11 @@
                 
             }
         }
-        .col-4:nth-of-type(2) {
+        .col:nth-of-type(2) {
             background-image: url('/images/suv.jpg');
             background-size: cover;
         }
-        .col-4:nth-of-type(3) {
+        .col:nth-of-type(3) {
             background-image: url('/images/coupe.jpg');
             background-size: cover;
         }
@@ -66,7 +66,9 @@
     }
      .car-specials { 
          position: relative;
+        
         .car-special-item { 
+            margin:20px 0;
             img {
                 box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.37);
                 border-radius: 8px;

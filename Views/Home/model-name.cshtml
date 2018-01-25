@@ -7,13 +7,15 @@
     <div class="main-cta">
         <div class="car-specs mx-auto text-center">
             <ul class="list-inline">
+                <li class="list-inline-item"><span><a href="">Lexus IS</a></span></li>
+                <li class="list-inline-item"><span><a href="">Specs</a></span></li>
+                <li class="list-inline-item"><span><a href="">Gallery</a></span></li>
                 <li class="list-inline-item">
                     <span><img src="/images/phone-white.png" alt="">Midrand</span>
 <!--                    <span>012 543 1235</span>-->
                 </li>
                 <li class="list-inline-item"><span> <img src="/images/location-white.png" alt="">Find a Dealer</span></li>
                 <li class="list-inline-item"><span> <img src="/images/book-test-drive-white.png" alt="">Book a Test Drive</span></li>
-                
             </ul>    
         </div> 
     </div>
@@ -34,26 +36,15 @@
     </section> 
     <section class="car-info-table my-4">
         <div class="container-fluid px-5">
-           <div class="main-cta-stick mt-0" id="stickytypeheader">
-                <div class="car-specs">
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><span><a href="">Lexus IS</a></span></li>
-                        <li class="list-inline-item"><span><a href="">Specs</a></span></li>
-                        <li class="list-inline-item"><span><a href="">Gallery</a></span></li>
-                    </ul>    
-                </div> 
-            </div>
             <div class="row my-5">
                 <div class="col-2">
-
                 </div> 
-                
             </div>
             <div class="float-left" style="height:300px">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><span>IS 200T E</span></a>
                     <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><span>IS 200T EX</span></a>
-                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">IS 350 F Sport</a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><span>IS 350 F Sport</span></a>
                 </div>
             </div>
             <div class="tab-content" id="v-pills-tabContent">
@@ -194,7 +185,8 @@
             <div class="car-model-pic mx-auto wrap">
                 <img src="/images/angled_IS.png" alt="" class="img-fluid">  
             </div>
-               <span class="h3 mx-auto light d-block w-75 py-5">The IS brings together show-stopping look with <span class="font-weight-bold">advanced hybrid technology</span> and unparalleled comfort. With athletic stance and longe coupe roofline, this exeptional sports saloon is engineered to deliver an effortless, heart-racing performance.</span>
+               <div class="display-4">Lexus IS</div>
+               <span class="h3 light d-block w-75 pb-5">The IS brings together show-stopping look with <span class="font-weight-bold">advanced hybrid technology</span> and unparalleled comfort. With athletic stance and longe coupe roofline, this exeptional sports saloon is engineered to deliver an effortless, heart-racing performance.</span>
         </div>
     </section>     
     <section class="car-vr">
@@ -352,29 +344,3 @@
         </div>
     </section>
     
-    
-
-
-    
-
-
-@section Scripts {
-<script>
-	$(function(){
-    var stickyHeaderTop = $('#stickytypeheader').offset().top;
-    $(window).scroll(function(){
-        if( $(window).scrollTop() > stickyHeaderTop ) {
-                $('#stickytypeheader').css({position: 'fixed', top: '65px', color: 'white', background: 'rgba(0, 0, 0, 0.7)', border: '0'});
-                $('#sticky').css('display', 'block');
-                $('.list-inline-item a').css({color: 'white'});   
-        } else {
-                $('#stickytypeheader').css({position: 'static', top: '0', background: 'transparent', borderBottom: '2px solid rgba(0, 0, 0, 0.7)'});
-                $('#sticky').css('display', 'none');
-                $('.list-inline-item a').css({color: 'white'}); 
-        }
-    });
-});
-</script>
-}
-
-
