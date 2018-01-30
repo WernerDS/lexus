@@ -14,8 +14,13 @@ body {
             .list-inline-item {    
                 margin: 1px -2px;
                 height: 320px;
-                width: 160px;
+                width: 137px;
                 transform: skewX(-20deg);
+                
+                @include media-breakpoint-down(md) {
+                    width: 100px;
+                }
+                
                
                 &.is:hover {            
                     background-image: url('/images/is-slant.png');
@@ -136,6 +141,11 @@ body {
         
         @include media-breakpoint-down(sm) {
             margin-top: 0;
+           
+        }
+        
+        @include media-breakpoint-down(md) {
+            max-width:80%;
         }
         
         img { 
@@ -148,9 +158,12 @@ body {
         
         img:nth-of-type(1) {
             position: absolute;
-            top:-21px;
-            left:-100px;
+            top:0;
+            left:-25%;
             z-index: 10;
+            @include media-breakpoint-up(lg) {
+                left:-10%;
+            }
             @include media-breakpoint-down(sm) {
                 position: static;
                 margin:20px 0;
@@ -162,8 +175,11 @@ body {
         img:nth-of-type(2) {
             position: absolute;
             top:0;
-            left:268px;
+            left:5%;
             z-index: 9;
+            @include media-breakpoint-up(lg) {
+                left:20%;
+            }
             @include media-breakpoint-down(sm) {
                 display: block;
                 position: static;
@@ -171,12 +187,15 @@ body {
         }   
         img:nth-of-type(3) {
             position: absolute;
-            top:9px;
-            left:590px;
+            top:0;
+            left:28%;
             z-index: 8;
+            @include media-breakpoint-up(lg) {
+                left:40%;
+            }
             @include media-breakpoint-down(sm) {
                 display: block;
-                 position: static;
+                position: static;
             }
         }
     }
@@ -295,7 +314,6 @@ body {
             }
         }
     }
-    
     .sedans { 
         background: url('/images/sedan-bg.jpg');
         background-size: cover;
@@ -401,17 +419,21 @@ body {
                 color:white;
                 text-transform: uppercase;
                 & .list-inline-item { 
-                    min-width: 120px;
                     color:white;
                     height: 60px;
-                    width: 248px;
-                    
+                    padding: 0 30px;
+                
+                &:hover { 
+                    cursor: pointer;  
+                    background:#000045;
+                }
+
                     span {
                         display: block;
-                        font-size: 1.2em;
+                        font-size: 1em;
                         transform: skewX(20deg);
                         font-weight: bold;
-                        padding-top: 16px;
+                        padding-top: 20px;
                         img { margin-right:10px;}
                         
                         a {
@@ -423,11 +445,21 @@ body {
 
                 & .list-inline-item:last-child {     
                     background:$blue;
+                    padding:0 40px;
+                    &:hover { cursor: pointer;  background:#000045;}
                 }
 
             }
         }
     }
+    .book-test-drive { 
+        color:black!important;
+            .modal-content { 
+                label { color:black;}
+                color:black;
+                background-image: url('/images/white_leather.png')!important;
+            }
+        }
     .main-cta-stick {
         height: 60px;
         transform: skewX(-20deg);
@@ -480,23 +512,36 @@ body {
         .list-inline {
             .list-inline-item {    
                 margin: 0px -2px;
-                min-width: 179px;
+                min-width: 158px;
                 height: 200px;
-                transform: skewX(-20deg);            
+                transform: skewX(-20deg);    
+                @include media-breakpoint-down(md) {
+                    min-width: 117px;
+                } 
+                @include media-breakpoint-down(sm) {
+                    width:92px;
+                    min-width: auto;
+                    height: 166px;
+                }
+                
                 p {
                     font-weight: bold;
-                    font-size:1.5em;
+                    font-size:1em;
                     margin-top:20px;
                     transform: skewX(20deg);
                     text-align: center;
                 }
                 span {
                     display: block; 
-                    font-size: 4.5em;
+                    font-size: 2.5em;
                     font-weight: bold;
                     margin-bottom: 20px;
                     transform: skewX(20deg); 
                     padding:0 30px;
+                    
+                    @include media-breakpoint-down(sm) {
+                        font-size: 1.5em;
+                    }
                 }
                 
                 //0-100
@@ -570,7 +615,7 @@ body {
         }
     }
     .car-model-pic { 
-    margin-top:-50px;
+    margin-top:-71px;
     }
     .car-model-colours { 
         
@@ -592,6 +637,10 @@ body {
                 border-radius:3px;
                 box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
                 transition: all 0.2s;
+                @include media-breakpoint-down(sm) {
+                    width:30px;
+                    margin-top:20px;
+                }
             }
             & span:hover { 
                 padding-top:10px;
@@ -661,6 +710,18 @@ body {
         thead {
             border-bottom: 1px solid #000000;
         }
+        
+        .car-performance-tabs { 
+            float:left;
+            height:300px;
+            min-width: 180px;
+            
+            @include media-breakpoint-down(sm) {
+                float:none;
+                height:auto;
+                width:100%;
+            }
+        }
         .nav  { 
             display: block;
             text-transform: uppercase;
@@ -691,6 +752,34 @@ body {
             .card-header,.card-footer { 
                 border:none;background: transparent;
             }        
+        }
+    }
+    .hero-club { 
+        color:white;   
+        background-image: url('/images/club-mccarthy-bg-l.jpg');
+        background-size: cover;  
+        background-repeat: no-repeat;
+       
+        z-index: 10;    
+        p {
+            font-size:0.7em;
+        }
+    } 
+    .variant-select { 
+        .btn {
+            background:$gray-800;
+            
+            &:focus { 
+                box-shadow: none;
+            }
+        }
+        .dropdown-menu { 
+            width:100%;
+            background:$gray-200;
+        }
+        .dropdown-item { 
+            font-weight:bold;
+          
         }
     }
 }

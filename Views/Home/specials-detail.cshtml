@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Specials Model";
+}
+
+<section class="lexus-shared section pb-0">
+    <div class="edge--bottom-detail"></div>
+    <div class="row m-2">
+        <div class="col">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="/specials">Back to Specials</a>
+                </li>
+                <li class="breadcrumb-item active">Lexus ES 300H EX 2.0</li>
+            </ul>
+        </div>
+    </div>
+    
+<div class="container car-specials car-specials-details">
+    <div class="row">
+        <div class="col col-lg-7 mx-auto">
+            <div class="card">
+                @Html.Partial("specials-item")
+                <div class="card-body">
+                    @Html.Partial("specials-contact")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</section>
+
+
+

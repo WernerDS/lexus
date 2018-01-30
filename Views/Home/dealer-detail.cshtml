@@ -1,0 +1,76 @@
+@{
+    ViewData["Title"] = "Dealer Details";
+}
+
+<section class="lexus-shared section pb-0">
+    <div class="row m-2">
+        <div class="col">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="/specials">Back to Specials</a>
+                </li>
+                <li class="breadcrumb-item active">Lexus ES 300H EX 2.0</li>
+            </ul>
+        </div>
+    </div>
+    <section class="dealer-info">
+        <div class="container-fluid">
+            <div class="row text-center-xs">
+                <div class="col-12 col-lg-6 pt-5 bg-dark text-white mx-auto pb-4">
+                    <img src="/images/bidvest-logo-white.png" alt="" class="d-block-xs mx-auto py-3">
+                    <span class="display-4 text-uppercase">Midrand</span>
+                    <span class="h2 d-block"><img src="/images/phone-white.png" alt=""> 012 231 4123</span>
+                    <span class="d-block">1682 New Rd</span>
+                    <span class="d-block">Carswald</span>
+                    <span class="d-block">Midrand</span>    
+                </div>
+                <div class="col-12 col-lg-6 bg-dark p-0"> 
+                    <div id="map"></div>   
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="models">
+        <div class="container-fluid">
+            <div class="row mt-5">
+                <div class="col">
+                    <h2 class="display-4">New Cars</h2>
+                    <span></span>
+                   
+                </div>
+                <div class="col">
+                    <h2 class="display-4">Demo Cars</h2>
+                    <span></span>
+                </div>
+                <div class="col">
+                    <h2 class="display-4">Used Cars</h2>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container">
+       <div class="row mt-5">
+            <div class="col">
+                <div class="h2 text-uppercase">More specials from this dealer</div>
+                <div class="h5 light text-uppercase">25 January 2017</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="car-specials my-5">
+                    <div class="container">
+                        @Html.Partial("specials-listings")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

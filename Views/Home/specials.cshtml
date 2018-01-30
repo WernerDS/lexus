@@ -1,65 +1,70 @@
+ @{ ViewData["Title"] = "Latest Specials"; }
 
-@{ ViewData["Title"] = "New Car Specials"; }
-
-   <div class="home-page">
+<div class="lexus-shared bg-gray-2">
     <section class="section specials-hero angle--bottom-right">
         <div class="container">
             <div class="row my-5" style="height:200px">
                 <div class="col">
-                    <img src="/images/bidvest-logo-white.png" alt="" height="50" class="my-4">
+                    <img src="/images/bidvest-logo-white.png" alt="" height="40" class="my-4">
                     <h1 class="display-4">@ViewBag.Title</h1>
+                    <div class="h5 light text-uppercase">25 January 2017</div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section class="car-specials mb-5">
-        <div class="container">
-            <div class="row mx-auto w-100-md-down">
-                <div class="col-12 col-md-6 col-lg-4 car-special-item">
-                    <a href="/specials-detail">
-                        <img src="/images/specials-1.jpg" alt="" class="img-fluid">
-                        <span class="">ES 300H EX 2.0 FWD (Hybrid)</span>
-                        <span class="">R670 700</span>
-                        <span class="">R28 000</span>
-                    </a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 car-special-item">
-                    <a href=""><img src="/images/specials-2.jpg" alt="" class="img-fluid">
-                        <span class="">GS300EX (Auto)</span>
-                        <span class="">R770 700</span>
-                        <span class="">R30 000</span>
-                    </a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 car-special-item">
-                    <a href=""><img src="/images/specials-3.jpg" alt="" class="img-fluid">
-                        <span class="">NX 300 E</span>
-                        <span class="">R599 700</span>
-                        <span class="">R20 000</span>
-                    </a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 car-special-item">
-                    <a href=""><img src="/images/specials-1.jpg" alt="" class="img-fluid">
-                        <span class="">ES 300H EX 2.0 FWD (Hybrid)</span>
-                        <span class="">R670 700</span>
-                        <span class="">R28 000</span>
-                    </a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 car-special-item">
-                    <a href=""><img src="/images/specials-2.jpg" alt="" class="img-fluid">
-                        <span class="">GS300EX (Auto)</span>
-                        <span class="">R770 700</span>
-                        <span class="">R30 000</span>
-                    </a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 car-special-item">
-                    <a href=""><img src="/images/specials-3.jpg" alt="" class="img-fluid">
-                        <span class="">NX 300 E</span>
-                        <span class="">R599 700</span>
-                        <span class="">R20 000</span>
-                    </a>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <aside class="facets facets-specials d-none d-md-block">
+                    @Html.Partial("specials-facets")
+                </aside>
+            </div>
+            <div class="col-12 col-md-9">
+                <div class="car-specials mb-5">
+                    <div class="container">
+                        <div class="row mt-4">
+                            <div class="col">
+                                <div class="facet-select d-md-none">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   Select Dealership
+                                </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Lyndwood <span>(17)</span></a>
+                                            <a class="dropdown-item" href="#">Midrand <span>(2)</span></a>
+                                            <a class="dropdown-item" href="#">Kingsmead <span>(1)</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="facet-select d-md-none mt-0">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                           Select Category
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">New <span>(17)</span></a>
+                                            <a class="dropdown-item" href="#">Demo <span>(2)</span></a>
+                                            <a class="dropdown-item" href="#">Used <span>(1)</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @Html.Partial("specials-listings")
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </div>
+@section Scripts {
+<script>
+    $(".dropdown-menu a").click(function(){
+      $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+      $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+    });
+</script>
+}

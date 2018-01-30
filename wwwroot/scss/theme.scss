@@ -1,65 +1,99 @@
-//Mobile Text alignment
-
+//Mobile Elements alignment
 @media (max-width: 767px) {
-  // Align text to center.
-  .text-xs-center {
-    text-align: center;
-  } 
+    // Align text to center.
+    .text-center-xs {
+        text-align: center;
+    }
+    .d-block-xs {
+        display: block;
+    }
 }
 
 
-// NAVBAR
+//// NAVBAR
 #main-nav.navbar {
-    padding:0;
-    height: 65px;
-//	transition: $transition-base; 
-//    background: $gray-900;
-    background: black;
-	z-index: 1040;
-	&.nav-padding {
-//        padding-top: 20px;
-//        padding-bottom: 20px;
-	}
-	.navbar-brand {
-		img {
-			height: 42px;
-            margin-left:140px;
-		}
-	}
-    .navbar-nav { 
-        align-items: center;
-    }
-    .nav-item {    
-        &.active {     
-            span {
-                display: flex;
-                align-items: center;
-                padding: 22px 10px;
-                font-weight: bold;
-                width: auto;
-                position: relative;
-                width: 130px; 
-                justify-content: center;
-                
-                &:before {
-                    content: '';
-                    transform: skew(-20deg);
-                    position: absolute;
-                    width: 130px;
-                    height: 65px; 
-                    background: $gray-700;
-                    z-index: -1;
-                }  
+    //    padding:0;
+    //    height: 65px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1040;
+    //	&.nav-padding {
+    ////  padding-top: 20px;
+    ////  padding-bottom: 20px;
+    //	}
+    .navbar-brand {
+        img {
+            height: 42px;
+            margin-left: 130px;
+
+            @include media-breakpoint-down(sm) {
+                height: 30px;
+                margin-left: 100px;
             }
-                  
-        } 
+        }
+    }
+    
+    
+    
+    .navbar-nav {
+        align-items: center;
+        @include media-breakpoint-down(sm) {
+            padding-top: 20px;
+        }
+        .nav-item {
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                text-align: center;
+            }
+            
+            &:hover { background: transparent;}
+
+            &.active {
+                span {
+                    display: flex;
+                    align-items: center;
+                    padding: 3px 10px;
+                    font-weight: bold;
+                    width: auto;
+                    position: relative;
+                    width: 130px;
+                    justify-content: center;
+
+                    @include media-breakpoint-down(sm) {
+                        width: 100%;
+                    }
+
+                    &:before {
+                        content: '';
+                        transform: skew(-20deg);
+                        position: absolute;
+                        width: 130px;
+                        height: 65px;
+                        background: $gray-700;
+                        z-index: -1;
+                        @include media-breakpoint-down(sm) {
+                            height: 30px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .nav-link:hover {
+                background: transparent;
+            }
+        }
     }
 }
+
 .bidvest-logo { 
     position: absolute;
     top: 0;
     left: 0;
     height: 65px;
+    z-index: 10;
+    @include media-breakpoint-down(sm) {
+        height: 53px;
+    }
 }
 
 
@@ -133,23 +167,6 @@ header,
 }
 
 
-// NAVBAR
-footer {
-    text-transform: uppercase;
-    font-size: 0.8em;
-    li { 
-        padding:4px 0;
-    }
-    a{
-        color:white;
-    }
-    background:#0f264b;
-	img {
-		height: 30px;
-        
-	}
-}
-
 .logoSVG {
 	display: none;
 }
@@ -158,7 +175,7 @@ footer {
 	a {
 		position: relative;
 		display:block;
-		background-position: -160px 0;
+		background-position: -200px 0;
 		&:hover,
 		&:focus{
 			background-position: 10px 0;
@@ -174,8 +191,14 @@ footer {
 			background-position: inherit; 
 			-webkit-mask: url('../images/lexus-white.svg') center;
 			mask: url('#mask-firefox');
+            
+//            @include media-breakpoint-down(sm) {
+//            display:none;
+//            }
 		}
+        
 	}
+    
 }
 
 //FORM VALIDATION 
@@ -242,8 +265,8 @@ label {
     }
 }
 .form-group {margin:20px 0;}
-//PAGINATION
 
+//PAGINATION
 .pagination { 
     .page-link {
         background: transparent;
@@ -258,4 +281,38 @@ label {
     }   
 }
 
+//BREADCRUMBS
+.breadcrumb { 
+    background:none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    a {
+        color:grey;
+    }
+    .active {
+        color:white;
+    }
+}
 
+// FOOTER
+footer {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    li { 
+        padding:4px 0;
+    }
+    a {
+        color:white;
+        &:hover { 
+            text-decoration: none;
+            font-weight:bold;
+            color:white;
+        }
+    }
+    background:#0f264b;
+	img {
+		height: 30px;
+        
+	}
+}

@@ -7,18 +7,27 @@
     <div class="main-cta">
         <div class="car-specs mx-auto text-center">
             <ul class="list-inline">
-                <li class="list-inline-item"><span><a href="">Lexus IS</a></span></li>
-                <li class="list-inline-item"><span><a href="">Specs</a></span></li>
-                <li class="list-inline-item"><span><a href="">Gallery</a></span></li>
-                <li class="list-inline-item">
+                <li class="list-inline-item d-none d-lg-inline-block"><span><a href="">Lexus IS</a></span></li>
+                <li class="list-inline-item d-none d-lg-inline-block"><span><a href="">Specs</a></span></li>
+                <li class="list-inline-item d-none d-lg-inline-block"><span><a href="">Gallery</a></span></li>
+                <li class="list-inline-item d-none d-md-inline-block">
                     <span><img src="/images/phone-white.png" alt="">Midrand</span>
 <!--                    <span>012 543 1235</span>-->
                 </li>
-                <li class="list-inline-item"><span> <img src="/images/location-white.png" alt="">Find a Dealer</span></li>
-                <li class="list-inline-item"><span> <img src="/images/book-test-drive-white.png" alt="">Book a Test Drive</span></li>
+                <li class="list-inline-item d-none d-md-inline-block"><span> <img src="/images/location-white.png" alt="">Find a Dealer</span></li>
+                <li class="list-inline-item d-none d-md-inline-block">
+                    <span>
+                    <img src="/images/book-test-drive-white.png" alt="">
+                    <a data-toggle="modal" data-target="#exampleModal">
+                     Book a Test Drive
+                    </a>
+                    </span>
+                </li>
             </ul>    
         </div> 
     </div>
+    <!-- Modal Pop-up-->
+    @Html.Partial("book-test-drive")
     <section class="hero">
         <header class="parallax-window use-parallax-mirror" data-parallax="scroll" data-image-src="/images/lexusIS_headerBG.jpg">
             <div class="parallax-section parallax">
@@ -34,13 +43,21 @@
             </div>
         </header>
     </section> 
-    <section class="car-info-table my-4">
-        <div class="container-fluid px-5">
-            <div class="row my-5">
-                <div class="col-2">
-                </div> 
+    <section class="car-info-table my-5">
+        <div class="container-fluid px-md-5">
+            <div class="variant-select d-md-none">
+                <div class="dropdown">
+                    <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        IS 200T E
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">IS 200T E</a>
+                        <a class="dropdown-item" href="#">IS 200T EX</a>
+                        <a class="dropdown-item" href="#">IS 350 F Sport</a>
+                    </div>
+                </div>
             </div>
-            <div class="float-left" style="height:300px">
+            <div class="car-performance-tabs d-none d-md-block">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><span>IS 200T E</span></a>
                     <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><span>IS 200T EX</span></a>
@@ -50,13 +67,13 @@
             <div class="tab-content" id="v-pills-tabContent">
                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                     <div class="row mt-4">
-                        <div class="col-4 text-right">
+                        <div class="col-12 col-lg-4 mb-4">
                             <h1 class="display-4">IS 200T E</h1>
                             <span class="h4">R 787 000</span>
                         </div>
 
-                        <div class="col-6">
-                            <div class="car-specs-model text-left">
+                        <div class="col-12 col-lg-8">
+                            <div class="car-specs-model text-center text-lg-left">
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
                                         <p></p><span>7.0s</span></li>
@@ -71,13 +88,13 @@
                 </div>
                 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                     <div class="row mt-4">
-                        <div class="col-4 text-right">
+                        <div class="col-12 col-lg-4 mb-4">
                             <h1 class="display-4">IS 200T EX</h1>
                             <span class="h4">R 787 000</span>
                         </div>
 
-                        <div class="col-6">
-                            <div class="car-specs-model text-left">
+                        <div class="col-12 col-lg-8">
+                            <div class="car-specs-model text-center text-lg-left">
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
                                         <p></p><span>7.0s</span></li>
@@ -92,13 +109,13 @@
                 </div>
                 <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                     <div class="row mt-4">
-                        <div class="col-4 text-right">
+                        <div class="col-12 col-lg-4 mb-4">
                             <h1 class="display-4">IS 350 F SPORT</h1>
                             <span class="h4">R 987 000</span>
                         </div>
 
-                        <div class="col-6">
-                            <div class="car-specs-model text-left">
+                        <div class="col-12 col-lg-8">
+                            <div class="car-specs-model text-center text-lg-left">
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
                                         <p></p><span>5.9s</span></li>
@@ -134,7 +151,7 @@
             <div class="parallax-section parallax">
                 <div class="container-fluid">
                     <div class="row car-features-row">
-                        <div class="col-6 offset-1">
+                        <div class="col-lg-9 col-12 offset-lg-1">
                            <ul class="wheels">
                                <li>A 17" Alloy wheel design with five twisted twin-spokes produces an elegant look to the IS.</li>
                                <li>LED Daytime Running Headlamp in the signature Lexus arrowhead that is designed to clearly light the way. </li>
@@ -151,7 +168,7 @@
             <div class="parallax-section parallax">
                 <div class="container">
                     <div class="row car-features-row float-right">
-                        <div class="col">
+                        <div class="col-lg-9 col-12 offset-lg-1">
                            <ul class="steering">
                                <li>A 17" Alloy wheel design with five twisted twin-spokes produces an elegant look to the IS.</li>
                                <li>LED Daytime Running Headlamp in the signature Lexus arrowhead that is designed to clearly light the way. </li>
@@ -168,7 +185,7 @@
             <div class="parallax-section parallax">
                 <div class="container">
                     <div class="row car-features-row">
-                        <div class="col">
+                        <div class="col-lg-9 col-12 offset-lg-1">
                            <ul class="seat">
                                <li>A 17" Alloy wheel design with five twisted twin-spokes produces an elegant look to the IS.</li>
                                <li>LED Daytime Running Headlamp in the signature Lexus arrowhead that is designed to clearly light the way. </li>
@@ -185,18 +202,32 @@
             <div class="car-model-pic mx-auto wrap">
                 <img src="/images/angled_IS.png" alt="" class="img-fluid">  
             </div>
-               <div class="display-4">Lexus IS</div>
-               <span class="h3 light d-block w-75 pb-5">The IS brings together show-stopping look with <span class="font-weight-bold">advanced hybrid technology</span> and unparalleled comfort. With athletic stance and longe coupe roofline, this exeptional sports saloon is engineered to deliver an effortless, heart-racing performance.</span>
+               <h3 class="text-center text-uppercase text-muted">Lexus IS</h3>
+               <span class="h4 light d-block w-75 pb-5 mx-auto">The IS brings together show-stopping look with <span class="font-weight-bold">advanced hybrid technology</span> and unparalleled comfort. With athletic stance and longe coupe roofline, this exeptional sports saloon is engineered to deliver an effortless, heart-racing performance.</span>
         </div>
     </section>     
     <section class="car-vr">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-12 col-md-6">
                     <div class="display-4"> Drive in Style</div>
                     <div class="h4 light">360 Interior View</div>
                 </div>
                 <div class="col">
+                    <div class="variant-select d-md-none mb-4">
+                        <div class="dropdown">
+                            <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                IS 200T E
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">IS 200T E</a>
+                                <a class="dropdown-item" href="#">IS 200T EX</a>
+                                <a class="dropdown-item" href="#">IS 350 F Sport</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-none d-md-block">
                     <div class="car-vr-models mx-auto text-center">
                         <ul class="list-inline">
                             <li class="list-inline-item"><span>IS 350 F Sport</span></li>
@@ -212,7 +243,21 @@
     <section class="car-info-table my-4">
         <div class="container">
            <div class="row">
-               <div class="col-3">
+                <div class="col">
+                    <div class="variant-select d-md-none mb-4">
+                        <div class="dropdown">
+                            <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                IS 200T E
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">IS 200T E</a>
+                                <a class="dropdown-item" href="#">IS 200T EX</a>
+                                <a class="dropdown-item" href="#">IS 350 F Sport</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               <div class="col-12 col-lg-3 d-none d-md-block">
                    <ul class="nav nav-tabs" id="installments-info" role="tablist">
                       <li class="nav-item">
                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><span>IS 200T E</span></a>
@@ -225,7 +270,7 @@
                       </li>
                     </ul>
                </div>
-                   <div class="col-9">
+                   <div class="col-12 col-lg-9">
                         <div class="tab-content" id="tab-content-1">
                             <div class="h2 text-uppercase">Installments</div>
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -245,7 +290,23 @@
     <section class="car-info-table my-4">
         <div class="container">
            <div class="row">
-               <div class="col-3">
+                <div class="col">
+                    <div class="variant-select d-md-none mb-4">
+                        <div class="dropdown">
+                            <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                The Lexus Warranty
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">The Lexus Distance Plan</a>
+                                <a class="dropdown-item" href="#">The Lexus Distance Plan</a>
+                                <a class="dropdown-item" href="#">Booking a service for your Lexus</a>
+                                <a class="dropdown-item" href="#">Lexus body and paint repairers</a>
+                                <a class="dropdown-item" href="#">Lexus roadside assistance</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 d-none d-md-block">
                    <ul class="nav nav-tabs" id="maintenance-info" role="tablist">
                       <li class="nav-item">
                         <a class="nav-link active" id="1" data-toggle="tab" href="#1" role="tab" aria-controls="1" aria-selected="true"><span>The Lexus Warranty</span></a>
@@ -264,7 +325,7 @@
                       </li>
                     </ul>
                </div>
-                   <div class="col-9">
+                   <div class="col-12 col-lg-9">
                         <div class="tab-content" id="tab-content-2">
                             <div class="h2 text-uppercase">Maintenance</div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, perferendis molestias explicabo quod consequuntur assumenda quidem quia voluptates earum dolorum porro commodi doloremque optio, rerum? Voluptates officia unde sapiente praesentium!</p>
@@ -282,65 +343,101 @@
                </div>
            </div>
     </section>
-    
-    <hr class="stitch-1">
+    <hr class="stitch-2">
     <section class="car-dealerships my-4">
         <div class="container">
-            <div class="row">
-                <div class="row my-4">
-                     <div class="display-4">Lexus Dealerships</div>
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="h2 text-uppercase">Lexus Dealerships</div>
                 </div>
             </div>
             <div class="row mx-auto text-center">
-                    <div class="col-4">
-                        <div class="card text-left">
-                            <div class="card-header">
-                                <span class="h3 text-uppercase">Midrand</span>
-                                <img src="/images/bidvest-logo-white.png" alt="" class="float-right">
-                            </div>
-                            <div class="card-body">
-                                <span class="d-block">1682 New Rd</span>
-                                <span class="d-block">Carswald</span>
-                                <span class="d-block">Midrand</span>
-                            </div>
-                            <div class="card-footer text-center">
-                                <span class="h4"><img src="/images/phone-white.png" alt=""> 012 231 4123</span>
-                            </div>
-                        </div>               
-                    </div>
-                    <div class="col-4">
-                       <div class="card text-left">
-                            <div class="card-header">
-                                <span class="h3 text-uppercase">Midrand</span>
-                                <img src="/images/bidvest-logo-white.png" alt="" class="float-right">
-                            </div>
-                            <div class="card-body">
-                                <span class="d-block">1682 New Rd</span>
-                                <span class="d-block">Carswald</span>
-                                <span class="d-block">Midrand</span>
-                            </div>
-                            <div class="card-footer text-center">
-                                <span class="h4"><img src="/images/phone-white.png" alt=""> 012 231 4123</span>
-                            </div>
-                        </div>   
-                    </div>
-                    <div class="col-4">
-                      <div class="card text-left">
-                            <div class="card-header">
-                                <span class="h3 text-uppercase">Midrand</span>
-                                <img src="/images/bidvest-logo-white.png" alt="" class="float-right">
-                            </div>
-                            <div class="card-body">
-                                <span class="d-block">1682 New Rd</span>
-                                <span class="d-block">Carswald</span>
-                                <span class="d-block">Midrand</span>
-                            </div>
-                            <div class="card-footer text-center">
-                                <span class="h4"><img src="/images/phone-white.png" alt=""> 012 231 4123</span>
-                            </div>
-                        </div>   
-                    </div>
-            </div> 
-        </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card text-left">
+                        <div class="card-header">
+                            <span class="h3 text-uppercase">Midrand</span>
+                            <img src="/images/bidvest-logo-white.png" alt="" class="float-right">
+                        </div>
+                        <div class="card-body">
+                            <span class="d-block">1682 New Rd</span>
+                            <span class="d-block">Carswald</span>
+                            <span class="d-block">Midrand</span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <span class="h4"><img src="/images/phone-white.png" alt=""> 012 231 4123</span>
+                        </div>
+                    </div>               
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                   <div class="card text-left">
+                        <div class="card-header">
+                            <span class="h3 text-uppercase">Midrand</span>
+                            <img src="/images/bidvest-logo-white.png" alt="" class="float-right">
+                        </div>
+                        <div class="card-body">
+                            <span class="d-block">1682 New Rd</span>
+                            <span class="d-block">Carswald</span>
+                            <span class="d-block">Midrand</span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <span class="h4"><img src="/images/phone-white.png" alt=""> 012 231 4123</span>
+                        </div>
+                    </div>   
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                  <div class="card text-left">
+                        <div class="card-header">
+                            <span class="h3 text-uppercase">Midrand</span>
+                            <img src="/images/bidvest-logo-white.png" alt="" class="float-right">
+                        </div>
+                        <div class="card-body">
+                            <span class="d-block">1682 New Rd</span>
+                            <span class="d-block">Carswald</span>
+                            <span class="d-block">Midrand</span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <span class="h4"><img src="/images/phone-white.png" alt=""> 012 231 4123</span>
+                        </div>
+                    </div>   
+                </div>
+            </div> </div>
     </section>
+    <section class="hero-club">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="/images/bidvest-club-mccarthy-logo.png" width="200" alt="" class="img-fluid mb-4" style="margin-top:63px;">
+                    <h3 class="h4 py-2">Get 1 year free membership with every Lexus purchase.</h3>
+                </div>
+            </div>
+            
+            <div class="row text-center">
+                <div class="col-4 col-lg-2">
+                    <img src="/images/medical-assistance.png" width="40" alt="" class="img-fluid">
+                    <p>24/7 Professional Emergency Assistance on road or at home</p>
+                </div> 
+                <div class="col-4 col-lg-2">
+                    <img src="/images/giveaways.png" alt="" width="40" class="img-fluid">
+                    <p>Exclusive Giveaways and Discount on travel.</p>
+                </div> 
+                <div class="col-4 col-lg-2">
+                    <img src="/images/gps-app.png" alt="" width="40" class="img-fluid">
+                    <p>McCarthy App with GPS to help get our emergency team faster to you.</p>
+                </div> 
+            </div>
+            <div class="row text-center pb-5">
+                <div class="col-4 col-lg-2">
+                    <img src="/images/emergency-assistance.png" width="40" alt="" class="img-fluid">
+                    <p>Medical Emergency Assistance</p>
+                </div> 
+                <div class="col-4 col-lg-2">
+                    <img src="/images/legal.png" alt="" width="40" class="img-fluid">
+                    <p>Legal Advice Assistance.</p>
+                </div>
+                <div class="col-4 col-lg-2"></div>
+            </div>
+        
+        </div>   
+    </section>
+</div>
     

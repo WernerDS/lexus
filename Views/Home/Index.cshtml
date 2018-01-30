@@ -1,14 +1,14 @@
 ﻿@{
-    ViewData["Title"] = "Home Page2";
+    ViewData["Title"] = "Home Page";
 }
-<div class="home-page">
+<div class="lexus-shared">
     <section class="section bidvest-mccarthy">
        <div class="container">
             <div class="row py-5">
-                <div class="col">
+                <div class="col-12">
                     <img src="/images/bidvest-logo-white.png" alt="" height="50" class="mb-4">
                     <p class="text-white mb-5">It is the old motor industry adage that people buy from people, but these days we know that people only buy from the BEST people and there is no better than at McCarthy Toyota Midrand. For all your motor needs; from Purchasing your Brand New Toyota, to servicing it and using Toyota genuine Parts, to our wide range of Pre-Owned vehicles you can be guaranteed that you will be dealing with the right people.</p>
-                     <a href="javascript:void(0)" class="btn btn-secondary mb-5 text-uppercase">Find a Bidvest McCarthy Dealership</a>
+                    <a href="/dealers" class="btn btn-secondary text-uppercase text-center-xs d-block-xs mx-auto">Find a Bidvest McCarthy Dealership</a>
                 </div>
             </div>
         </div>
@@ -16,18 +16,17 @@
     <section class="models">
         <div class="container-fluid">
             <div class="row mt-5">
-                <div class="col">
-                    <h2 class="display-4">Sedan</h2>
-                    <p class="h5 light">Best of all worlds</p>
-                    <span></span>
-                   
-                </div>
-                <div class="col">
+                    <div class="col" onclick="location.href='/models#sedans';">
+                       <h2 class="display-4">Sedans</h2>
+                        <p class="h5 light">Best of all worlds</p>
+                        <span></span>
+                    </div>
+                <div class="col" onclick="location.href='/models#suvs';">
                     <h2 class="display-4">Suvs</h2>
                     <p class="h5 light">Luxury Expanded</p>
                     <span></span>
                 </div>
-                <div class="col">
+                <div class="col" onclick="location.href='/models#coupes';">
                     <h2 class="display-4">Coupes</h2>
                     <p class="h5 light">More than a car. A feeling</p>
                     <span></span>
@@ -39,85 +38,24 @@
         <div class="container">
             <div class="row my-4">
                 <div class="col">
-                    <div class="display-4">Special Offers</div>
-<!--                <div class="h4 light">Exclusive deals of other similar models to the IS 200T EX</div>      -->
-                </div>  
-            </div>
-            <div class="row mx-auto w-100-md-down">
-                <div class="col-12 col-md-6 col-lg-4 car-special-item">
-                    <a href="">
-                        <img src="/images/specials-1.jpg" alt="" class="img-fluid">
-                        <span class="">ES 300H EX 2.0 FWD (Hybrid)</span>
-                        <span class="">R670 700</span>
-                        <span class="">R28 000</span>                
-                    </a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 car-special-item">
-                    <a href=""> <img src="/images/specials-2.jpg" alt="" class="img-fluid">
-                        <span class="">GS300EX (Auto)</span>
-                        <span class="">R770 700</span>
-                        <span class="">R30 000</span>
-                    </a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 car-special-item">
-                    <a href=""> <img src="/images/specials-3.jpg" alt="" class="img-fluid">
-                        <span class="">NX 300 E</span>
-                        <span class="">R599 700</span>
-                        <span class="">R20 000</span>
-                    </a>
+                    <div class="display-4">Latest Specials</div>
+                    <div class="h5 light text-uppercase">25 January 2017</div>
                 </div>
             </div>
+            @Html.Partial("specials-listings")
         </div>
     </section>
  
-    <section class="angle--top-left">
-        <div class="container-fluid">
-             
+    <section class="angle--top-left-2">
+        <div class="container-fluid">           
             <div class="row">
-                <div class="col-12 col-sm-6 hero">
-                    <div class="row p-5">
-                        <div class="col">
-                            <img src="/images/bidvest-club-mccarthy-logo.png" width="200" alt="" class="img-fluid mb-4" style="margin-top:63px;">
-                        </div>
-                    </div>
-                    <div class="row text-center px-5">
-                        <div class="col-4">
-                            <img src="/images/medical-assistance.png" width="40" alt="" class="img-fluid">
-                            <p>24/7 Professional Emergency Assistance on road or at home</p>
-                        </div> 
-                        <div class="col-4">
-                            <img src="/images/giveaways.png" alt="" width="40" class="img-fluid">
-                            <p>Exclusive Giveaways and Discount on travel.</p>
-                        </div> 
-                        <div class="col-4">
-                            <img src="/images/gps-app.png" alt="" width="40" class="img-fluid">
-                            <p>McCarthy App with GPS to help get our emergency team faster to you.</p>
-                        </div> 
-                    </div>
-                        <div class="row text-center px-5">
-                            <div class="col-4">
-                                <img src="/images/emergency-assistance.png" width="40" alt="" class="img-fluid">
-                                <p>Medical Emergency Assistance</p>
-                            </div> 
-                            <div class="col-4">
-                                <img src="/images/legal.png" alt="" width="40" class="img-fluid">
-                                <p>Legal Advice Assistance.</p>
-                            </div>
-                        </div>
-                        <div class="row px-5 my-3">
-                            <div class="col">
-                                <a href="javascript:void(0)" class="btn btn-secondary mb-3">Join Bidvest Club McCarthy</a>
-                                <p class="p font-weight-bold small text-xs-center mb-4">Get 1 Year free membership with every Lexus purchase</p>
-                            </div>
-                        </div>    
-                </div>
-                <div class="col-12 col-sm-6 bidvest-insurance">
+                <div class="col-12 col-md-6 bidvest-insurance">
                     <div class="row p-4">
                         <div class="col">
                             <img src="/images/bidvest-insurance-logo.png" width="150" alt="" class="img-fluid" style="margin-top:83px;">
                         </div>
                     </div>
-                    <div class="row p-4">
+                    <div class="row p-4 w-75-lg-up">
                         <div class="col">
                             <img src="/images/mechanical-warranty.png" width="40"alt="" class="img-fluid">
                             <p>Mechanical Warranty</p>
@@ -139,7 +77,7 @@
                             <p>Shortfall Protection</p>
                         </div>
                     </div>
-                    <div class="row p-4">
+                    <div class="row p-4 w-75-lg-up">
                         <div class="col">
                             <img src="/images/maintenance-plan.png" alt="" width="40" class="img-fluid">
                             <p>Maintenance Plan</p>
@@ -158,12 +96,49 @@
                         </div>
                         <div class="col"></div>
                     </div>
-                    <div class="row">
+                    <div class="row mb-4">
                         <div class="col">
-                            <a href="javascript:void(0)" class="btn btn-secondary mb-3 mx-auto">Apply for Bidvest Insurance</a>
+                            <a href="javascript:void(0)" class="btn btn-secondary mb-3 mx-auto d-block-xs mx-md-4">Apply for Bidvest Insurance</a>
                         </div>
                     </div>          
-                </div>          
+                </div>  
+                <div class="col-12 col-md-6 hero">
+                    <div class="row p-5">
+                        <div class="col">
+                            <img src="/images/bidvest-club-mccarthy-logo.png" width="200" alt="" class="img-fluid" style="margin-top:60px;">
+                        </div>
+                    </div>
+                    <div class="row text-center px-5 w-75-lg-up">
+                        <div class="col-4">
+                            <img src="/images/medical-assistance.png" width="40" alt="" class="img-fluid">
+                            <p>24/7 Professional Emergency Assistance on road or at home</p>
+                        </div> 
+                        <div class="col-4">
+                            <img src="/images/giveaways.png" alt="" width="40" class="img-fluid">
+                            <p>Exclusive Giveaways and Discount on travel.</p>
+                        </div> 
+                        <div class="col-4">
+                            <img src="/images/gps-app.png" alt="" width="40" class="img-fluid">
+                            <p>McCarthy App with GPS to help get our emergency team faster to you.</p>
+                        </div> 
+                    </div>
+                    <div class="row text-center px-5 w-75-lg-up">
+                        <div class="col-4">
+                            <img src="/images/emergency-assistance.png" width="40" alt="" class="img-fluid">
+                            <p>Medical Emergency Assistance</p>
+                        </div> 
+                        <div class="col-4">
+                            <img src="/images/legal.png" alt="" width="40" class="img-fluid">
+                            <p>Legal Advice Assistance.</p>
+                        </div>
+                    </div>
+                    <div class="row my-3">
+                        <div class="col">
+                            <a href="javascript:void(0)" class="btn btn-secondary mb-3 d-block-xs mx-md-4">Join Bidvest Club McCarthy</a>
+                            <p class="p font-weight-bold small text-center-xs mb-4 mx-lg-4">Get 1 Year free membership with every Lexus purchase</p>
+                        </div>
+                    </div>    
+                </div>        
             </div>  
         </div>
     </section>

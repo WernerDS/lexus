@@ -198,8 +198,8 @@ $size: 45px;
     width:300px;
     height:100%;
     overflow-y: scroll;
-//    box-shadow: 0 7px 14px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1); 
-     @extend .bg-gray-3;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+    background-image: url('/images/white_leather.png');
     
     p { 
         @extend .lead;
@@ -234,23 +234,26 @@ $size: 45px;
             position: relative;
             padding: 5px 44px;
             font-size: 0.9em;
-            margin: 0 5px;
+            
             
             & a {
                 color:black;
+                margin:0;
             }
             &.active {
                 background: $gray-200;
                 font-weight: bold;
                 border-radius: 0;
-                margin: 0;
+                
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
                 a {
                     color:black;
                 }
                 
-                &:hover {
-                    background: #505050;
+                &:hover { 
+                    background: $gray-200;
                 }
+                
                 .badge {
                     background: white;
                     color:black;
@@ -258,8 +261,10 @@ $size: 45px;
             }
             
             &:hover  {
-                background: #f4f4f4;  
+                background: rgba(0, 0, 0, 0.20);  
                 cursor:pointer;
+                color:white;
+                margin:0;
             }
         }
         span {

@@ -1,0 +1,269 @@
+.lexus-shared { 
+    header, .bg-image {
+        position: relative;
+
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+    .hero { 
+        color:white;   
+        background-image: url('/images/club-mccarthy-bg.jpg');
+        background-size: cover;  
+        z-index: 10;
+        img {
+            margin-bottom:10px;
+        }
+        p {
+            font-size:0.7em;
+        }
+    } 
+    .specials-hero { 
+        color:white;   
+        background-image: url('/images/specials-bg.jpg');
+        background-size: cover;  
+        z-index: 10;
+        img {
+            margin-bottom:10px;
+        }
+        p {
+            font-size:0.7em;
+        }
+    }
+    .dealers-hero { 
+        color:white;   
+        background-image: url('/images/dealers-hero.jpg');
+        background-size: cover;  
+        z-index: 10;
+        img {
+            margin-bottom:10px;
+        }
+        p {
+            font-size:0.7em;
+        }
+    } 
+    
+    .dealer-info { 
+        margin-top: -67px;
+    }
+
+    .car-dealerships { 
+        a { 
+            transition: all 0.4s cubic-bezier(.25,.8,.25,1); 
+            border-radius:8px;
+            display: block;
+        }
+            
+        a:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 10px 40px rgba(0,0,0,0.3); 
+        }
+        
+        .card {    
+            background-image: url('/images/paper-texture.jpg');
+            color:white;
+            border:none;
+            .card-header,.card-footer { 
+                border:none;background: transparent;
+            }        
+        }
+    }
+    
+
+    
+    .models { 
+        margin-top: -176px;
+        text-transform: uppercase;
+        color:white;
+        .col {
+            height: 520px;
+            padding: 132px 60px;
+            position: relative;
+            transition: all 0.4s cubic-bezier(.25,.8,.25,1); 
+            &:hover {
+                cursor: pointer; 
+                filter:contrast(120%);
+                transition: all 0.4s cubic-bezier(.25,.8,.25,1); 
+                & span { 
+                    position: absolute;
+                    top: 136px;
+                    left: 90%;         
+                    background-image: url(/images/white-chevron.png);
+                    background-repeat: no-repeat;
+                    width: 22px;
+                    height: 46px;
+                    animation: bar fadeIn 0.6s ease; 
+                    animation: fadeIn 0.6s ease; 
+//                    transition: all 0.4s cubic-bezier(.25,.8,.25,1); 
+                    
+                }
+            }
+            @keyframes bar {
+              0% {
+                left: 0%;
+              }
+              100% {
+                left: 90%;
+              }
+            }
+            @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+        }
+        
+        .col:nth-of-type(1) {
+            background-image: url('/images/sedan.jpg');
+            background-size: cover;
+        }
+        .col:nth-of-type(2) {
+            background-image: url('/images/suv.jpg');
+            background-size: cover;
+        }
+        .col:nth-of-type(3) {
+            background-image: url('/images/coupe.jpg');
+            background-size: cover;
+        }
+    }
+    .bidvest-mccarthy { 
+        @extend .angle--bottom-right;
+        background-image: url('/images/bidvest-dealer.jpg');
+        background-size: cover;   
+        z-index: 10;
+    }
+    .bidvest-insurance { 
+        background-image: url('/images/insurance-bg.jpg');
+        background-size: cover;
+        color: white;
+        img {
+            margin-bottom:6px;
+        }
+        p { 
+            font-size: 0.7em;
+        }
+    }
+    .car-specials { 
+        background-image: url('/images/white_leather.png.jpg');
+        background-size: cover;
+        position: relative;
+        z-index: 10;
+        .car-special-listing { 
+            margin:20px 0;
+//            max-width: 455px;
+            
+            a { 
+                transition: all 0.4s cubic-bezier(.25,.8,.25,1); 
+                border-radius:8px;
+                display: block;
+            }
+            
+            a:hover {
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 10px 40px rgba(0,0,0,0.3); 
+            }
+            
+            img {
+                box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.37);
+                border-radius: 8px;
+                width:100%;
+            }
+            //Car Desc
+            span:nth-of-type(1) {
+                position: absolute;
+                top:12px;
+                left:30px;
+                font-size:1.2em;
+                font-weight:bold;
+            }
+            //Dealership
+            span:nth-of-type(2) {
+                position: absolute;
+                top: 35px;
+                left: 30px;
+                font-size: 0.8em;
+            }
+            
+            
+            //Car Price
+            span:nth-of-type(3) {
+                position: absolute;
+                top:52px;
+                left:30px;
+                font-size:2em;
+                font-weight: bold;
+            }
+            //Car Special
+            span:nth-of-type(4) {
+                font-size:1.1em;
+                position: absolute;
+                top:94px;
+                left:30px;
+                font-weight: normal;
+                color:$blue;
+                &:before {
+                    content:'SAVE'; 
+                    display: block;
+                    text-align: left;
+                    margin-bottom: -5px;
+                }
+            }
+        }
+    }
+    .car-specials-details {
+        
+        .car-special-listing {
+            padding:0;
+            margin:0;
+            max-width:auto;
+            width:100%;
+            a:hover {
+                box-shadow: none;
+            }
+            img {
+                width: 100%;
+                box-shadow: none;
+                border-radius: 3px;
+            }
+           
+        }
+        .card {
+            margin:30px;
+            box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.37);
+            border:none;
+            @include media-breakpoint-down(sm) {
+                margin:30px 0;
+            }
+        }
+        .card-body { 
+            background-image:url('/images/dark_leather.png');
+            padding:10px 50px;
+        }
+    }
+    
+    .facets-specials {
+        position: absolute;
+        left: 0;
+        top: -27px;
+        width: 100%;
+        padding-top:30px;
+    }
+    .facet-select { 
+        .btn {
+            background:$gray-800;
+            
+            &:focus { 
+                box-shadow: none;
+            }
+        }
+        .dropdown-menu { 
+            width:100%;
+            background:$gray-200;
+        }
+        .dropdown-item { 
+            font-weight:bold;
+            & span { 
+                font-weight:normal;
+                position: absolute;
+                right:10px;
+                
+            }  
+        }
+    }
+}

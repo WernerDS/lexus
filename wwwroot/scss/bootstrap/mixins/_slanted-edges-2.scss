@@ -135,6 +135,10 @@
   @include angle-edge($angle: 3, $angle-position-y: 'top', $angle-position-x: 'left');
 }
 
+.angle--top-left-2 {
+  @include angle-edge($angle: 2, $angle-position-y: 'top', $angle-position-x: 'left');
+}
+
 .angle--top-right {
   @include angle-edge($angle: 3, $angle-position-y: 'top', $angle-position-x: 'right');
 }
