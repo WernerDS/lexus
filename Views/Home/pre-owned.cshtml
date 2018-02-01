@@ -1,79 +1,69 @@
-@{
-    ViewData["Title"] = "Search Results";
-}
+@{ ViewData["Title"] = "Search Results"; }
 
 <section class="section results">
     <ul class="breadcrumb mb-0">
         <li class="breadcrumb-item">
-          <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
         </li>
         <li class="breadcrumb-item">
-          <a href="#">Parent</a>
+            <a href="#">Parent</a>
         </li>
         <li class="breadcrumb-item active">USED LEXUS RX MODELS</li>
     </ul>
-    
+
     <div class="d-block d-md-none mt-0 refine-search">
         <a href="#top" class="btn btn-light  btn-block btn-rounded"><i class="fa fa-sliders" aria-hidden="true"></i> Search Refine</a>
     </div>
-   
+
     <div class="container">
-    <aside class="facets d-none d-md-block">
-        @Html.Partial("pre-owned-facets")
-    </aside>
-    <div class="results-column">
-        <div class="row mt-4">
-            <div class="col">
-                <h1 class="mb-0"><span class="light pr-2">USED </span>
-                
-                <div class="edge--skew bg-gray-6 p-3">
-                    <span class="text-white">LEXUS RX MODELS</span>
+        <aside class="facets d-none d-md-block">
+            @Html.Partial("pre-owned-facets")
+        </aside>
+        <div class="results-column">
+            <div class="row mt-4">
+                <div class="col">
+                    <div class="results-heading">
+                        <h1 class="mb-0 light pr-2">USED<span class="text-white bg-gray-6 p-3">LEXUS RX MODELS</span></h1>
+                    </div>
+                    <span class="d-block py-4"><b>35</b> Vehicles matching your search </span>
                 </div>
-                
-                </h1>
-                <span class="d-block py-4"><b>35</b> Vehicles matching your search </span> 
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    @Html.Partial("result-listing") 
+                    @Html.Partial("result-listing") 
+                    @Html.Partial("result-listing") 
+                    @Html.Partial("result-listing") 
+                    @Html.Partial("result-listing") 
+                    @Html.Partial("result-listing") 
+                    @Html.Partial("result-listing")
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul class="pagination justify-content-center mt-4">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous"> <i class="fa fa-chevron-left" aria-hidden="true"></i> <span class="sr-only">Previous</span> </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">4</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next"> <i class="fa fa-chevron-right" aria-hidden="true"></i> <span class="sr-only">Next</span> </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-            
-        <div class="row">
-            <div class="col">
-                @Html.Partial("result-listing")
-                @Html.Partial("result-listing")
-                @Html.Partial("result-listing")
-                @Html.Partial("result-listing")
-                @Html.Partial("result-listing")
-                @Html.Partial("result-listing")
-                @Html.Partial("result-listing")
-            </div>
-        </div> 
-        <div class="row">
-            <div class="col">
-                <ul class="pagination justify-content-center mt-4">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous"> <i class="fa fa-chevron-left" aria-hidden="true"></i> <span class="sr-only">Previous</span> </a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item active">
-                        <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">4</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next"> <i class="fa fa-chevron-right" aria-hidden="true"></i> <span class="sr-only">Next</span> </a>
-                    </li>
-                </ul>
-              </div>
-        </div>
-    </div>
-       
     </div>
 </section>
-        
-       
-

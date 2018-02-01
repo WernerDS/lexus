@@ -40,17 +40,16 @@
         p {
             font-size:0.7em;
         }
-    } 
-    
+    }   
     .dealer-info { 
         margin-top: -67px;
     }
-
     .car-dealerships { 
         a { 
             transition: all 0.4s cubic-bezier(.25,.8,.25,1); 
             border-radius:8px;
             display: block;
+            text-decoration: none;
         }
             
         a:hover {
@@ -66,48 +65,53 @@
             }        
         }
     }
-    
-
-    
     .models { 
         margin-top: -176px;
         text-transform: uppercase;
         color:white;
         .col {
             height: 520px;
-            padding: 132px 60px;
+            padding: 166px 60px;
             position: relative;
             transition: all 0.4s cubic-bezier(.25,.8,.25,1); 
+            
+            @include media-breakpoint-down(sm) { 
+                span {
+                    position: absolute;
+                    top: 173px;
+                    left: 90%;  
+                    width: 22px;
+                    height: 46px;
+                    background-repeat: no-repeat;
+                    background-image: url(/images/white-chevron.png);
+                }
+            }
+           
             &:hover {
                 cursor: pointer; 
                 filter:contrast(120%);
                 transition: all 0.4s cubic-bezier(.25,.8,.25,1); 
                 & span { 
                     position: absolute;
-                    top: 136px;
-                    left: 90%;         
+                    top: 173px;
+                    left: 90%;  
                     background-image: url(/images/white-chevron.png);
                     background-repeat: no-repeat;
                     width: 22px;
                     height: 46px;
-                    animation: bar fadeIn 0.6s ease; 
-                    animation: fadeIn 0.6s ease; 
-//                    transition: all 0.4s cubic-bezier(.25,.8,.25,1); 
+                    animation: all 0.4s ease;   
                     
                 }
             }
-            @keyframes bar {
-              0% {
-                left: 0%;
-              }
-              100% {
-                left: 90%;
-              }
-            }
+
             @keyframes fadeIn {
-            0% {opacity: 0;}
-            100% {opacity: 1;}
-         }
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
         }
         
         .col:nth-of-type(1) {
@@ -121,6 +125,21 @@
         .col:nth-of-type(3) {
             background-image: url('/images/coupe.jpg');
             background-size: cover;
+        }
+        
+        .dealer-cars { 
+            .col:nth-of-type(1) {
+                background-image: url('/images/new-car.jpg');
+                background-size: cover;
+            }
+            .col:nth-of-type(2) {
+                background-image: url('/images/demo-car.jpg');
+                background-size: cover;
+            }
+            .col:nth-of-type(3) {
+                background-image: url('/images/used-car.jpg');
+                background-size: cover;
+            }
         }
     }
     .bidvest-mccarthy { 
@@ -137,7 +156,9 @@
             margin-bottom:6px;
         }
         p { 
-            font-size: 0.7em;
+            @extend .h5;
+            font-size:14px;
+            @extend .light;
         }
     }
     .car-specials { 
@@ -197,11 +218,13 @@
                 left:30px;
                 font-weight: normal;
                 color:$blue;
+                font-weight: bold;
                 &:before {
                     content:'SAVE'; 
                     display: block;
                     text-align: left;
                     margin-bottom: -5px;
+                    
                 }
             }
         }
@@ -236,7 +259,6 @@
             padding:10px 50px;
         }
     }
-    
     .facets-specials {
         position: absolute;
         left: 0;

@@ -1,5 +1,5 @@
-//Mobile Elements alignment
-@media (max-width: 767px) {
+//Mobile Helpers
+@include media-breakpoint-down(sm) {
     // Align text to center.
     .text-center-xs {
         text-align: center;
@@ -8,7 +8,31 @@
         display: block;
     }
 }
+@include media-breakpoint-only(md) {
+    .px-md-6 {
+        padding-left: 5rem !important;
+        padding-right: 5rem !important;
+    }  
+}
+@include media-breakpoint-only(md) {
+    .px-md-7 {
+        padding-left: 6rem !important;
+        padding-right: 6rem !important;
+    }   
+}
 
+//FONT SIZES FOR MOBILE
+
+@include media-breakpoint-down(sm) { 
+   h1 { font-size: $font-size-base / 0.4 !important; }
+   h2 { font-size: $font-size-base  / 0.4 !important; }
+   h3 { font-size: $font-size-base / 0.4 !important; }  
+   h4 { font-size: $font-size-base / 0.4 !important; }  
+   .display-1 { font-size: $font-size-base / 0.4  !important; }  
+   .display-2 { font-size: $font-size-base / 0.4  !important; }  
+   .display-3 { font-size: $font-size-base / 0.4 !important; }  
+   .display-4 { font-size: $font-size-base / 0.4 !important; }  
+}
 
 //// NAVBAR
 #main-nav.navbar {
@@ -41,7 +65,7 @@
         }
         .nav-item {
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 width: 100%;
                 text-align: center;
             }
@@ -59,7 +83,7 @@
                     width: 130px;
                     justify-content: center;
 
-                    @include media-breakpoint-down(sm) {
+                    @include media-breakpoint-down(md) {
                         width: 100%;
                     }
 
@@ -71,9 +95,9 @@
                         height: 65px;
                         background: $gray-700;
                         z-index: -1;
-                        @include media-breakpoint-down(sm) {
+                        @include media-breakpoint-down(md) {
                             height: 30px;
-                            width: 100%;
+                            width: 30%;
                         }
                     }
                 }
@@ -95,7 +119,6 @@
         height: 53px;
     }
 }
-
 
 // HEADER
 header,
@@ -165,12 +188,9 @@ header,
 	    z-index: 1;
 	}
 }
-
-
 .logoSVG {
 	display: none;
 }
-
 .mask { 
 	a {
 		position: relative;
@@ -206,9 +226,7 @@ header,
 input:required, textarea:required {
     border:2px solid #ec0f2b !important; 
 }
-
 .form-control {border-radius: 1px;}
-
 input[type=text],
 input[type=email],
 textarea {
@@ -228,31 +246,25 @@ label {
 }
 .form-group.req  { 
     position: relative;
-    label {
-        & + span {
-            position: absolute;
-            top: 63px;
-            right: 0px;
-            font-weight: bold;
-            color:white;           
-            background:#ec0f2b;
-            font-size:0.8em;
-            padding:0 3px;
-            border-radius: 3px;
-            margin:3px 0;
-           
-            
-            &:before {
-                content:'Required';
-            }
-            
-            &:after { 
-               content: "\f06a";
+    
+    div.invalid-feedback { 
+        position: absolute;
+        top: 0;
+        right: 0px;
+        font-weight: bold;
+        color:white;           
+        background:#ec0f2b;
+        font-size:0.8em;
+        padding:0 3px;
+        border-radius: 3px;
+        margin:3px 0;  
+        &:after { 
+                content: "\f06a";
                 font-family: fontawesome;
                 font-weight: 600;
                 font-size: 18px;
                 position: absolute;
-                top: -38px;
+                top: 25px;
                 right: 2px;
                 color: white;
                 background: #ec0f2b;
@@ -260,7 +272,17 @@ label {
                 width: 30px;
                 height: 31px;
                 text-align: center;
-            }
+        }
+        &:before { 
+            @extend .edge--skew; 
+            display: block;
+        }
+    }
+    
+    label {
+        & + span {
+            position: absolute;
+            
         } 
     }
 }
@@ -306,7 +328,6 @@ footer {
         color:white;
         &:hover { 
             text-decoration: none;
-            font-weight:bold;
             color:white;
         }
     }
@@ -316,3 +337,8 @@ footer {
         
 	}
 }
+
+//BUTTONS
+
+
+

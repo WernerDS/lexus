@@ -30,6 +30,21 @@ $size: 45px;
         @include media-breakpoint-up(md) {
            margin-left:300px;
         } 
+        
+        .results-heading { 
+            span {
+                @extend .edge--skew;
+                &:before { 
+                    content:'';
+                    display: inline-block;
+                   transform: skewX(-20deg);
+                }
+            }
+            
+            @include media-breakpoint-down(md) {
+                font-size:1em;
+            } 
+        }
     
     .result-listing {
         @extend .card; 
@@ -270,9 +285,10 @@ $size: 45px;
         span {
             position: absolute;
             top: 6px;
-            right: 15px;
-            color:grey;                   
-            min-width:25px;
+            right: 14px;
+            color: grey;
+            min-width: 25px;
+            text-align: right;
         }
     }
 }
@@ -344,6 +360,8 @@ $size: 45px;
                 font-size: 2.5em;
                 font-weight: bold;
                 color: black;
+                padding: 0px 20px;
+                padding: 0px 20px;
   
             &:before {
                 background: inherit;
@@ -362,10 +380,8 @@ $size: 45px;
                 transform: skewX(-20deg);
                 transform-origin: 100% 0;
               }
-
         }
     }
-    
     
     .card-body { 
         .list-group { 
@@ -465,7 +481,7 @@ $size: 45px;
             }
             
             & .list-inline-item:nth-child(n + 2):not(:nth-child(n + 4)) {
-                border-right:2px dotted #4d4d4d;
+                border-right:2px dotted $gray-600;
                 margin:3px;
                 border-radius: 0;
             }
@@ -507,7 +523,6 @@ $size: 45px;
         background-image: url('../images/left-arrow.png');
         height: 50px;
     }
-    
 }
 
 //CONTACT DEALER
@@ -541,16 +556,22 @@ $size: 45px;
             font-family: fontawesome;
             margin-right:5px;
         }
-    }    
+    }
+    & + footer {
+        margin-right:350px;
+        @include media-breakpoint-down(md) {
+            margin-right:0;
+        }  
+    }
 }
 .result-contact-sm {
- 
+    background: $gray-800;
+    color:white;
     border: 1px solid black;
     
     .dealer-name { 
-        background: #4f4f4f;
+        background: $gray-800;
         height: 41px;
-        color: #ffffff;
         padding: 10px;
         font-size: 1.2em; 
         font-weight: bold;
@@ -566,13 +587,10 @@ $size: 45px;
     label { 
         text-transform: uppercase;
         margin-top: 5px;
-        color:black;
         font-size: 0.9em;
     }
   
     .form-control { 
-        background: transparent;
-        color:black;
         border: 1px solid #cecece;
     }
 }

@@ -503,7 +503,7 @@ template {
   display: none !important; }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .models .car-features .car-features-row ul, .models-detail .car-features .car-features-row ul, .h4, .h5, .h6 {
+.h1, .h2, .h3, .models .car-features .car-features-row ul, .models-detail .car-features .car-features-row ul, .h4, .h5, .lexus-shared .bidvest-insurance p, .h6 {
   margin-bottom: 0.5rem;
   font-family: "nobellexusbold";
   font-weight: 700;
@@ -522,7 +522,7 @@ h3, .h3, .models .car-features .car-features-row ul, .models-detail .car-feature
 h4, .h4 {
   font-size: 1.5rem; }
 
-h5, .h5 {
+h5, .h5, .lexus-shared .bidvest-insurance p {
   font-size: 1.25rem; }
 
 h6, .h6 {
@@ -596,7 +596,7 @@ mark,
   .blockquote-footer::before {
     content: "\2014 \00A0"; }
 
-.img-fluid {
+.img-fluid, .models .car-model-pic img {
   max-width: 100%;
   height: auto; }
 
@@ -1767,7 +1767,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+  transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out; }
   .btn:focus, .btn:hover {
     text-decoration: none; }
   .btn:focus, .btn.focus {
@@ -9044,7 +9044,6 @@ readers do not read off random characters that represent icons */
   line-height: 55px;
   height: 55px;
   padding: 0 45px;
-  border: none;
   font-weight: 700;
   font-family: "nobellexusbold";
   text-transform: uppercase;
@@ -9552,40 +9551,54 @@ readers do not read off random characters that represent icons */
 .display-4 {
   font-family: "nobellexusbold";
   text-transform: uppercase; }
-  .shout.light, .models .car-features .car-features-row ul.shout, .models-detail .car-features .car-features-row ul.shout,
+  .shout.light, .lexus-shared .bidvest-insurance p.shout, .models .car-features .car-features-row ul.shout, .models-detail .car-features .car-features-row ul.shout,
   .shout .light,
+  .shout .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+  .shout p,
   .shout .models .car-features .car-features-row ul, .models .car-features .car-features-row
   .shout ul,
   .shout .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
   .shout ul,
   .display-1.light,
+  .lexus-shared .bidvest-insurance p.display-1,
   .models .car-features .car-features-row ul.display-1,
   .models-detail .car-features .car-features-row ul.display-1,
   .display-1 .light,
+  .display-1 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+  .display-1 p,
   .display-1 .models .car-features .car-features-row ul, .models .car-features .car-features-row
   .display-1 ul,
   .display-1 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
   .display-1 ul,
   .display-2.light,
+  .lexus-shared .bidvest-insurance p.display-2,
   .models .car-features .car-features-row ul.display-2,
   .models-detail .car-features .car-features-row ul.display-2,
   .display-2 .light,
+  .display-2 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+  .display-2 p,
   .display-2 .models .car-features .car-features-row ul, .models .car-features .car-features-row
   .display-2 ul,
   .display-2 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
   .display-2 ul,
   .display-3.light,
+  .lexus-shared .bidvest-insurance p.display-3,
   .models .car-features .car-features-row ul.display-3,
   .models-detail .car-features .car-features-row ul.display-3,
   .display-3 .light,
+  .display-3 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+  .display-3 p,
   .display-3 .models .car-features .car-features-row ul, .models .car-features .car-features-row
   .display-3 ul,
   .display-3 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
   .display-3 ul,
   .display-4.light,
+  .lexus-shared .bidvest-insurance p.display-4,
   .models .car-features .car-features-row ul.display-4,
   .models-detail .car-features .car-features-row ul.display-4,
   .display-4 .light,
+  .display-4 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+  .display-4 p,
   .display-4 .models .car-features .car-features-row ul, .models .car-features .car-features-row
   .display-4 ul,
   .display-4 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
@@ -9605,66 +9618,90 @@ readers do not read off random characters that represent icons */
 
 h1.light,
 h1 .light,
+h1 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+h1 p,
 h1 .models .car-features .car-features-row ul, .models .car-features .car-features-row
 h1 ul,
 h1 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
-h1 ul, .h1.light, .models .car-features .car-features-row ul.h1, .models-detail .car-features .car-features-row ul.h1,
+h1 ul, .h1.light, .lexus-shared .bidvest-insurance p.h1, .models .car-features .car-features-row ul.h1, .models-detail .car-features .car-features-row ul.h1,
 .h1 .light,
+.h1 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+.h1 p,
 .h1 .models .car-features .car-features-row ul, .models .car-features .car-features-row
 .h1 ul,
 .h1 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
 .h1 ul,
 h2.light,
 h2 .light,
+h2 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+h2 p,
 h2 .models .car-features .car-features-row ul, .models .car-features .car-features-row
 h2 ul,
 h2 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
-h2 ul, .h2.light, .models .car-features .car-features-row ul.h2, .models-detail .car-features .car-features-row ul.h2,
+h2 ul, .h2.light, .lexus-shared .bidvest-insurance p.h2, .models .car-features .car-features-row ul.h2, .models-detail .car-features .car-features-row ul.h2,
 .h2 .light,
+.h2 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+.h2 p,
 .h2 .models .car-features .car-features-row ul, .models .car-features .car-features-row
 .h2 ul,
 .h2 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
 .h2 ul,
 h3.light,
 h3 .light,
+h3 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+h3 p,
 h3 .models .car-features .car-features-row ul, .models .car-features .car-features-row
 h3 ul,
 h3 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
-h3 ul, .h3.light, .models .car-features .car-features-row ul, .models-detail .car-features .car-features-row ul,
+h3 ul, .h3.light, .lexus-shared .bidvest-insurance p.h3, .models .car-features .car-features-row ul, .models-detail .car-features .car-features-row ul,
 .h3 .light, .models .car-features .car-features-row ul .light, .models-detail .car-features .car-features-row ul .light,
+.h3 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+.h3 p, .models .car-features .car-features-row ul .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance .models .car-features .car-features-row ul p, .models-detail .car-features .car-features-row ul .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance .models-detail .car-features .car-features-row ul p,
 .h3 .models .car-features .car-features-row ul, .models .car-features .car-features-row
 .h3 ul, .models .car-features .car-features-row ul ul,
 .h3 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
 .h3 ul, .models-detail .car-features .car-features-row ul ul,
 h4.light,
 h4 .light,
+h4 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+h4 p,
 h4 .models .car-features .car-features-row ul, .models .car-features .car-features-row
 h4 ul,
 h4 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
-h4 ul, .h4.light, .models .car-features .car-features-row ul.h4, .models-detail .car-features .car-features-row ul.h4,
+h4 ul, .h4.light, .lexus-shared .bidvest-insurance p.h4, .models .car-features .car-features-row ul.h4, .models-detail .car-features .car-features-row ul.h4,
 .h4 .light,
+.h4 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+.h4 p,
 .h4 .models .car-features .car-features-row ul, .models .car-features .car-features-row
 .h4 ul,
 .h4 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
 .h4 ul,
 h5.light,
 h5 .light,
+h5 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+h5 p,
 h5 .models .car-features .car-features-row ul, .models .car-features .car-features-row
 h5 ul,
 h5 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
-h5 ul, .h5.light, .models .car-features .car-features-row ul.h5, .models-detail .car-features .car-features-row ul.h5,
-.h5 .light,
+h5 ul, .h5.light, .lexus-shared .bidvest-insurance p, .models .car-features .car-features-row ul.h5, .models-detail .car-features .car-features-row ul.h5,
+.h5 .light, .lexus-shared .bidvest-insurance p .light,
+.h5 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+.h5 p, .lexus-shared .bidvest-insurance p p,
 .h5 .models .car-features .car-features-row ul, .models .car-features .car-features-row
-.h5 ul,
+.h5 ul, .lexus-shared .bidvest-insurance p .models .car-features .car-features-row ul, .models .car-features .car-features-row .lexus-shared .bidvest-insurance p ul,
 .h5 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
-.h5 ul,
+.h5 ul, .lexus-shared .bidvest-insurance p .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row .lexus-shared .bidvest-insurance p ul,
 h6.light,
 h6 .light,
+h6 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+h6 p,
 h6 .models .car-features .car-features-row ul, .models .car-features .car-features-row
 h6 ul,
 h6 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
-h6 ul, .h6.light, .models .car-features .car-features-row ul.h6, .models-detail .car-features .car-features-row ul.h6,
+h6 ul, .h6.light, .lexus-shared .bidvest-insurance p.h6, .models .car-features .car-features-row ul.h6, .models-detail .car-features .car-features-row ul.h6,
 .h6 .light,
+.h6 .lexus-shared .bidvest-insurance p, .lexus-shared .bidvest-insurance
+.h6 p,
 .h6 .models .car-features .car-features-row ul, .models .car-features .car-features-row
 .h6 ul,
 .h6 .models-detail .car-features .car-features-row ul, .models-detail .car-features .car-features-row
@@ -9684,8 +9721,8 @@ h4.gray,
 h4 .gray, .h4.gray,
 .h4 .gray,
 h5.gray,
-h5 .gray, .h5.gray,
-.h5 .gray,
+h5 .gray, .h5.gray, .lexus-shared .bidvest-insurance p.gray,
+.h5 .gray, .lexus-shared .bidvest-insurance p .gray,
 h6.gray,
 h6 .gray, .h6.gray,
 .h6 .gray {
@@ -9694,11 +9731,39 @@ h6 .gray, .h6.gray,
 p {
   max-width: 635px; }
 
-@media (max-width: 767px) {
+@media (max-width: 767.99px) {
   .text-center-xs {
     text-align: center; }
   .d-block-xs {
     display: block; } }
+
+@media (min-width: 768px) and (max-width: 991.99px) {
+  .px-md-6 {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important; } }
+
+@media (min-width: 768px) and (max-width: 991.99px) {
+  .px-md-7 {
+    padding-left: 6rem !important;
+    padding-right: 6rem !important; } }
+
+@media (max-width: 767.99px) {
+  h1 {
+    font-size: 2.5rem !important; }
+  h2 {
+    font-size: 2.5rem !important; }
+  h3 {
+    font-size: 2.5rem !important; }
+  h4 {
+    font-size: 2.5rem !important; }
+  .display-1 {
+    font-size: 2.5rem !important; }
+  .display-2 {
+    font-size: 2.5rem !important; }
+  .display-3 {
+    font-size: 2.5rem !important; }
+  .display-4 {
+    font-size: 2.5rem !important; } }
 
 #main-nav.navbar {
   background: rgba(0, 0, 0, 0.9);
@@ -9715,7 +9780,7 @@ p {
     @media (max-width: 767.99px) {
       #main-nav.navbar .navbar-nav {
         padding-top: 20px; } }
-    @media (max-width: 767.99px) {
+    @media (max-width: 991.99px) {
       #main-nav.navbar .navbar-nav .nav-item {
         width: 100%;
         text-align: center; } }
@@ -9730,7 +9795,7 @@ p {
       position: relative;
       width: 130px;
       justify-content: center; }
-      @media (max-width: 767.99px) {
+      @media (max-width: 991.99px) {
         #main-nav.navbar .navbar-nav .nav-item.active span {
           width: 100%; } }
       #main-nav.navbar .navbar-nav .nav-item.active span:before {
@@ -9741,10 +9806,10 @@ p {
         height: 65px;
         background: #495057;
         z-index: -1; }
-        @media (max-width: 767.99px) {
+        @media (max-width: 991.99px) {
           #main-nav.navbar .navbar-nav .nav-item.active span:before {
             height: 30px;
-            width: 100%; } }
+            width: 30%; } }
     #main-nav.navbar .navbar-nav .nav-item .nav-link:hover {
       background: transparent; }
 
@@ -9865,9 +9930,9 @@ label {
 
 .form-group.req {
   position: relative; }
-  .form-group.req label + span {
+  .form-group.req div.invalid-feedback {
     position: absolute;
-    top: 63px;
+    top: 0;
     right: 0px;
     font-weight: bold;
     color: white;
@@ -9876,15 +9941,13 @@ label {
     padding: 0 3px;
     border-radius: 3px;
     margin: 3px 0; }
-    .form-group.req label + span:before {
-      content: 'Required'; }
-    .form-group.req label + span:after {
+    .form-group.req div.invalid-feedback:after {
       content: "\f06a";
       font-family: fontawesome;
       font-weight: 600;
       font-size: 18px;
       position: absolute;
-      top: -38px;
+      top: 25px;
       right: 2px;
       color: white;
       background: #ec0f2b;
@@ -9892,6 +9955,10 @@ label {
       width: 30px;
       height: 31px;
       text-align: center; }
+    .form-group.req div.invalid-feedback:before {
+      display: block; }
+  .form-group.req label + span {
+    position: absolute; }
 
 .form-group {
   margin: 20px 0; }
@@ -9925,7 +9992,6 @@ footer {
     color: white; }
     footer a:hover {
       text-decoration: none;
-      font-weight: bold;
       color: white; }
   footer img {
     height: 30px; }
@@ -9948,13 +10014,13 @@ footer {
     transform: skewY(-1.5deg);
     transform-origin: 100%; }
 
-.edge--skew, .pagination .page-item.active, .models .car-info-table .nav .nav-link.active, .models-detail .car-model-colours .list-inline-item span, .models-detail .car-info-table .nav .nav-link.active {
+.edge--skew, .form-group.req div.invalid-feedback:before, .pagination .page-item.active, .results .results-column .results-heading span, .models .car-info-table .nav .nav-link.active, .models-detail .car-model-colours .list-inline-item span, .models-detail .car-info-table .nav .nav-link.active {
   transform: skewX(-20deg);
   display: inline-block; }
-  .edge--skew span, .pagination .page-item.active span, .models .car-info-table .nav .nav-link.active span, .models-detail .car-model-colours .list-inline-item span span, .models-detail .car-info-table .nav .nav-link.active span {
+  .edge--skew span, .form-group.req div.invalid-feedback:before span, .pagination .page-item.active span, .results .results-column .results-heading span span, .models .car-info-table .nav .nav-link.active span, .models-detail .car-model-colours .list-inline-item span span, .models-detail .car-info-table .nav .nav-link.active span {
     transform: skewX(20deg);
     display: inline-block; }
-  .edge--skew a, .pagination .page-item.active a, .models .car-info-table .nav .nav-link.active a, .models-detail .car-model-colours .list-inline-item span a, .models-detail .car-info-table .nav .nav-link.active a {
+  .edge--skew a, .form-group.req div.invalid-feedback:before a, .pagination .page-item.active a, .results .results-column .results-heading span a, .models .car-info-table .nav .nav-link.active a, .models-detail .car-model-colours .list-inline-item span a, .models-detail .car-info-table .nav .nav-link.active a {
     transform: skewX(20deg);
     display: inline-block; }
 
@@ -10337,7 +10403,8 @@ footer {
 .lexus-shared .car-dealerships a {
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-radius: 8px;
-  display: block; }
+  display: block;
+  text-decoration: none; }
 
 .lexus-shared .car-dealerships a:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 10px 40px rgba(0, 0, 0, 0.3); }
@@ -10356,29 +10423,31 @@ footer {
   color: white; }
   .lexus-shared .models .col {
     height: 520px;
-    padding: 132px 60px;
+    padding: 166px 60px;
     position: relative;
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    @media (max-width: 767.99px) {
+      .lexus-shared .models .col span {
+        position: absolute;
+        top: 173px;
+        left: 90%;
+        width: 22px;
+        height: 46px;
+        background-repeat: no-repeat;
+        background-image: url(/images/white-chevron.png); } }
     .lexus-shared .models .col:hover {
       cursor: pointer;
       filter: contrast(120%);
       transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
       .lexus-shared .models .col:hover span {
         position: absolute;
-        top: 136px;
+        top: 173px;
         left: 90%;
         background-image: url(/images/white-chevron.png);
         background-repeat: no-repeat;
         width: 22px;
         height: 46px;
-        animation: bar fadeIn 0.6s ease;
-        animation: fadeIn 0.6s ease; }
-
-@keyframes bar {
-  0% {
-    left: 0%; }
-  100% {
-    left: 90%; } }
+        animation: all 0.4s ease; }
 
 @keyframes fadeIn {
   0% {
@@ -10394,6 +10463,15 @@ footer {
   .lexus-shared .models .col:nth-of-type(3) {
     background-image: url("/images/coupe.jpg");
     background-size: cover; }
+  .lexus-shared .models .dealer-cars .col:nth-of-type(1) {
+    background-image: url("/images/new-car.jpg");
+    background-size: cover; }
+  .lexus-shared .models .dealer-cars .col:nth-of-type(2) {
+    background-image: url("/images/demo-car.jpg");
+    background-size: cover; }
+  .lexus-shared .models .dealer-cars .col:nth-of-type(3) {
+    background-image: url("/images/used-car.jpg");
+    background-size: cover; }
 
 .lexus-shared .bidvest-mccarthy {
   background-image: url("/images/bidvest-dealer.jpg");
@@ -10407,7 +10485,7 @@ footer {
   .lexus-shared .bidvest-insurance img {
     margin-bottom: 6px; }
   .lexus-shared .bidvest-insurance p {
-    font-size: 0.7em; }
+    font-size: 14px; }
 
 .lexus-shared .car-specials {
   background-image: url("/images/white_leather.png.jpg");
@@ -10449,7 +10527,8 @@ footer {
       top: 94px;
       left: 30px;
       font-weight: normal;
-      color: #428bca; }
+      color: #428bca;
+      font-weight: bold; }
       .lexus-shared .car-specials .car-special-listing span:nth-of-type(4):before {
         content: 'SAVE';
         display: block;
@@ -10524,6 +10603,13 @@ footer {
   @media (min-width: 768px) {
     .results .results-column {
       margin-left: 300px; } }
+  .results .results-column .results-heading span:before {
+    content: '';
+    display: inline-block;
+    transform: skewX(-20deg); }
+  @media (max-width: 991.99px) {
+    .results .results-column .results-heading {
+      font-size: 1em; } }
   .results .results-column .result-listing {
     margin: 10px 0;
     position: relative; }
@@ -10676,9 +10762,10 @@ footer {
   .facets .search-list span {
     position: absolute;
     top: 6px;
-    right: 15px;
+    right: 14px;
     color: grey;
-    min-width: 25px; }
+    min-width: 25px;
+    text-align: right; }
 
 .result-details {
   background: #d9d8d9;
@@ -10725,7 +10812,9 @@ footer {
       right: 0;
       font-size: 2.5em;
       font-weight: bold;
-      color: black; }
+      color: black;
+      padding: 0px 20px;
+      padding: 0px 20px; }
       .result-details .card-header span:before {
         background: inherit;
         content: '';
@@ -10791,7 +10880,7 @@ footer {
       .result-details .car-specs .list-inline .list-inline-item:nth-of-type(4) p:before {
         content: 'Transmission'; }
     .result-details .car-specs .list-inline .list-inline-item:nth-child(n + 2):not(:nth-child(n + 4)) {
-      border-right: 2px dotted #4d4d4d;
+      border-right: 2px dotted #868e96;
       margin: 3px;
       border-radius: 0; }
     .result-details .car-specs .list-inline .list-inline-item:first-child {
@@ -10845,13 +10934,19 @@ footer {
       content: "\f095";
       font-family: fontawesome;
       margin-right: 5px; }
+  .result-contact + footer {
+    margin-right: 350px; }
+    @media (max-width: 991.99px) {
+      .result-contact + footer {
+        margin-right: 0; } }
 
 .result-contact-sm {
+  background: #343a40;
+  color: white;
   border: 1px solid black; }
   .result-contact-sm .dealer-name {
-    background: #4f4f4f;
+    background: #343a40;
     height: 41px;
-    color: #ffffff;
     padding: 10px;
     font-size: 1.2em;
     font-weight: bold;
@@ -10864,11 +10959,8 @@ footer {
   .result-contact-sm label {
     text-transform: uppercase;
     margin-top: 5px;
-    color: black;
     font-size: 0.9em; }
   .result-contact-sm .form-control {
-    background: transparent;
-    color: black;
     border: 1px solid #cecece; }
 
 body {
@@ -10876,7 +10968,8 @@ body {
   margin-top: 0; }
 
 .models .car-specs-model .list-inline {
-  margin-top: 50px; }
+  margin-top: 50px;
+  transition: ease-in 0.4s; }
   .models .car-specs-model .list-inline:emtpy span:nth-of-type(1) {
     display: none; }
   .models .car-specs-model .list-inline .list-inline-item {
@@ -10886,8 +10979,10 @@ body {
     transform: skewX(-20deg); }
     @media (max-width: 991.99px) {
       .models .car-specs-model .list-inline .list-inline-item {
-        width: 100px; } }
+        width: 100px;
+        height: 280px; } }
     .models .car-specs-model .list-inline .list-inline-item.is:hover {
+      transition: background 0.4s ease-in;
       background-image: url("/images/is-slant.png"); }
       .models .car-specs-model .list-inline .list-inline-item.is:hover span:nth-of-type(1) {
         display: block; }
@@ -10970,34 +11065,108 @@ body {
   width: 100%; }
   @media (max-width: 767.99px) {
     .models .car-model-pic {
-      margin-top: 0; } }
-  @media (max-width: 991.99px) {
-    .models .car-model-pic {
-      max-width: 80%; } }
+      margin-top: 0; }
+      .models .car-model-pic img:hover {
+        filter: contrast(120%);
+        cursor: pointer; } }
+  .models .car-model-pic span:nth-of-type(1) {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font-size: 2.4em;
+    font-weight: bold; }
+    @media (min-width: 768px) {
+      .models .car-model-pic span:nth-of-type(1) {
+        display: none; } }
+  .models .car-model-pic span:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.2em;
+    font-weight: bold; }
+    .models .car-model-pic span:nth-of-type(2):before {
+      content: 'From';
+      font-weight: normal;
+      margin-right: 5px; }
+    @media (min-width: 768px) {
+      .models .car-model-pic span:nth-of-type(2) {
+        display: none; } }
+  .models .car-model-pic span:nth-of-type(3) {
+    position: absolute;
+    top: 180px;
+    left: 0;
+    font-size: 2.4em;
+    font-weight: bold; }
+    @media (min-width: 768px) {
+      .models .car-model-pic span:nth-of-type(3) {
+        display: none; } }
+  .models .car-model-pic span:nth-of-type(4) {
+    position: absolute;
+    top: 190px;
+    right: 0;
+    font-size: 1.2em;
+    font-weight: bold; }
+    @media (min-width: 768px) {
+      .models .car-model-pic span:nth-of-type(4) {
+        display: none; } }
+    .models .car-model-pic span:nth-of-type(4):before {
+      content: 'From';
+      font-weight: normal;
+      margin-right: 5px; }
+  .models .car-model-pic span:nth-of-type(5) {
+    position: absolute;
+    top: 356px;
+    left: 0;
+    font-size: 2.4em;
+    font-weight: bold; }
+    @media (min-width: 768px) {
+      .models .car-model-pic span:nth-of-type(5) {
+        display: none; } }
+  .models .car-model-pic span:nth-of-type(6) {
+    position: absolute;
+    top: 365px;
+    right: 0;
+    font-size: 1.2em;
+    font-weight: bold; }
+    @media (min-width: 768px) {
+      .models .car-model-pic span:nth-of-type(6) {
+        display: none; } }
+    .models .car-model-pic span:nth-of-type(6):before {
+      content: 'From';
+      font-weight: normal;
+      margin-right: 5px; }
   @media (max-width: 767.99px) {
     .models .car-model-pic img {
       display: block;
       padding: 30px 0;
-      border-bottom: 1px solid black; } }
+      border-bottom: 1px solid black;
+      height: 180px;
+      margin: auto; } }
   .models .car-model-pic img:nth-of-type(1) {
     position: absolute;
     top: 0;
     left: -25%;
     z-index: 10; }
+    @media (min-width: 768px) and (max-width: 991.99px) {
+      .models .car-model-pic img:nth-of-type(1) {
+        width: 80%;
+        left: -20%; } }
     @media (min-width: 992px) {
       .models .car-model-pic img:nth-of-type(1) {
         left: -10%; } }
     @media (max-width: 767.99px) {
       .models .car-model-pic img:nth-of-type(1) {
-        position: static;
-        margin: 20px 0; }
-        .models .car-model-pic img:nth-of-type(1):before {
-          content: 'Hello'; } }
+        display: block;
+        position: static; } }
   .models .car-model-pic img:nth-of-type(2) {
     position: absolute;
     top: 0;
     left: 5%;
     z-index: 9; }
+    @media (min-width: 768px) and (max-width: 991.99px) {
+      .models .car-model-pic img:nth-of-type(2) {
+        width: 80%;
+        left: 10%; } }
     @media (min-width: 992px) {
       .models .car-model-pic img:nth-of-type(2) {
         left: 20%; } }
@@ -11010,6 +11179,10 @@ body {
     top: 0;
     left: 28%;
     z-index: 8; }
+    @media (min-width: 768px) and (max-width: 991.99px) {
+      .models .car-model-pic img:nth-of-type(3) {
+        width: 80%;
+        left: 40%; } }
     @media (min-width: 992px) {
       .models .car-model-pic img:nth-of-type(3) {
         left: 40%; } }
@@ -11063,50 +11236,31 @@ body {
     width: 100%;
     margin-left: 13px; }
 
-.models .car-dealerships .stitch-7 {
-  background-image: url(/images/stitch-2.png);
-  width: 100%;
-  height: 20px;
-  margin-top: -38px; }
+.models .car-dealerships a {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 8px;
+  display: block;
+  text-decoration: none; }
+
+.models .car-dealerships a:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 10px 40px rgba(0, 0, 0, 0.3); }
 
 .models .car-dealerships .card, .models .car-dealerships .results .results-column .result-listing, .results .results-column .models .car-dealerships .result-listing {
-  box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.8);
   background-image: url("/images/paper-texture.jpg");
   color: white;
   border: none; }
-  .models .car-dealerships .card img.midrand-map, .models .car-dealerships .results .results-column .result-listing img.midrand-map, .results .results-column .models .car-dealerships .result-listing img.midrand-map {
-    display: none; }
-    .models .car-dealerships .card img.midrand-map + span, .models .car-dealerships .results .results-column .result-listing img.midrand-map + span, .results .results-column .models .car-dealerships .result-listing img.midrand-map + span {
-      display: none; }
   .models .car-dealerships .card .card-header, .models .car-dealerships .results .results-column .result-listing .card-header, .results .results-column .models .car-dealerships .result-listing .card-header, .models .car-dealerships .card .card-footer, .models .car-dealerships .results .results-column .result-listing .card-footer, .results .results-column .models .car-dealerships .result-listing .card-footer {
     border: none;
     background: transparent; }
-  .models .car-dealerships .card:hover img.midrand-map, .models .car-dealerships .results .results-column .result-listing:hover img.midrand-map, .results .results-column .models .car-dealerships .result-listing:hover img.midrand-map {
-    height: 204px;
-    display: block;
-    cursor: pointer; }
-    .models .car-dealerships .card:hover img.midrand-map ~ .card-header, .models .car-dealerships .results .results-column .result-listing:hover img.midrand-map ~ .card-header, .results .results-column .models .car-dealerships .result-listing:hover img.midrand-map ~ .card-header {
-      display: none; }
-    .models .car-dealerships .card:hover img.midrand-map ~ .card-body, .models .car-dealerships .results .results-column .result-listing:hover img.midrand-map ~ .card-body, .results .results-column .models .car-dealerships .result-listing:hover img.midrand-map ~ .card-body {
-      display: none; }
-    .models .car-dealerships .card:hover img.midrand-map ~ .card-footer, .models .car-dealerships .results .results-column .result-listing:hover img.midrand-map ~ .card-footer, .results .results-column .models .car-dealerships .result-listing:hover img.midrand-map ~ .card-footer {
-      display: none; }
-    .models .car-dealerships .card:hover img.midrand-map + span, .models .car-dealerships .results .results-column .result-listing:hover img.midrand-map + span, .results .results-column .models .car-dealerships .result-listing:hover img.midrand-map + span {
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: black;
-      color: white;
-      text-align: center;
-      padding: 4px; }
 
 .models .sedans {
   background: url("/images/sedan-bg.jpg");
   background-size: cover;
   padding-bottom: 140px;
   overflow: hidden; }
+  @media (max-width: 767.99px) {
+    .models .sedans {
+      padding-bottom: 0; } }
   .models .sedans .stitch-2 {
     background-image: url("/images/sedan-panel.png");
     position: absolute;
@@ -11127,6 +11281,9 @@ body {
   overflow: hidden;
   margin-top: -124px;
   z-index: 2; }
+  @media (max-width: 767.99px) {
+    .models .suvs {
+      padding-bottom: 0; } }
   .models .suvs:before {
     content: '';
     position: absolute;
@@ -11166,6 +11323,9 @@ body {
   margin-top: -122px;
   z-index: 1;
   overflow: hidden; }
+  @media (max-width: 767.99px) {
+    .models .coupes {
+      margin-top: -80px; } }
   .models .coupes:before {
     content: '';
     position: absolute;
@@ -11206,12 +11366,17 @@ body {
   transform: skewX(-20deg);
   z-index: 1000; }
   .models-detail .main-cta .car-specs .list-inline {
-    color: white;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: normal; }
     .models-detail .main-cta .car-specs .list-inline .list-inline-item {
-      color: white;
       height: 60px;
-      padding: 0 30px; }
+      padding: 0 30px;
+      margin: 0 -2px; }
+      .models-detail .main-cta .car-specs .list-inline .list-inline-item.active {
+        color: white;
+        font-weight: bold; }
+        .models-detail .main-cta .car-specs .list-inline .list-inline-item.active a {
+          border-bottom: 2px solid white; }
       .models-detail .main-cta .car-specs .list-inline .list-inline-item:hover {
         cursor: pointer;
         background: #000045; }
@@ -11219,19 +11384,98 @@ body {
         display: block;
         font-size: 1em;
         transform: skewX(20deg);
-        font-weight: bold;
         padding-top: 20px; }
         .models-detail .main-cta .car-specs .list-inline .list-inline-item span img {
           margin-right: 10px; }
         .models-detail .main-cta .car-specs .list-inline .list-inline-item span a {
           color: white;
           text-decoration: none; }
+        .models-detail .main-cta .car-specs .list-inline .list-inline-item span .dropdown {
+          top: -20px;
+          left: -40px; }
+          .models-detail .main-cta .car-specs .list-inline .list-inline-item span .dropdown .dropdown-menu {
+            width: 100%;
+            background: #e9ecef; }
+            .models-detail .main-cta .car-specs .list-inline .list-inline-item span .dropdown .dropdown-menu .dropdown-item {
+              font-weight: bold; }
+              .models-detail .main-cta .car-specs .list-inline .list-inline-item span .dropdown .dropdown-menu .dropdown-item span {
+                font-weight: normal;
+                position: absolute;
+                right: 10px; }
+            .models-detail .main-cta .car-specs .list-inline .list-inline-item span .dropdown .dropdown-menu a {
+              color: black;
+              text-align: center; }
+    .models-detail .main-cta .car-specs .list-inline .list-inline-item:nth-child(4) {
+      padding-top: 0;
+      position: relative; }
+      .models-detail .main-cta .car-specs .list-inline .list-inline-item:nth-child(4) a {
+        font-size: 0.8em; }
+      .models-detail .main-cta .car-specs .list-inline .list-inline-item:nth-child(4) span:last-child {
+        position: absolute;
+        font-size: 0.7em;
+        left: 74px;
+        top: 40px;
+        padding-top: 0; }
     .models-detail .main-cta .car-specs .list-inline .list-inline-item:last-child {
       background: #428bca;
       padding: 0 40px; }
       .models-detail .main-cta .car-specs .list-inline .list-inline-item:last-child:hover {
         cursor: pointer;
         background: #000045; }
+
+.models-detail .main-cta-mobile {
+  position: fixed;
+  height: 60px;
+  background: #428bca;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; }
+  .models-detail .main-cta-mobile .car-specs .list-inline {
+    color: black;
+    text-transform: uppercase; }
+    .models-detail .main-cta-mobile .car-specs .list-inline .list-inline-item {
+      color: white;
+      height: 60px;
+      padding: 0 30px; }
+      .models-detail .main-cta-mobile .car-specs .list-inline .list-inline-item:hover {
+        cursor: pointer;
+        background: #000045; }
+      .models-detail .main-cta-mobile .car-specs .list-inline .list-inline-item span {
+        display: block;
+        font-size: 0.8em;
+        font-weight: bold;
+        padding-top: 20px; }
+        .models-detail .main-cta-mobile .car-specs .list-inline .list-inline-item span img {
+          margin-right: 10px; }
+        .models-detail .main-cta-mobile .car-specs .list-inline .list-inline-item span a {
+          color: white;
+          text-decoration: none; }
+        .models-detail .main-cta-mobile .car-specs .list-inline .list-inline-item span .dropdown {
+          top: -20px;
+          left: -40px; }
+          .models-detail .main-cta-mobile .car-specs .list-inline .list-inline-item span .dropdown .dropdown-menu {
+            width: 100%;
+            background: #e9ecef; }
+            .models-detail .main-cta-mobile .car-specs .list-inline .list-inline-item span .dropdown .dropdown-menu .dropdown-item {
+              font-weight: bold; }
+              .models-detail .main-cta-mobile .car-specs .list-inline .list-inline-item span .dropdown .dropdown-menu .dropdown-item span {
+                font-weight: normal;
+                position: absolute;
+                right: 10px; }
+            .models-detail .main-cta-mobile .car-specs .list-inline .list-inline-item span .dropdown .dropdown-menu a {
+              color: black;
+              text-align: center; }
+    .models-detail .main-cta-mobile .car-specs .list-inline .list-inline-item:nth-child(4) {
+      position: relative; }
+      .models-detail .main-cta-mobile .car-specs .list-inline .list-inline-item:nth-child(4) a {
+        font-size: 0.8em; }
+      .models-detail .main-cta-mobile .car-specs .list-inline .list-inline-item:nth-child(4) span:last-child {
+        position: absolute;
+        font-size: 0.7em;
+        left: 74px;
+        top: 40px;
+        padding-top: 0; }
 
 .models-detail .book-test-drive {
   color: black !important; }
@@ -11450,15 +11694,11 @@ body {
     background: #343a40;
     color: white;
     width: 100%;
-    margin-left: 13px; }
-
-.models-detail .car-dealerships .card, .models-detail .car-dealerships .results .results-column .result-listing, .results .results-column .models-detail .car-dealerships .result-listing {
-  background-image: url("/images/paper-texture.jpg");
-  color: white;
-  border: none; }
-  .models-detail .car-dealerships .card .card-header, .models-detail .car-dealerships .results .results-column .result-listing .card-header, .results .results-column .models-detail .car-dealerships .result-listing .card-header, .models-detail .car-dealerships .card .card-footer, .models-detail .car-dealerships .results .results-column .result-listing .card-footer, .results .results-column .models-detail .car-dealerships .result-listing .card-footer {
-    border: none;
-    background: transparent; }
+    margin-left: 13px;
+    padding-right: 27px;
+    text-align: right; }
+  .models-detail .car-info-table .nav .nav-link {
+    text-align: right; }
 
 .models-detail .hero-club {
   color: white;
@@ -11480,3 +11720,20 @@ body {
 
 .models-detail .variant-select .dropdown-item {
   font-weight: bold; }
+
+.models-detail .car-dealerships a {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 8px;
+  display: block;
+  text-decoration: none; }
+
+.models-detail .car-dealerships a:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 10px 40px rgba(0, 0, 0, 0.3); }
+
+.models-detail .car-dealerships .card, .models-detail .car-dealerships .results .results-column .result-listing, .results .results-column .models-detail .car-dealerships .result-listing {
+  background-image: url("/images/paper-texture.jpg");
+  color: white;
+  border: none; }
+  .models-detail .car-dealerships .card .card-header, .models-detail .car-dealerships .results .results-column .result-listing .card-header, .results .results-column .models-detail .car-dealerships .result-listing .card-header, .models-detail .car-dealerships .card .card-footer, .models-detail .car-dealerships .results .results-column .result-listing .card-footer, .results .results-column .models-detail .car-dealerships .result-listing .card-footer {
+    border: none;
+    background: transparent; }

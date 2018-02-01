@@ -1,44 +1,35 @@
 <div class="dealer-name">Lexus Midrand</div>
 <div class="dealer-num">087 233 3235</div>
-<form class="p-3">     
+<form class="p-5">     
     <div class="form-group req">
-        <label for="name2" class="mb-0">Name</label>
-        <span></span>
+        <label for="name2" class="mb-0">Name <span>*</span></label>
+        <div class="invalid-feedback">Required</div>
         <input type="text" name="name2" id="name2" class="form-control" placeholder="Enter your name" required="">
-        <div class="invalid-feedback">Please provide a valid input.</div>
     </div>
     
     <div class="form-group req">
-        <label for="email2" class="mb-0">Email</label>
-        <span></span>
+        <label for="email2" class="mb-0">Email <span>*</span></label>
+        <div class="invalid-feedback">Required</div>
         <input type="text" name="email2" id="email2" class="form-control" placeholder="Enter your email address" required="">
     </div>
     
-    
     <div class="form-group req">
-        <label for="email2" class="mb-0">Phone</label>
-        <span></span>
-        <input type="text" name="email2" id="email2" class="form-control" placeholder="Enter your phone number"required=""> 
-    </div>
-    
-    
-    <div class="form-group mt-5"> 
-        <label for="email2" class="mb-0">Message</label> 
-        <span class="float-right text-white mb-0 pb-0"><small>Optional</small></span>
-        <textarea class="form-control" cols="20" id="txtMessage" name="Message" placeholder="" rows="3">Hi, I am interested in the Lexus CT 200H PREMIUM 2015</textarea> 
-    </div>
-    
-    <div>
-        <label>
-            <input type="checkbox" id="chkRemember" checked="">
-            Remember me
-        </label>
+        <label for="email2" class="mb-0">Phone <span>*</span></label>
+        <div class="invalid-feedback">Required</div> 
+        <input type="text" name="email2" id="email2" class="form-control" placeholder="Enter your phone number"required="">
     </div>
 
+    <div class="form-group  mt-5"> 
+        <label for="email2" class="mb-0">Message</label> 
+        <span class="float-right text-white mb-0 pb-0"><small>Optional</small></span>
+        <textarea class="form-control" cols="20" id="txtMessage" name="Message" placeholder="" rows="3">
+            Hi, I am interested in the Lexus CT 200H PREMIUM 2015
+        </textarea> 
+    </div>
     
     <label>
         <input type="checkbox" id="chkFinance">
-        Need Finance
+        Allow Lexus to contact me
     </label>
 
     <button type="submit" class="btn btn-secondary btn-lg btn-block mt-4">Email Dealer</button>

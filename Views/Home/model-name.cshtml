@@ -7,27 +7,31 @@
     <div class="main-cta">
         <div class="car-specs mx-auto text-center">
             <ul class="list-inline">
-                <li class="list-inline-item d-none d-lg-inline-block"><span><a href="">Lexus IS</a></span></li>
+                <li class="list-inline-item d-none d-lg-inline-block active"><span><a href="">Lexus IS</a></span></li>
                 <li class="list-inline-item d-none d-lg-inline-block"><span><a href="">Specs</a></span></li>
                 <li class="list-inline-item d-none d-lg-inline-block"><span><a href="">Gallery</a></span></li>
                 <li class="list-inline-item d-none d-md-inline-block">
-                    <span><img src="/images/phone-white.png" alt="">Midrand</span>
-<!--                    <span>012 543 1235</span>-->
-                </li>
-                <li class="list-inline-item d-none d-md-inline-block"><span> <img src="/images/location-white.png" alt="">Find a Dealer</span></li>
-                <li class="list-inline-item d-none d-md-inline-block">
-                    <span>
-                    <img src="/images/book-test-drive-white.png" alt="">
-                    <a data-toggle="modal" data-target="#exampleModal">
-                     Book a Test Drive
-                    </a>
+                    <span onclick="location.href='tel:+27125431235';">
+                        <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img src="/images/phone-white.png" alt="">Midrand</a>
+                            <div class="dropdown">
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Midrand</a>
+                                    <a class="dropdown-item" href="#">Kingsmead</a>
+                                    <a class="dropdown-item" href="#">Lyndwood</a>
+                                </div>
+                            </div> 
                     </span>
+                    <span>012 543 1235</span>
+                </li>
+                
+                <li class="list-inline-item d-none d-md-inline-block" data-toggle="modal" data-target="#exampleModal">
+                    <span><img src="/images/envelope-white.png" alt="">Contact</span>
                 </li>
             </ul>    
         </div> 
     </div>
     <!-- Modal Pop-up-->
-    @Html.Partial("book-test-drive")
+    @Html.Partial("contact")
     <section class="hero">
         <header class="parallax-window use-parallax-mirror" data-parallax="scroll" data-image-src="/images/lexusIS_headerBG.jpg">
             <div class="parallax-section parallax">
@@ -57,7 +61,7 @@
                     </div>
                 </div>
             </div>
-            <div class="car-performance-tabs d-none d-md-block">
+            <div class="car-performance-tabs d-none d-md-block text-right">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><span>IS 200T E</span></a>
                     <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><span>IS 200T EX</span></a>
@@ -209,7 +213,7 @@
     <section class="car-vr">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12">
                     <div class="display-4"> Drive in Style</div>
                     <div class="h4 light">360 Interior View</div>
                 </div>
@@ -240,58 +244,12 @@
         </div>
         <div id="vrview"><iframe allowfullscreen="true" scrolling="no" width="100%" height="800" src="http://arkv4.dsdev.co.za/static/index.html?image=http://arkv4.dsdev.co.za/static/examples/gallery/fortuner.jpg&amp;" style="border: 0px;"></iframe></div>
     </section>
+   
     <section class="car-info-table my-4">
         <div class="container">
            <div class="row">
-                <div class="col">
-                    <div class="variant-select d-md-none mb-4">
-                        <div class="dropdown">
-                            <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                IS 200T E
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">IS 200T E</a>
-                                <a class="dropdown-item" href="#">IS 200T EX</a>
-                                <a class="dropdown-item" href="#">IS 350 F Sport</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               <div class="col-12 col-lg-3 d-none d-md-block">
-                   <ul class="nav nav-tabs" id="installments-info" role="tablist">
-                      <li class="nav-item">
-                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><span>IS 200T E</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><span>IS 200T EX</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><span>IS 350 F Sport</span></a>
-                      </li>
-                    </ul>
-               </div>
-                   <div class="col-12 col-lg-9">
-                        <div class="tab-content" id="tab-content-1">
-                            <div class="h2 text-uppercase">Installments</div>
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                @Html.Partial("car-info-installments")
-                            </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                @Html.Partial("car-info-installments")
-                            </div>
-                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                                @Html.Partial("car-info-installments")
-                            </div>
-                        </div>
-                    </div>   
-               </div>
-           </div>
-    </section> 
-    <section class="car-info-table my-4">
-        <div class="container">
-           <div class="row">
-                <div class="col">
-                    <div class="variant-select d-md-none mb-4">
+                <div class="col d-lg-none mb-4">
+                    <div class="variant-select">
                         <div class="dropdown">
                             <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 The Lexus Warranty
@@ -306,22 +264,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-3 d-none d-md-block">
+                
+                <div class="col-12 col-lg-3 d-none d-lg-block">
                    <ul class="nav nav-tabs" id="maintenance-info" role="tablist">
                       <li class="nav-item">
-                        <a class="nav-link active" id="1" data-toggle="tab" href="#1" role="tab" aria-controls="1" aria-selected="true"><span>The Lexus Warranty</span></a>
+                        <a class="nav-link active" id="one" data-toggle="tab" href="#1" role="tab" aria-controls="1" aria-selected="true"><span>The Lexus Warranty</span></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="2" data-toggle="tab" href="#2" role="tab" aria-controls="2" aria-selected="false"><span>The Lexus Distance Plan</span></a>
+                        <a class="nav-link" id="two" data-toggle="tab" href="#2" role="tab" aria-controls="2" aria-selected="false"><span>The Lexus Distance Plan</span></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="3" data-toggle="tab" href="#3" role="tab" aria-controls="3" aria-selected="false"><span>Booking a service for your Lexus</span></a>
+                        <a class="nav-link" id="three" data-toggle="tab" href="#3" role="tab" aria-controls="3" aria-selected="false"><span>Booking a service for your Lexus</span></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="4" data-toggle="tab" href="#4" role="tab" aria-controls="4" aria-selected="false"><span>Lexus body and paint repairers</span></a>
+                        <a class="nav-link" id="four" data-toggle="tab" href="#4" role="tab" aria-controls="4" aria-selected="false"><span>Lexus body and paint repairers</span></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="5" data-toggle="tab" href="#5" role="tab" aria-controls="5" aria-selected="false"><span>Lexus roadside assistance</span></a>
+                        <a class="nav-link" id="five" data-toggle="tab" href="#5" role="tab" aria-controls="5" aria-selected="false"><span>Lexus roadside assistance</span></a>
                       </li>
                     </ul>
                </div>
@@ -333,9 +292,15 @@
                                 @Html.Partial("car-info-maintenance")
                             </div>
                             <div class="tab-pane fade" id="2" role="tabpanel" aria-labelledby="2">
-                                @Html.Partial("car-info-maintenance")
+                                @Html.Partial("car-info-distance-plan")
                             </div>
                             <div class="tab-pane fade" id="3" role="tabpanel" aria-labelledby="3">
+                                @Html.Partial("car-info-maintenance")
+                            </div> 
+                            <div class="tab-pane fade" id="4" role="tabpanel" aria-labelledby="3">
+                                @Html.Partial("car-info-maintenance")
+                            </div>
+                            <div class="tab-pane fade" id="5" role="tabpanel" aria-labelledby="3">
                                 @Html.Partial("car-info-maintenance")
                             </div>
                         </div>
@@ -343,7 +308,7 @@
                </div>
            </div>
     </section>
-    <hr class="stitch-2">
+    <hr class="stitch-7">
     <section class="car-dealerships my-4">
         <div class="container">
             <div class="row mb-4">
@@ -351,56 +316,8 @@
                     <div class="h2 text-uppercase">Lexus Dealerships</div>
                 </div>
             </div>
-            <div class="row mx-auto text-center">
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card text-left">
-                        <div class="card-header">
-                            <span class="h3 text-uppercase">Midrand</span>
-                            <img src="/images/bidvest-logo-white.png" alt="" class="float-right">
-                        </div>
-                        <div class="card-body">
-                            <span class="d-block">1682 New Rd</span>
-                            <span class="d-block">Carswald</span>
-                            <span class="d-block">Midrand</span>
-                        </div>
-                        <div class="card-footer text-center">
-                            <span class="h4"><img src="/images/phone-white.png" alt=""> 012 231 4123</span>
-                        </div>
-                    </div>               
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                   <div class="card text-left">
-                        <div class="card-header">
-                            <span class="h3 text-uppercase">Midrand</span>
-                            <img src="/images/bidvest-logo-white.png" alt="" class="float-right">
-                        </div>
-                        <div class="card-body">
-                            <span class="d-block">1682 New Rd</span>
-                            <span class="d-block">Carswald</span>
-                            <span class="d-block">Midrand</span>
-                        </div>
-                        <div class="card-footer text-center">
-                            <span class="h4"><img src="/images/phone-white.png" alt=""> 012 231 4123</span>
-                        </div>
-                    </div>   
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                  <div class="card text-left">
-                        <div class="card-header">
-                            <span class="h3 text-uppercase">Midrand</span>
-                            <img src="/images/bidvest-logo-white.png" alt="" class="float-right">
-                        </div>
-                        <div class="card-body">
-                            <span class="d-block">1682 New Rd</span>
-                            <span class="d-block">Carswald</span>
-                            <span class="d-block">Midrand</span>
-                        </div>
-                        <div class="card-footer text-center">
-                            <span class="h4"><img src="/images/phone-white.png" alt=""> 012 231 4123</span>
-                        </div>
-                    </div>   
-                </div>
-            </div> </div>
+            @Html.Partial("dealerships")
+        </div>
     </section>
     <section class="hero-club">
         <div class="container">
@@ -438,6 +355,22 @@
             </div>
         
         </div>   
+    </section>
+    <section class="main-cta-mobile d-md-none">
+        <div class="car-specs mx-auto text-center">
+            <ul class="list-inline">
+                <li class="list-inline-item" onclick="location.href='/dealers';">
+                    <span> 
+                        <img src="/images/location-white.png" alt="">Find a Dealer
+                    </span>
+                </li>
+                <li class="list-inline-item" data-toggle="modal" data-target="#exampleModal">
+                    <span>
+                        <img src="/images/book-test-drive-white.png" alt="">Contact
+                    </span>
+                </li>
+            </ul>    
+        </div>
     </section>
 </div>
     
