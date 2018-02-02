@@ -5,6 +5,9 @@ body {
 
 .models {  
     .car-specs-model { 
+        font-family: 'nobellexusregular';
+        font-weight: bold;
+    
         .list-inline {
             margin-top: 50px;
             transition: ease-in 0.4s;       
@@ -121,11 +124,19 @@ body {
                 }
                 span:nth-of-type(2) {
                     display: block; 
+                    position: relative;
                     font-size: 3em;
                     font-weight: normal;
                     margin-bottom: 20px;
                     transform: skewX(20deg); 
                     padding:0 30px;
+                }
+                span:nth-of-type(3) {
+                    top: 53px;
+                    left: 44%;
+                    position: absolute;
+                    transform: skewX(20deg);
+                    font-size: 1.2em;
                 }
             }
         }
@@ -503,9 +514,12 @@ body {
         z-index: 1000;
         .car-specs { 
             .list-inline {
+                position: relative;
                 text-transform: uppercase;
                 font-weight: normal;
+                
                 & .list-inline-item { 
+                    color:grey;
                     height: 60px;
                     padding: 0 30px;
                     margin:0 -2px;   
@@ -514,6 +528,7 @@ body {
                         font-weight: bold;
                         a { 
                             border-bottom:2px solid white;
+                            color:white;
                         }
                     }
                 
@@ -534,7 +549,7 @@ body {
                         }
                         
                         a {
-                            color:white;
+                            color:$gray-400;
                             text-decoration: none;
                         }
                         .dropdown {
@@ -546,6 +561,7 @@ body {
 
                                 .dropdown-item {         
                                     font-weight:bold;
+                                    color:black;
                                     & span { 
                                         font-weight:normal;
                                         position: absolute;
@@ -564,19 +580,31 @@ body {
                 & .list-inline-item:nth-child(4) { 
                     padding-top:0;
                     position: relative;
-                    a { 
-                        font-size:0.8em;
+                    width:160px;
+                    height:60px;
+                    font-weight: bold;
+                    padding-left:0;
+                    
+                    span:first-child { 
+                        a { 
+                            font-size:0.7em;
+                            color:white;
+                            text-transform: none;
+                        }
                     }
 
                     & span:last-child {
                         position: absolute;
-                        font-size: 0.7em;
-                        left: 74px;
-                        top: 40px;
+                        font-size: 0.9em;
+                        color:white;
+                        left: 65px;
+                        top: 38px;
                         padding-top: 0;
                     }    
                 }
                 & .list-inline-item:last-child {     
+                    color:white;
+                    font-weight: bold;
                     background:$blue;
                     padding:0 40px;
                     &:hover { 
@@ -957,6 +985,10 @@ body {
                 padding-right: 27px;
                 text-align: right;
                 @extend .edge--skew;
+                span { 
+                  transform: skewX(20deg);
+                    display: block;
+                }
             }
             .nav-link { 
                 text-align: right;

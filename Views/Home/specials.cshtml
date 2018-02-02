@@ -1,66 +1,77 @@
  @{ ViewData["Title"] = "Latest Specials"; }
 
 <div class="lexus-shared bg-gray-2">
+<!--
     <section class="section specials-hero angle--bottom-right">
         <div class="container">
             <div class="row my-5" style="height:200px">
                 <div class="col">
                     <img src="/images/bidvest-logo-white.png" alt="" height="40" class="my-4">
                     <h1 class="display-4">@ViewBag.Title</h1>
-                    <div class="h5 light text-uppercase">25 January 2017</div>
+                    <div class="h5 light">25 January 2017</div>
                 </div>
             </div>
         </div>
     </section>
-    <div class="container-fluid">
-
-        <div class="row">
-            <div class="col-12 col-md-3">
-                <aside class="facets facets-specials d-none d-md-block">
-                    @Html.Partial("specials-facets")
-                </aside>
-            </div>
-            <div class="col-12 col-md-9">
-                <div class="car-specials mb-5">
-                    <div class="container">
-<!--
-                        <div class="row mt-4">
-                            <div class="col">
-                                <div class="facet-select d-md-none">
-                                    <div class="dropdown">
-                                        <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                   Select Dealership
-                                </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">Lyndwood <span>(17)</span></a>
-                                            <a class="dropdown-item" href="#">Midrand <span>(2)</span></a>
-                                            <a class="dropdown-item" href="#">Kingsmead <span>(1)</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="facet-select d-md-none mt-0">
-                                    <div class="dropdown">
-                                        <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                           Select Category
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">New <span>(17)</span></a>
-                                            <a class="dropdown-item" href="#">Demo <span>(2)</span></a>
-                                            <a class="dropdown-item" href="#">Used <span>(1)</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 -->
-                        @Html.Partial("specials-listings")
+   <section class="section">
+         <div class="container-fluid">
+           
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <aside class="facets facets-specials d-none d-md-block">
+                        @Html.Partial("specials-facets")
+                    </aside>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="car-specials">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="/images/bidvest-logo-black.png" alt="" height="40" class="mt-4 mb-2">
+                                    <h1 class="display-4">@ViewBag.Title</h1>
+                                    <div class="h5 light"  id="showdate"></div>
+                                </div>
+                            </div>
+        <!--
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <div class="facet-select d-md-none">
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                       Select Dealership
+                                    </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Lyndwood <span>(17)</span></a>
+                                                <a class="dropdown-item" href="#">Midrand <span>(2)</span></a>
+                                                <a class="dropdown-item" href="#">Kingsmead <span>(1)</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="facet-select d-md-none mt-0">
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                               Select Category
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">New <span>(17)</span></a>
+                                                <a class="dropdown-item" href="#">Demo <span>(2)</span></a>
+                                                <a class="dropdown-item" href="#">Used <span>(1)</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        -->
+                            @Html.Partial("specials-listings")
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>
 @section Scripts {
 <script>

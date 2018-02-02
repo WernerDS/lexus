@@ -193,28 +193,20 @@
                 font-size:1.2em;
                 font-weight:bold;
             }
-            //Dealership
-            span:nth-of-type(2) {
-                position: absolute;
-                top: 35px;
-                left: 30px;
-                font-size: 0.8em;
-            }
-            
             
             //Car Price
-            span:nth-of-type(3) {
+            span:nth-of-type(2) {
                 position: absolute;
-                top:52px;
+                top:34px;
                 left:30px;
                 font-size:2em;
                 font-weight: bold;
             }
             //Car Special
-            span:nth-of-type(4) {
+            span:nth-of-type(3) {
                 font-size:1.1em;
                 position: absolute;
-                top:94px;
+                top:70px;
                 left:30px;
                 font-weight: normal;
                 color:$blue;
@@ -226,6 +218,13 @@
                     margin-bottom: -5px;
                     
                 }
+            }
+            //Dealership
+            span:nth-of-type(4) {
+                position: absolute;
+                top: 110px;
+                left: 30px;
+                font-size: 0.8em;
             }
         }
     }
