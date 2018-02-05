@@ -9753,15 +9753,15 @@ p {
     padding-right: 6rem !important; } }
 
 #main-nav.navbar {
-  background: rgba(0, 0, 0, 0.9);
+  background: #222222;
   z-index: 1040; }
   #main-nav.navbar .navbar-brand img {
     height: 42px;
-    margin-left: 130px; }
+    margin-left: 170px; }
     @media (max-width: 767.99px) {
       #main-nav.navbar .navbar-brand img {
         height: 30px;
-        margin-left: 100px; } }
+        margin-left: 140px; } }
   #main-nav.navbar .navbar-nav {
     align-items: center; }
     @media (max-width: 767.99px) {
@@ -11033,6 +11033,20 @@ body {
         background-image: url("/images/is-slant.png"); }
         .models .car-specs-model .list-inline .list-inline-item.is:hover span:nth-of-type(1) {
           display: block; }
+        .models .car-specs-model .list-inline .list-inline-item.is:hover + #is {
+          background: red;
+          display: block;
+          width: 200px;
+          height: 200px; }
+      .models .car-specs-model .list-inline .list-inline-item #is-model:hover li + #is {
+        background: red;
+        display: block; }
+        .models .car-specs-model .list-inline .list-inline-item #is-model:hover li + #is img:nth-of-type(1) {
+          display: block; }
+        .models .car-specs-model .list-inline .list-inline-item #is-model:hover li + #is img:nth-of-type(2) {
+          display: none; }
+        .models .car-specs-model .list-inline .list-inline-item #is-model:hover li + #is img:nth-of-type(3) {
+          display: none; }
       .models .car-specs-model .list-inline .list-inline-item.es-hybrid:hover {
         background-image: url("/images/lc-slant.png"); }
         .models .car-specs-model .list-inline .list-inline-item.es-hybrid:hover span:nth-of-type(1) {

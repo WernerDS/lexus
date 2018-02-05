@@ -38,7 +38,8 @@
 #main-nav.navbar {
     //    padding:0;
     //    height: 65px;
-    background: rgba(0, 0, 0, 0.9);
+    //    background: rgba(0, 0, 0, 0.9);
+    background: #222222;
     z-index: 1040;
     //	&.nav-padding {
     ////  padding-top: 20px;
@@ -47,11 +48,11 @@
     .navbar-brand {
         img {
             height: 42px;
-            margin-left: 130px;
+            margin-left: 170px;
 
             @include media-breakpoint-down(sm) {
                 height: 30px;
-                margin-left: 100px;
+                margin-left: 140px;
             }
         }
     }

@@ -30,8 +30,24 @@ body {
                     span:nth-of-type(1){
                         display: block;
                     }
-                }  
+                    
+                    + #is { background:red; display: block; width:200px; height:200px; }
+                } 
                 
+                #is-model:hover li + #is { 
+                    background:red;
+                    display: block;
+                    img:nth-of-type(1) { 
+                            display:block;
+                        } 
+                        img:nth-of-type(2) { 
+                            display:none;
+                        } 
+                        img:nth-of-type(3) { 
+                            display:none;
+                        }
+                } 
+                   
                 &.es-hybrid:hover { 
                     background-image: url('/images/lc-slant.png');
                     span:nth-of-type(1){
@@ -170,8 +186,7 @@ body {
             @include media-breakpoint-up(md) {
                 display: none;
             } 
-        } 
-        
+        }       
         span:nth-of-type(2) {           
             position: absolute;
             top:0;
@@ -238,18 +253,17 @@ body {
             }
         }
         
-            img { 
-                @extend .img-fluid; 
-                @include media-breakpoint-down(sm) {
-                    display: block;
-                    padding:30px 0;
-                    border-bottom: 1px solid black;
-                    height:180px;
-                    margin:auto; 
-                }
+        img { 
+            @extend .img-fluid; 
+            @include media-breakpoint-down(sm) {
+                display: block;
+                padding:30px 0;
+                border-bottom: 1px solid black;
+                height:180px;
+                margin:auto; 
             }
-       
-        
+            }
+            
         img:nth-of-type(1) {
             position: absolute;
             top:0;
@@ -268,8 +282,7 @@ body {
                 display: block;
                 position: static;
             }         
-        }
-        
+        }        
         img:nth-of-type(2) {
             position: absolute;
             top:0;
